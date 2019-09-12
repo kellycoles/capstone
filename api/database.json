@@ -1,7 +1,20 @@
 {
-    "users": [],
-    "items": [],
-    "maintenance": [],
-    "categories": [],
-    "tasks": []
+  "users": [
+    {
+      "username": "kellycoles",
+      "email": "kellycoles1@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "username": "Otto",
+      "email": "Otto@otto.com",
+      "password": "456",
+      "id": 2
+    }
+  ],
+  "items": [],
+  "maintenance": [],
+  "categories": [],
+  "tasks": []
 }
