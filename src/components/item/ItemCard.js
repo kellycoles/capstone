@@ -15,7 +15,7 @@ class ItemCard extends Component {
                     <button type="button"
                         onClick={() => { this.props.history.push(`/items/${this.props.item.id}/edit`) }}>Edit</button>
                     <button type="button" onClick={() => this.props.deleteItem(this.props.item.id)}>Delete
-                    Event</button>
+                    Item</button>
 
                 </div>
             </div>

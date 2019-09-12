@@ -5,7 +5,7 @@ import login from './authentication/login'
 import welcome from "./authentication/welcome";
 import registration from "./authentication/registration";
 import ItemList from './item/ItemList'
-// import ItemForm from './item/ItemForm'
+import ItemForm from './item/ItemForm'
 import ItemEditForm from './item/ItemEditForm'
 
 export default class ApplicationViews extends Component {
@@ -24,13 +24,13 @@ export default class ApplicationViews extends Component {
                         return <Redirect to="/login" />
                     }
                 }} />
-                {/* <Route path="/items/new" render={(props) => {
+                <Route path="/items/new" render={(props) => {
                     return <ItemForm {...props} />
-                }} /> */}
-                <Route path="/items/:itemId(\d+)/edit" render={props => {
+                }} />
+                {/* <Route path="/items/:itemId(\d+)/edit" render={props => {
                     return <ItemEditForm {...props} />
                 }}
-                />
+                /> */}
 
             </React.Fragment>
         )
