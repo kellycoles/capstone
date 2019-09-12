@@ -19,7 +19,7 @@ export default {
             .then(result => result.json())
     },
     updateItem(editedItem) {
-        return fetch(`${remoteURL}/events/${editedItem.id}`, {
+        return fetch(`${remoteURL}/items/${editedItem.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -27,8 +27,8 @@ export default {
             body: JSON.stringify(editedItem)
         }).then(data => data.json());
     },
-    postEvent(newItem) {
-        return fetch(`${remoteURL}/events`, {
+    postItem(newItem) {
+        return fetch(`${remoteURL}/items`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
