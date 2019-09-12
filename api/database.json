@@ -13,7 +13,18 @@
       "id": 2
     }
   ],
-  "items": [],
+  "items": [
+    {
+    "name":"Truck",
+    "year":"2000",
+    "model":"Dodge Dakota",
+    "image":"firebaseImage",
+    "manual": "firebaseFile",
+    "notes":"The ABS, and brake light are both on, which is probably a sensor. Radiator needs to be replaced",
+    "id": 1,
+    "userId": 1
+    }
+  ],
   "maintenance": [],
   "categories": [],
   "tasks": []

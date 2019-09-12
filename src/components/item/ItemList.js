@@ -10,37 +10,39 @@ import ItemsManager from '../../modules/ItemsManager'
 class ItemList extends Component {
     //define what this component needs to render
     state = {
-        events: [],
+        items: [],
     }
-    
+  //store the logged in user's id to use later to show only that person's data
     loggedInUser = parseInt(sessionStorage.getItem("activeUser"))
+
     componentDidMount() {
-             //getAll from ItemManager and hang on to that data; put it in state
-        ItemManager.getAllItems(this.loggedInUser)
+        console.log(this.loggedInUser)
+        //getAll from ItemManager and hang on to that data; put it in state
+        ItemsManager.getAllItems(this.loggedInUser)
             .then((itemFromDB) => {
+                console.log(itemFromDB)
                 this.setState({
-                    item: itemFromDB
+                    items: itemFromDB
                 })
             })
     }
 
     deleteItem = id => {
-        ItemManager.deleteItem(id)
+        ItemsManager.deleteItem(id)
             .then(() => {
                 ItemsManager.getAllItems(this.loggedInUser)
                     .then((newItem) => {
                         this.setState({
-                            item: newItem
+                            items: newItem
                         })
                     })
             })
     }
 
     render() {
-
+console.log(this.state.items)
         return (
             <>
-                <h1 className="center card"></h1>
                 <section className="section-content">
                     <button type="button"
                         className="card"
@@ -48,15 +50,13 @@ class ItemList extends Component {
                         Add Item
                     </button>
                 </section>
-                <div className="container-cards">
-                    {this.state.events.map(item =>
-                        <ItemCard
+                    {this.state.items.map(item =>
+                    <ItemCard
                             key={item.id}
-                            event={item}
-                            deleteEvent={this.delete}Item
+                            item={item}
+                            
                             {...this.props} />
                     )}
-                </div>
             </>
         )
     }
