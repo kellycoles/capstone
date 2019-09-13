@@ -10,7 +10,9 @@ export default {
     },
 
     getAllItems(userId) {
-        return fetch(`${remoteURL}/items?userId=${userId}`).then(result => result.json())
+        return fetch(`${remoteURL}/items?userId=${userId}`)
+        
+        .then(result => result.json())
     },
     deleteItem(id) {
         return fetch(`${remoteURL}/items/${id}`, {
