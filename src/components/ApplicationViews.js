@@ -27,10 +27,10 @@ export default class ApplicationViews extends Component {
                 <Route path="/items/new" render={(props) => {
                     return <ItemForm {...props} />
                 }} />
-                {/* <Route path="/items/:itemId(\d+)/edit" render={props => {
+                <Route path="/items/:itemId(\d+)/edit" render={props => {
                     return <ItemEditForm {...props} />
                 }}
-                /> */}
+                />
 
             </React.Fragment>
         )

@@ -20,7 +20,6 @@ class ItemList extends Component {
         //getAll from ItemManager and hang on to that data; put it in state
         ItemsManager.getAllItems(this.loggedInUser)
             .then((itemFromDB) => {
-                console.log(itemFromDB)
                 this.setState({
                     items: itemFromDB
                 })
@@ -54,7 +53,7 @@ console.log(this.state.items)
                     <ItemCard
                             key={item.id}
                             item={item}
-                            
+                            deleteItem={this.deleteItem}
                             {...this.props} />
                     )}
             </>

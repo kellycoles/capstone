@@ -22,7 +22,7 @@ class ItemForm extends Component {
     */
     constructNewItem = evt => {
         evt.preventDefault();
-        if (this.state.name === "" || this.state.year === "" || this.state.model === "") { //add category================
+        if (this.state.name === "" || this.state.year === "" || this.state.model === "" || this.state.category === "") {
             window.alert("Please complete name, year, and model");
         } else {
 
@@ -32,9 +32,9 @@ class ItemForm extends Component {
                 name: this.state.name,
                 year: this.state.year,
                 model: this.state.model,
+                category: this.state.category,
                 image: this.state.image,
                 manual: this.state.manual,
-                //add category here==================================
                 userId: parseInt(sessionStorage.getItem('activeUser'))
             };
 
@@ -52,6 +52,15 @@ class ItemForm extends Component {
                 <form>
                     <fieldset>
                         <div className="formgrid">
+                        <input
+                                type="select"
+                                required
+                                onChange={this.handleFieldChange}
+                                id="category"
+
+                            />
+                            <label htmlFor="category">Category</label>
+                            
                             <input
                                 type="text"
                                 required

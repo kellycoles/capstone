@@ -17,10 +17,6 @@ class NavBar extends Component {
                     <li className="nav-item">
                         <Link className="nav-link" to="/maintenance">Maintenance Log</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/tasks"></Link>
-                    </li>
-
                 </ul>
             </nav>
         )
