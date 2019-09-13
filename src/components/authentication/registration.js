@@ -49,9 +49,15 @@ class Registration extends Component {
                     };
 
 
-                    // Create the user and redirect user to news
+                    // Create the user and redirect user to items
                     RegistrationManager.createNewUser(user)
-                        .then(() => this.props.history.push("/welcome"));
+                    .then(results => {
+                        console.log(results)
+                            sessionStorage.setItem("activeUser", results.id)
+                            this.props.history.push("/items");
+        
+                    })
+                        
                 }
             })
     }
