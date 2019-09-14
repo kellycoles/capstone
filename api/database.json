@@ -38,6 +38,7 @@
       "year": "2000",
       "model": "Dodge Dakota",
       "image": "firebase",
+      "categoryId": 3,
       "manual": "firebaseFile",
       "userId": 1
     },
@@ -50,6 +51,16 @@
       "categoryId": 2,
       "userId": 1,
       "id": 2
+    },
+    {
+      "name": "cub cadet",
+      "year": "2001",
+      "model": "mower",
+      "categoryId": 4,
+      "image": "image",
+      "manual": "manual",
+      "userId": 1,
+      "id": 3
     }
   ],
   "maintenance": [],

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ItemsManager from '../../modules/ItemsManager';
+import CategoryManager from '../../modules/CategoryManager';
 
 class ItemForm extends Component {
     state = {
@@ -9,9 +10,14 @@ class ItemForm extends Component {
         image: "",
         manual: "",
         userId: "",
+        categoryId: "",
+        categories:[],
         loadingStatus: false,
     };
-
+    componentDidMount() {
+        CategoryManager.getAllItems()
+            .then(categories => this.setState({ categories }))
+    }
     handleFieldChange = evt => {
         const stateToChange = {};
         stateToChange[evt.target.id] = evt.target.value;
@@ -32,7 +38,7 @@ class ItemForm extends Component {
                 name: this.state.name,
                 year: this.state.year,
                 model: this.state.model,
-                category: this.state.category,
+                categoryId: parseInt(this.state.categoryId),
                 image: this.state.image,
                 manual: this.state.manual,
                 userId: parseInt(sessionStorage.getItem('activeUser'))
@@ -52,15 +58,18 @@ class ItemForm extends Component {
                 <form>
                     <fieldset>
                         <div className="formgrid">
-                        <input
-                                type="select"
-                                required
-                                onChange={this.handleFieldChange}
-                                id="category"
-
-                            />
-                            <label htmlFor="category">Category</label>
-                            
+                            <select id="categoryId" value={this.state.category} onChange={this.handleFieldChange}>
+                            <option value="">Select Category</option>
+                                {this.state.categories.map(category=>
+                                <option key={category.id} value={category.id}>
+                                    {category.type}
+                                </option>
+                                )
+                                    
+                                }
+                               
+                                
+                            </select>
                             <input
                                 type="text"
                                 required

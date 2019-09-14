@@ -8,7 +8,7 @@ class ItemCard extends Component {
         return (
             <div className="card">
                 <div className="card-content">
-                    <h3>Category: {this.props.item.type}</h3>  
+                    <h3>Category: {this.props.item.category.type}</h3>  
                     <h4><span className="card-petname"></span>{this.props.item.name}</h4>
                     
                     <p>{this.props.item.year} {this.props.item.model}</p>
