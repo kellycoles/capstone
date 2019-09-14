@@ -11,6 +11,24 @@
       "email": "Otto@otto.com",
       "password": "456",
       "id": 2
+    },
+    {
+      "username": "joe",
+      "email": "joe@joe.com",
+      "password": "555",
+      "id": 3
+    },
+    {
+      "username": "fred",
+      "email": "fred@joe.com",
+      "password": "111",
+      "id": 4
+    },
+    {
+      "username": "Bryan",
+      "email": "bryan@bryan.com",
+      "password": "789",
+      "id": 5
     }
   ],
   "items": [
@@ -19,7 +37,8 @@
       "name": "Truck",
       "year": "2000",
       "model": "Dodge Dakota",
-      "image": "url",
+      "image": "firebase",
+      "categoryId": 3,
       "manual": "firebaseFile",
       "userId": 1
     },
@@ -32,6 +51,16 @@
       "categoryId": 2,
       "userId": 1,
       "id": 2
+    },
+    {
+      "name": "cub cadet",
+      "year": "2001",
+      "model": "mower",
+      "categoryId": 4,
+      "image": "image",
+      "manual": "manual",
+      "userId": 1,
+      "id": 3
     }
   ],
   "maintenance": [],

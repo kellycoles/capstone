@@ -10,7 +10,7 @@ export default {
     },
 
     getAllItems(userId) {
-        return fetch(`${remoteURL}/items?userId=${userId}`)
+        return fetch(`${remoteURL}/items?userId=${userId}&_expand=category`)
         
         .then(result => result.json())
     },
