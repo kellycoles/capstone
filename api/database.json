@@ -1,34 +1,22 @@
 {
   "users": [
     {
-      "username": "kellycoles",
-      "email": "kellycoles1@gmail.com",
-      "password": "123",
-      "id": 1
-    },
-    {
       "username": "Otto",
       "email": "Otto@otto.com",
       "password": "456",
-      "id": 2
+      "id": 1
     },
     {
       "username": "joe",
       "email": "joe@joe.com",
       "password": "555",
+      "id": 2
+    },
+    {
+      "username": "kellycoles",
+      "email": "kellycoles1@gmail.com",
+      "password": "123",
       "id": 3
-    },
-    {
-      "username": "fred",
-      "email": "fred@joe.com",
-      "password": "111",
-      "id": 4
-    },
-    {
-      "username": "Bryan",
-      "email": "bryan@bryan.com",
-      "password": "789",
-      "id": 5
     }
   ],
   "items": [
@@ -36,34 +24,26 @@
       "id": 1,
       "name": "Truck",
       "year": "2000",
-      "model": "Dodge Dakota",
-      "image": "firebase",
-      "categoryId": 3,
-      "manual": "firebaseFile",
+      "model": "Dodge",
+      "categoryId": 2,
+      "image": "image",
+      "manual": "manual",
+      "notes": "radiator repair needed",
       "userId": 1
     },
     {
-      "name": "Mazda",
-      "year": "2012",
-      "model": "miata",
-      "image": "image",
-      "manual": "manual",
-      "categoryId": 2,
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "name": "cub cadet",
-      "year": "2001",
-      "model": "mower",
+      "id": 2,
+      "name": "Nick",
+      "year": "gggg",
+      "model": "dfd",
       "categoryId": 4,
-      "image": "image",
-      "manual": "manual",
-      "userId": 1,
-      "id": 3
+      "image": "ggg",
+      "manual": "gggg",
+      "notes": "ghhhh",
+      "userId": 3
     }
   ],
-  "maintenance": [],
+  "maintenanceItems": [],
   "categories": [
     {
       "type": "appliance",

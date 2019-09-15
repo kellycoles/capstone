@@ -9,6 +9,7 @@ class ItemForm extends Component {
         model: "",
         image: "",
         manual: "",
+        notes: "",
         userId: "",
         categoryId: "",
         categories:[],
@@ -24,12 +25,10 @@ class ItemForm extends Component {
         this.setState(stateToChange);
     };
 
-    /*  Local method for validation, set loadingStatus, create item object, invoke the ItemsManager post method, and redirect to the item list
-    */
     constructNewItem = evt => {
         evt.preventDefault();
         if (this.state.name === "" || this.state.year === "" || this.state.model === "" || this.state.category === "") {
-            window.alert("Please complete name, year, and model");
+            window.alert("Please complete name, year, and model fields");
         } else {
 
             this.setState({ loadingStatus: true });
@@ -41,6 +40,7 @@ class ItemForm extends Component {
                 categoryId: parseInt(this.state.categoryId),
                 image: this.state.image,
                 manual: this.state.manual,
+                notes: this.state.notes,
                 userId: parseInt(sessionStorage.getItem('activeUser'))
             };
 
@@ -65,10 +65,10 @@ class ItemForm extends Component {
                                     {category.type}
                                 </option>
                                 )
-                                    
+
                                 }
-                               
-                                
+
+
                             </select>
                             <input
                                 type="text"
@@ -101,7 +101,7 @@ class ItemForm extends Component {
                                 id="image"
 
                             />
-                            <label htmlFor="year">Image:</label>
+                            <label htmlFor="image">Image:</label>
                             <input
                                 type="text"
                                 required
@@ -109,7 +109,7 @@ class ItemForm extends Component {
                                 id="manual"
 
                             />
-                            <label htmlFor="year">Manual:</label>
+                            <label htmlFor="manual">Manual:</label>
                             <input
                                 type="text"
                                 required
@@ -117,7 +117,7 @@ class ItemForm extends Component {
                                 id="notes"
 
                             />
-                            <label htmlFor="year">Notes:</label>
+                            <label htmlFor="notes">Notes:</label>
                         </div>
                         <div className="alignRight">
                             <button
