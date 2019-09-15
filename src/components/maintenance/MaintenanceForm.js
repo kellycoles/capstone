@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import ItemsManager from '../../modules/ItemsManager';
+import MaintenanceManager from '../../modules/MaintenanceManager';
 import CategoryManager from '../../modules/CategoryManager';
 
-class ItemForm extends Component {
+class MaintenanceForm extends Component {
     state = {
         name: "",
-        year: "",
-        model: "",
-        userId: "",
-        categoryId: "",
-        categories: [],
+        title: "",
+        details: "",
+        parts: "",
+        date: "",
+        itemId: "",
         loadingStatus: false,
     };
     componentDidMount() {
@@ -24,27 +24,24 @@ class ItemForm extends Component {
 
     /*  Local method for validation, set loadingStatus, create item object, invoke the ItemsManager post method, and redirect to the item list
     */
-    constructNewItem = evt => {
+    constructNewMaintenance = evt => {
         evt.preventDefault();
-        if (this.state.name === "" || this.state.year === "" || this.state.model === "" || this.state.category === "") {
-            window.alert("Please complete name, year, and model fields");
+        if (this.state.name === "" || this.state.title === "" || this.state.details === "" || this.state.parts === "" || this.state.category === "" || this.state.date === "") {
+            window.alert("Please complete all fields");
         } else {
 
             this.setState({ loadingStatus: true });
 
-            const item = {
+            const maintenance = {
                 name: this.state.name,
-                year: this.state.year,
-                model: this.state.model,
-                categoryId: parseInt(this.state.categoryId),
-                image: this.state.image,
-                manual: this.state.manual,
-                userId: parseInt(sessionStorage.getItem('activeUser'))
+                title: this.state.title,
+                details: this.state.details,
+                parts: this.state.parts
+                // itemId:????????????????????????
             };
 
-            // Create the\item and redirect user to item list
-            ItemsManager.postItem(item)
-                .then(() => this.props.history.push("/items"));
+            MaintenanceManager.postMaintenanceItem(maintenance)
+                .then(() => this.props.history.push("/maintenanceItems"));
         }
     };
 
@@ -52,22 +49,18 @@ class ItemForm extends Component {
 
         return (
             <>
-                <h1 className="center card">New Item Form</h1>
+                <h1 className="center card">Maintenance Log Form</h1>
                 <form>
                     <fieldset>
                         <div className="formgrid">
-                            <select id="categoryId" value={this.state.category} onChange={this.handleFieldChange}>
-                                <option value="">Select Category</option>
-                                {this.state.categories.map(category =>
-                                    <option key={category.id} value={category.id}>
-                                        {category.type}
-                                    </option>
-                                )
+                            <input
+                                type="date"
+                                required
+                                onChange={this.handleFieldChange}
+                                id="date"
 
-                                }
-
-
-                            </select>
+                            />
+                            <label htmlFor="date">Date of Maintenance:</label>
                             <input
                                 type="text"
                                 required
@@ -75,53 +68,39 @@ class ItemForm extends Component {
                                 id="name"
 
                             />
-                            <label htmlFor="name">Name</label>
+                            <label htmlFor="name">Name of Item</label>
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
-                                id="model"
+                                id="title"
 
                             />
-                            <label htmlFor="model">Model:</label>
+                            <label htmlFor="title">Maintenance Performed</label>
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
-                                id="year"
+                                id="details"
 
                             />
-                            <label htmlFor="year">Year:</label>
+                            <label htmlFor="details">Maintenance Details:</label>
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
-                                id="image"
+                                id="parts"
 
                             />
-                            <label htmlFor="year">Image:</label>
-                            <input
-                                type="text"
-                                required
-                                onChange={this.handleFieldChange}
-                                id="manual"
+                            <label htmlFor="parts">Parts Used:</label>
 
-                            />
-                            <label htmlFor="year">Manual:</label>
-                            <input
-                                type="text"
-                                required
-                                onChange={this.handleFieldChange}
-                                id="notes"
 
-                            />
-                            <label htmlFor="year">Notes:</label>
                         </div>
                         <div className="alignRight">
                             <button
                                 type="button"
                                 disabled={this.state.loadingStatus}
-                                onClick={this.constructNewItem
+                                onClick={this.constructNewMaintenance
                                 }
                             >Submit</button>
                         </div>
@@ -132,4 +111,4 @@ class ItemForm extends Component {
     }
 }
 
-export default ItemForm
+export default MaintenanceForm

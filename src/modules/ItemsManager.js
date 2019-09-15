@@ -2,7 +2,7 @@ const remoteURL = "http://localhost:5002"
 
 export default {
     getItem(id) {
-        return fetch(`${remoteURL}/items/${id}&_expand=category`).then(result => result.json())
+        return fetch(`${remoteURL}/items/${id}`).then(result => result.json())
     },
     getUserItems(id, userId) {
         return fetch(`${remoteURL}/items/${id}&userId=${userId}`)

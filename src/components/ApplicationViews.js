@@ -8,7 +8,8 @@ import ItemList from './item/ItemList'
 import ItemForm from './item/ItemForm'
 import ItemDetails from './item/ItemDetails'
 import ItemEditForm from './item/ItemEditForm'
-// import MaintenanceForm from './maintenance/MaintenanceForm'
+import MaintenanceForm from './maintenance/MaintenanceForm'
+import MaintenanceList from './maintenance/MaintenanceList'
 // import MaintenanceDetails from './maintenance/MaintenanceDetails'
 // import MaintenancEditForm from './maintenance/MaintenanceEditForm'
 
@@ -29,10 +30,10 @@ export default class ApplicationViews extends Component {
                         return <Redirect to="/login" />
                     }
                 }} />
-                <Route path="/items/new" render={(props) => {
+                <Route exact path="/items/new" render={(props) => {
                     return <ItemForm {...props} />
                 }} />
-                <Route path="/items/:itemId(\d+)/edit" render={props => {
+                <Route exact path="/items/:itemId(\d+)/edit" render={props => {
                     return <ItemEditForm {...props} />
                 }}
                 />
@@ -40,16 +41,16 @@ export default class ApplicationViews extends Component {
                     return <ItemDetails itemId={parseInt(props.match.params.itemId)}{...props} />
                 }} />
 
-                 {/* <Route exact path="/maintenceItems" render={props => {
+                 <Route exact path="/maintenceItems" render={props => {
                     if (this.isAuthenticated()) {
                         return <MaintenanceList {...props} />
                     } else {
                         return <Redirect to="/login" />
                     }
-                }} /> */}
-                {/* <Route path="/maintenceItems/new" render={(props) => {
+                }} />
+                <Route exact path="/maintenanceItems/new" render={(props) => {
                     return <MaintenanceForm {...props} />
-                }} /> */}
+                }} />
                 {/* <Route path="/maintenceItems/:maintenceItemsId(\d+)/edit" render={props => {
                     return <MaintenanceEditForm {...props} />
                 }}

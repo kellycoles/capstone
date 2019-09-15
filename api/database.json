@@ -43,7 +43,17 @@
       "userId": 3
     }
   ],
-  "maintenanceItems": [],
+  "maintenanceItems": [
+    {
+      "id": 1,
+      "name": "truck",
+      "title": "oil change",
+      "details": "changed the oil at 250,000 miles",
+      "parts": "6 quarts 5 w 20 oil and p216 Fram oil filter",
+      "date": "2019, 10,10",
+      "itemId": 1
+    }
+  ],
   "categories": [
     {
       "type": "appliance",
@@ -60,10 +70,6 @@
     {
       "type": "lawn",
       "id": 4
-    },
-    {
-      "type": "other",
-      "id": 5
     }
   ],
   "tasks": []
