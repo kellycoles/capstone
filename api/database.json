@@ -29,17 +29,17 @@
       "image": "image",
       "manual": "manual",
       "notes": "radiator repair needed",
-      "userId": 1
+      "userId": 3
     },
     {
       "id": 2,
-      "name": "Nick",
-      "year": "gggg",
-      "model": "dfd",
-      "categoryId": 4,
-      "image": "ggg",
-      "manual": "gggg",
-      "notes": "ghhhh",
+      "name": "appli",
+      "year": "aaaa",
+      "model": "aaa",
+      "categoryId": 1,
+      "image": "aaa",
+      "manual": "aaaa",
+      "notes": "aaa",
       "userId": 3
     }
   ],
@@ -51,7 +51,8 @@
       "details": "changed the oil at 250,000 miles",
       "parts": "6 quarts 5 w 20 oil and p216 Fram oil filter",
       "date": "2019, 10,10",
-      "itemId": 1
+      "itemId": 1,
+      "userId": 3
     }
   ],
   "categories": [

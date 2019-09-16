@@ -51,7 +51,7 @@ class Registration extends Component {
                     RegistrationManager.createNewUser(user)
                         .then(results => {
                             sessionStorage.setItem("activeUser", results.id)
-                            this.props.history.push("/items");
+                            this.props.history.push("/CategoryList");
 
                         })
 

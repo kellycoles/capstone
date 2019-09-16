@@ -16,10 +16,7 @@ class ItemsEditForm extends Component {
     categories:[],
     loadingStatus: false,
 };
-componentDidMount() {
-  CategoryManager.getAllItems()
-      .then(categories => this.setState({ categories }))
-}
+
   handleFieldChange = evt => {
     const stateToChange = {}
     stateToChange[evt.target.id] = evt.target.value
@@ -47,6 +44,10 @@ componentDidMount() {
   }
   //Below are the fields that populate the edit form
   componentDidMount() {
+
+    CategoryManager.getAllItems()
+          .then(categories => this.setState({ categories }))
+
     ItemsManager.getItem(this.props.match.params.itemId)
       .then(item => {
         this.setState({
@@ -54,7 +55,6 @@ componentDidMount() {
           year: item.year,
           model: item.model,
           categoryId: parseInt(item.categoryId),
-          categories:[],          //category not sure??????
           image: item.image,
           manual: item.manual,
           notes: item.notes,
@@ -69,9 +69,9 @@ componentDidMount() {
         <form>
           <fieldset>
             <div className="formgrid">
-              <select id="categoryId" value={this.state.category} onChange={this.handleFieldChange}>
+              <select id="categoryId" value={this.state.categoryId} onChange={this.handleFieldChange}>
                 {this.state.categories.map(category =>
-                  <option key={category.id} value={this.state.category.id}>
+                  <option key={category.id} value={category.id}>
                     {category.type}
                   </option>
                 )

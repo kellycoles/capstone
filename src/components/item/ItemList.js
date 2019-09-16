@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//import the components needed
 import ItemCard from './ItemCard'
 import ItemsManager from '../../modules/ItemsManager'
 
@@ -62,4 +61,3 @@ console.log(this.state.items)
 }
 
 export default ItemList
-// old
