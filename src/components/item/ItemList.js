@@ -7,17 +7,18 @@ import ItemsManager from '../../modules/ItemsManager'
 //============================================================================
 
 class ItemList extends Component {
-    //define what this component needs to render
     state = {
         items: [],
     }
-  //store the logged in user's id to use later to show only that person's data
     loggedInUser = parseInt(sessionStorage.getItem("activeUser"))
+
+// put getAllItems in a function call it in line 19 and line 31. sort by category in function
 
     componentDidMount() {
         console.log(this.loggedInUser)
-        ItemsManager.getAllItems(this.loggedInUser)
+        ItemsManager.getAllItems(this.loggedInUser)   //this is going to be a function call
             .then((itemFromDB) => {
+                // sort category here
                 this.setState({
                     items: itemFromDB
                 })
@@ -27,7 +28,7 @@ class ItemList extends Component {
     deleteItem = id => {
         ItemsManager.deleteItem(id)
             .then(() => {
-                ItemsManager.getAllItems(this.loggedInUser)
+                ItemsManager.getAllItems(this.loggedInUser) //this is going to be a function call
                     .then((newItem) => {
                         this.setState({
                             items: newItem
@@ -51,7 +52,7 @@ console.log(this.state.items)
                     <ItemCard
                             key={item.id}
                             item={item}
-                            deleteItem={this.deleteItem}  //explain this
+                            deleteItem={this.deleteItem}  
                             {...this.props} />
                     )}
             </>

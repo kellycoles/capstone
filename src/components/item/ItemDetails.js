@@ -16,10 +16,11 @@ class ItemDetails extends Component {
     }
 
     componentDidMount() {
-        ItemsManager.getItem(this.props.itemId)
+        ItemsManager.getItem(this.props.itemId) 
             .then((item) => {
+                // .......// get the maint on the item
                 this.setState({
-                    categoryId: item.categoryId,            // category
+                    categoryId: item.categoryId,    //expand name        
                     name: item.name,
                     year: item.year,
                     model: item.model,

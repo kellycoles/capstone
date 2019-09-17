@@ -28,19 +28,19 @@
       "categoryId": 2,
       "image": "image",
       "manual": "manual",
-      "notes": "radiator repair needed",
+      "notes": "radiator repair ",
       "userId": 3
     },
     {
-      "id": 2,
-      "name": "appli",
-      "year": "aaaa",
+      "name": "Otto",
+      "year": "aa",
       "model": "aaa",
-      "categoryId": 1,
-      "image": "aaa",
-      "manual": "aaaa",
+      "categoryId": 2,
+      "image": "aa",
+      "manual": "aaa",
       "notes": "aaa",
-      "userId": 3
+      "userId": 2,
+      "id": 2
     }
   ],
   "maintenanceItems": [

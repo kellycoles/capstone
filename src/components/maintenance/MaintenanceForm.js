@@ -9,9 +9,7 @@ class MaintenanceForm extends Component {
         details: "",
         parts: "",
         date: "",
- kc-categorySelect
-        userId: "",
-        categoryId
+        itemId: "",
         loadingStatus: false,
     };
     componentDidMount() {
@@ -24,8 +22,6 @@ class MaintenanceForm extends Component {
         this.setState(stateToChange);
     };
 
-    /*  Local method for validation, set loadingStatus, create item object, invoke the ItemsManager post method, and redirect to the item list
-    */
     constructNewMaintenance = evt => {
         evt.preventDefault();
         if (this.state.name === "" || this.state.title === "" || this.state.details === "" || this.state.parts === "" || this.state.category === "" || this.state.date === "") {
@@ -38,12 +34,11 @@ class MaintenanceForm extends Component {
                 name: this.state.name,
                 title: this.state.title,
                 details: this.state.details,
-kc-categorySelect
                 parts: this.state.parts,
                 date: this.state.date,
-                ItemId: parseInt(this.state.ItemId)
+                itemId: parseInt(this.state.itemId)
 
-              
+            }; 
 
             MaintenanceManager.postMaintenanceItem(maintenance)
                 .then(() => this.props.history.push("/maintenanceItems"));
