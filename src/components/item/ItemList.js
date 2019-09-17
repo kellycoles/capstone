@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//import the components needed
 import ItemCard from './ItemCard'
 import ItemsManager from '../../modules/ItemsManager'
 
@@ -17,7 +16,6 @@ class ItemList extends Component {
 
     componentDidMount() {
         console.log(this.loggedInUser)
-        //getAll from ItemManager and hang on to that data; put it in state
         ItemsManager.getAllItems(this.loggedInUser)
             .then((itemFromDB) => {
                 this.setState({
@@ -53,7 +51,7 @@ console.log(this.state.items)
                     <ItemCard
                             key={item.id}
                             item={item}
-                            deleteItem={this.deleteItem}
+                            deleteItem={this.deleteItem}  //explain this
                             {...this.props} />
                     )}
             </>

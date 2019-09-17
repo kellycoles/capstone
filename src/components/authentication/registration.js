@@ -22,7 +22,7 @@ class Registration extends Component {
 
     // Validate user credentials then
     //Save new user to the database
-    createNewUser = evt => { 
+    createNewUser = evt => {
         evt.preventDefault();
         UsersManager.getUsersData()
             .then(parsedUsers => {
@@ -33,8 +33,6 @@ class Registration extends Component {
                     console.log(this.state.email)
                 } else if (this.state.password !== this.state.confirmPassword) {
                     alert("Passwords dont match")
-                }else if (parsedUsers.find(user => user.password === this.state.password)) {
-                    alert("Password already exists")
                 } else if (this.state.username === "" || this.state.email === "" || this.state.password === "") {
                     alert("Please fill out all fields")
                 } else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email))) {
@@ -51,13 +49,12 @@ class Registration extends Component {
 
                     // Create the user and redirect user to items
                     RegistrationManager.createNewUser(user)
-                    .then(results => {
-                        console.log(results)
+                        .then(results => {
                             sessionStorage.setItem("activeUser", results.id)
-                            this.props.history.push("/items");
-        
-                    })
-                        
+                            this.props.history.push("/CategoryList");
+
+                        })
+
                 }
             })
     }

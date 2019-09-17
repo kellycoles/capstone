@@ -9,9 +9,9 @@ class MaintenanceForm extends Component {
         details: "",
         parts: "",
         date: "",
+ kc-categorySelect
         userId: "",
-        categoryId: "",
-        itemId: "",
+        categoryId
         loadingStatus: false,
     };
     componentDidMount() {
@@ -38,10 +38,12 @@ class MaintenanceForm extends Component {
                 name: this.state.name,
                 title: this.state.title,
                 details: this.state.details,
+kc-categorySelect
                 parts: this.state.parts,
                 date: this.state.date,
                 ItemId: parseInt(this.state.ItemId)
-            };
+
+              
 
             MaintenanceManager.postMaintenanceItem(maintenance)
                 .then(() => this.props.history.push("/maintenanceItems"));

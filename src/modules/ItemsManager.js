@@ -11,8 +11,11 @@ export default {
 
     getAllItems(userId) {
         return fetch(`${remoteURL}/items?userId=${userId}&_expand=category`)
-        
-        .then(result => result.json())
+            .then(result => result.json())
+    },
+    getAllCategoryItems(userId, categoryId) {
+        return fetch(`${remoteURL}/items?userId=${userId}&_expand=category&categoryId=${categoryId}`)
+            .then(result => result.json())
     },
     deleteItem(id) {
         return fetch(`${remoteURL}/items/${id}`, {

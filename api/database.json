@@ -1,34 +1,22 @@
 {
   "users": [
     {
-      "username": "kellycoles",
-      "email": "kellycoles1@gmail.com",
-      "password": "123",
-      "id": 1
-    },
-    {
       "username": "Otto",
       "email": "Otto@otto.com",
       "password": "456",
-      "id": 2
+      "id": 1
     },
     {
       "username": "joe",
       "email": "joe@joe.com",
       "password": "555",
+      "id": 2
+    },
+    {
+      "username": "kellycoles",
+      "email": "kellycoles1@gmail.com",
+      "password": "123",
       "id": 3
-    },
-    {
-      "username": "fred",
-      "email": "fred@joe.com",
-      "password": "111",
-      "id": 4
-    },
-    {
-      "username": "Bryan",
-      "email": "bryan@bryan.com",
-      "password": "789",
-      "id": 5
     }
   ],
   "items": [
@@ -36,34 +24,37 @@
       "id": 1,
       "name": "Truck",
       "year": "2000",
-      "model": "Dodge Dakota",
-      "image": "firebase",
-      "categoryId": 3,
-      "manual": "firebaseFile",
-      "userId": 1
-    },
-    {
-      "name": "Mazda",
-      "year": "2012",
-      "model": "miata",
-      "image": "image",
-      "manual": "manual",
+      "model": "Dodge",
       "categoryId": 2,
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "name": "cub cadet",
-      "year": "2001",
-      "model": "mower",
-      "categoryId": 4,
       "image": "image",
       "manual": "manual",
-      "userId": 1,
-      "id": 3
+      "notes": "radiator repair needed",
+      "userId": 3
+    },
+    {
+      "id": 2,
+      "name": "appli",
+      "year": "aaaa",
+      "model": "aaa",
+      "categoryId": 1,
+      "image": "aaa",
+      "manual": "aaaa",
+      "notes": "aaa",
+      "userId": 3
     }
   ],
-  "maintenance": [],
+  "maintenanceItems": [
+    {
+      "id": 1,
+      "name": "truck",
+      "title": "oil change",
+      "details": "changed the oil at 250,000 miles",
+      "parts": "6 quarts 5 w 20 oil and p216 Fram oil filter",
+      "date": "2019, 10,10",
+      "itemId": 1,
+      "userId": 3
+    }
+  ],
   "categories": [
     {
       "type": "appliance",
@@ -80,10 +71,6 @@
     {
       "type": "lawn",
       "id": 4
-    },
-    {
-      "type": "other",
-      "id": 5
     }
   ],
   "tasks": []
