@@ -11,14 +11,14 @@ class MaintenanceCard extends Component {
                 <div className="card-content">
                     {/* i want one category container for all items in that category */}
 
-                    <h4><span className="card-petname"></span>{this.props.maintenanceItems.name}</h4>
-                    <p>{this.props.maintenanceItems.title}</p>
-                    <p>{this.props.maintenanceItems.details}</p>
-                    <p>{this.props.maintenanceItems.parts}</p>
+                    <h4><span className="card-petname"></span>{this.props.item.name}</h4>
+                    <p>{this.props.item.title}</p>
+                    <p>{this.props.item.details}</p>
+                    <p>{this.props.item.parts}</p>
                   
                     <button type="button"
-                        onClick={() => { this.props.history.push(`/maintenanceItems/${this.props.maintenanceItems.id}/edit`) }}>Edit</button>
-                    <button type="button" onClick={() => this.props.deleteItem(this.props.maintenancetems.id)}>Delete
+                        onClick={() => { this.props.history.push(`/maintenanceItems/${this.props.item.id}/edit`) }}>Edit</button>
+                    <button type="button" onClick={() => this.props.deleteItem(this.props.item.id)}>Delete
                     Item</button>
 
                 </div>

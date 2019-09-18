@@ -17,7 +17,7 @@ class MaintenanceList extends Component {
     // make a function to get all items line 20,31
     componentDidMount() {
         console.log(this.loggedInUser)
-        MaintenanceManager.getMaintenceItems(this.loggedInUser)
+        MaintenanceManager.getMaintenanceItems()
             .then((itemFromDB) => {
                 this.setState({
                     maintenanceItems: itemFromDB
@@ -28,7 +28,7 @@ class MaintenanceList extends Component {
     deleteMaintenanceItem = id => {
         MaintenanceManager.deleteItem(id)
             .then(() => {
-                MaintenanceManager.getMaintenanceItems(this.loggedInUser)
+                MaintenanceManager.getMaintenanceItems()
                     .then((newItem) => {
                         this.setState({
                             maintenanceItems: newItem
@@ -49,7 +49,8 @@ console.log(this.state.maintenanceItems)
                         Add Maintenance
                     </button>
                 </section>
-                    {this.state.maintenanceItems.map(item =>
+                    {this.state.maintenanceItems.filter(unfiltered => unfiltered.item.userId === this.loggedInUser)
+                    .map(item =>
                     <MaintenanceCard
                             key={item.id}
                             item={item}

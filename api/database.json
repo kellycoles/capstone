@@ -17,11 +17,6 @@
       "email": "kellycoles1@gmail.com",
       "password": "123",
       "id": 3
-    },
-    {
-      "email": "fthis@f.com",
-      "password": "555",
-      "id": 4
     }
   ],
   "items": [
@@ -36,49 +31,17 @@
       "notes": "radiator repair ",
       "userId": 3
     },
+
     {
-      "name": "Otto",
-      "year": "aa",
-      "model": "aaa",
-      "categoryId": 2,
-      "image": "aa",
-      "manual": "aaa",
-      "notes": "aaa",
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "id": 3,
+      "id": 2,
       "name": "mower",
       "year": "2003",
       "model": "cub cadet",
-      "categoryId": 3,
+      "categoryId": 5,
       "image": "upload image",
       "manual": "upload manual",
       "notes": "oil filter: briggs 4322, oil: 30",
       "userId": 4
-    },
-    {
-      "name": "gggggggggggggggg",
-      "year": "ggggggggggggggg",
-      "model": "gggggggggggggggggg",
-      "categoryId": 1,
-      "image": "gggggggggggggg",
-      "manual": "ggggggggggg",
-      "notes": "ggggggggggggggggggg",
-      "userId": 4,
-      "id": 4
-    },
-    {
-      "id": 5,
-      "name": "bbbb",
-      "year": "bbbb",
-      "model": "bbbb",
-      "categoryId": 1,
-      "image": "bbbb",
-      "manual": "bbbb",
-      "notes": "b",
-      "userId": 3
     }
   ],
   "maintenanceItems": [
@@ -93,12 +56,12 @@
     },
     {
       "id": 2,
-      "name": "truck",
+      "name": "mower",
       "title": "oil change",
-      "details": "changed the oil at 250,000 miles",
-      "parts": "6 quarts 5 w 20 oil and p216 Fram oil filter",
+      "details": "the usual",
+      "parts": "1.5 quarts sae 30 oil, brigs filter:2117",
       "date": "2019, 10,10",
-      "itemId": 1
+      "itemId": 2
     }
   ],
   "categories": [
@@ -123,7 +86,7 @@
       "id": 5
     },
     {
-      "type": "auto",
+      "type": "other",
       "id": 6
     }
   ],

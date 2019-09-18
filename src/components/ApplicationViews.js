@@ -22,7 +22,7 @@ export default class ApplicationViews extends Component {
                 <Route exact path="/" component={welcome} />
                 <Route path="/registration" component={registration} />
                 <Route path="/login" component={login} />
-                
+
                 <Route exact path="/items" render={props => {
                     if (this.isAuthenticated()) {
                         return <ItemList {...props} />
@@ -41,7 +41,7 @@ export default class ApplicationViews extends Component {
                     return <ItemDetails itemId={parseInt(props.match.params.itemId)}{...props} />
                 }} />
 
-                 <Route exact path="/maintenceItems" render={props => {
+                 <Route exact path="/maintenanceItems" render={props => {
                     if (this.isAuthenticated()) {
                         return <MaintenanceList {...props} />
                     } else {

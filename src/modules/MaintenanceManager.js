@@ -4,8 +4,8 @@ export default {
     getItem(id) {
         return fetch(`${remoteURL}/maintenanceItems/${id}`).then(result => result.json())
     },
-    getMaintenanceItems(userId) {
-        return fetch(`${remoteURL}/maintenanceItems/userId=${userId}`) 
+    getMaintenanceItems() {
+        return fetch(`${remoteURL}/maintenanceItems?&_expand=item`) 
             .then(result => result.json())
     },
 
