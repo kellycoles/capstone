@@ -4,14 +4,13 @@ export default {
     getItem(id) {
         return fetch(`${remoteURL}/maintenanceItems/${id}`).then(result => result.json())
     },
-    getMaintenanceItems(id, userId) {
-        return fetch(`${remoteURL}/maintenanceItems/${id}&userId=${userId}`)
+    getMaintenanceItems(userId) {
+        return fetch(`${remoteURL}/maintenanceItems/userId=${userId}`) 
             .then(result => result.json())
     },
 
-    getAllMaintenceItems(userId) {
-        return fetch(`${remoteURL}/maintenanceItems?userId=${userId}&_expand=item`)
-
+    getMaintenceOneItem(itemId) {
+        return fetch(`${remoteURL}/maintenanceItems?itemId=${itemId}&_expand=item`) 
         .then(result => result.json())
     },
     deleteMaintenanceItem(id) {

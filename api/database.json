@@ -17,6 +17,11 @@
       "email": "kellycoles1@gmail.com",
       "password": "123",
       "id": 3
+    },
+    {
+      "email": "fthis@f.com",
+      "password": "555",
+      "id": 4
     }
   ],
   "items": [
@@ -41,6 +46,39 @@
       "notes": "aaa",
       "userId": 2,
       "id": 2
+    },
+    {
+      "id": 3,
+      "name": "mower",
+      "year": "2003",
+      "model": "cub cadet",
+      "categoryId": 3,
+      "image": "upload image",
+      "manual": "upload manual",
+      "notes": "oil filter: briggs 4322, oil: 30",
+      "userId": 4
+    },
+    {
+      "name": "gggggggggggggggg",
+      "year": "ggggggggggggggg",
+      "model": "gggggggggggggggggg",
+      "categoryId": 1,
+      "image": "gggggggggggggg",
+      "manual": "ggggggggggg",
+      "notes": "ggggggggggggggggggg",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "bbbb",
+      "year": "bbbb",
+      "model": "bbbb",
+      "categoryId": 1,
+      "image": "bbbb",
+      "manual": "bbbb",
+      "notes": "b",
+      "userId": 3
     }
   ],
   "maintenanceItems": [
@@ -51,8 +89,16 @@
       "details": "changed the oil at 250,000 miles",
       "parts": "6 quarts 5 w 20 oil and p216 Fram oil filter",
       "date": "2019, 10,10",
-      "itemId": 1,
-      "userId": 3
+      "itemId": 1
+    },
+    {
+      "id": 2,
+      "name": "truck",
+      "title": "oil change",
+      "details": "changed the oil at 250,000 miles",
+      "parts": "6 quarts 5 w 20 oil and p216 Fram oil filter",
+      "date": "2019, 10,10",
+      "itemId": 1
     }
   ],
   "categories": [
@@ -65,12 +111,20 @@
       "id": 2
     },
     {
-      "type": "home",
+      "type": "electronics",
       "id": 3
     },
     {
-      "type": "lawn",
+      "type": "home",
       "id": 4
+    },
+    {
+      "type": "lawn",
+      "id": 5
+    },
+    {
+      "type": "auto",
+      "id": 6
     }
   ],
   "tasks": []

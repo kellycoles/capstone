@@ -4,7 +4,6 @@ import { Route, withRouter, Redirect } from "react-router-dom"
 import login from './authentication/login'
 import welcome from "./authentication/welcome";
 import registration from "./authentication/registration";
-import CategoryList from './item/CategoryList'
 import ItemList from './item/ItemList'
 import ItemForm from './item/ItemForm'
 import ItemDetails from './item/ItemDetails'
@@ -23,11 +22,7 @@ export default class ApplicationViews extends Component {
                 <Route exact path="/" component={welcome} />
                 <Route path="/registration" component={registration} />
                 <Route path="/login" component={login} />
-
-                <Route exact path="/categories" render={(props) => {
-                    return <CategoryList {...props} />
-                }} />
-
+                
                 <Route exact path="/items" render={props => {
                     if (this.isAuthenticated()) {
                         return <ItemList {...props} />

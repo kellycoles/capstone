@@ -14,9 +14,10 @@ class MaintenanceList extends Component {
   //store the logged in user's id to use later to show only that person's data
     loggedInUser = parseInt(sessionStorage.getItem("activeUser"))
 
+    // make a function to get all items line 20,31
     componentDidMount() {
         console.log(this.loggedInUser)
-        MaintenanceManager.getAllMaintenceItems(this.loggedInUser)
+        MaintenanceManager.getMaintenceItems(this.loggedInUser)
             .then((itemFromDB) => {
                 this.setState({
                     maintenanceItems: itemFromDB
@@ -27,7 +28,7 @@ class MaintenanceList extends Component {
     deleteMaintenanceItem = id => {
         MaintenanceManager.deleteItem(id)
             .then(() => {
-                MaintenanceManager.getAllMaintenanceItems(this.loggedInUser)
+                MaintenanceManager.getMaintenanceItems(this.loggedInUser)
                     .then((newItem) => {
                         this.setState({
                             maintenanceItems: newItem
@@ -37,9 +38,10 @@ class MaintenanceList extends Component {
     }
 
     render() {
-console.log(this.state.items)
+console.log(this.state.maintenanceItems)
         return (
             <>
+            <h1>My Maintenance</h1>
                 <section className="section-content">
                     <button type="button"
                         className="card"
@@ -47,7 +49,7 @@ console.log(this.state.items)
                         Add Maintenance
                     </button>
                 </section>
-                    {this.state.items.map(item =>
+                    {this.state.maintenanceItems.map(item =>
                     <MaintenanceCard
                             key={item.id}
                             item={item}

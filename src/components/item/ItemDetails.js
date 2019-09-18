@@ -5,18 +5,17 @@ import ItemsManager from '../../modules/ItemsManager';
 class ItemDetails extends Component {
 
     state = {
-        categoryId: "",
+        categoryId: "", //need type array?
         name: "",
         year: "",
         model: "",
-        image: "",              //??? image and manual This is where I want both of them to appear
-        manual: "",
+        image: "",              
         notes: "",
         loadingStatus: true,
     }
 
     componentDidMount() {
-        ItemsManager.getItem(this.props.itemId) 
+        ItemsManager.getItem(this.props.itemId)
             .then((item) => {
                 // .......// get the maint on the item
                 this.setState({
@@ -25,7 +24,6 @@ class ItemDetails extends Component {
                     year: item.year,
                     model: item.model,
                     image: item.image,
-                    manual: item.manual,
                     notes: item.notes,
                     loadingStatus: false
                 });
@@ -34,7 +32,7 @@ class ItemDetails extends Component {
 
     handleDelete = () => {
         this.setState({ loadingStatus: true })
-        ItemsManager.deleteItem(this.props.itemId)
+        ItemsManager.deleteItem(this.props.itemId)            //change this to delete maintenance on item, not the item
             .then(() => this.props.history.push("/items"))
     }
 
@@ -42,18 +40,16 @@ class ItemDetails extends Component {
         return (
             <div className="card">
                 <div className="card-content">
-                    {/* I want the card titile to be the category */}
-                <p>Category: {}</p>
-                <p>Image: {this.state.image}</p>
+                   
+                    <p>Image: {this.state.image}</p>
                     {/* <picture>
                     </picture> */}
-                    <h3><span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
+                    <h1><span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h1>
                     <p> {this.state.year} {this.state.model}</p>
                     <p>Notes: {this.state.notes}</p>
-                    {/* this is where I want to be able to view the manual */}
                     <p>Manual: {this.state.manual}</p>
-                    {/* i want to add edit here */}
-                    <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Delete</button>
+                    {/* re-code this delete to delete a maintenance*/}
+                    <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Delete Maintenance</button>
 
 
                 </div>

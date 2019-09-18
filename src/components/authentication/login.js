@@ -21,7 +21,7 @@ class Login extends Component {
             .then(results => {
                 if (results.length > 0) {
                     sessionStorage.setItem("activeUser", results[0].id)
-                    this.props.history.push("/CategoryList");
+                    this.props.history.push("/items");
 
                 } else {
                     alert("Incorrect email or password")

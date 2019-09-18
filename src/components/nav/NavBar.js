@@ -20,9 +20,7 @@ class NavBar extends Component {
                     <li className="nav-item">
                         <Link className="nav-link" to="/maintenanceItems">My Maintenance</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/maintenanceItems/new">Add Maintenance</Link>
-                    </li>
+                 
                 </ul>
             </nav>
         )

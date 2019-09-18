@@ -41,6 +41,7 @@ class ItemList extends Component {
 console.log(this.state.items)
         return (
             <>
+            <h1 className="center card">My Items</h1>
                 <section className="section-content">
                     <button type="button"
                         className="card"

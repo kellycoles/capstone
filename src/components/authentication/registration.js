@@ -6,7 +6,6 @@ class Registration extends Component {
 
     // Set initial state
     state = {
-        username: "",
         email: "",
         password: "",
         confirmPassword: ""
@@ -20,20 +19,17 @@ class Registration extends Component {
         this.setState(stateToChange)
     }
 
-    // Validate user credentials then
-    //Save new user to the database
     createNewUser = evt => {
         evt.preventDefault();
         UsersManager.getUsersData()
             .then(parsedUsers => {
-                if (parsedUsers.find(user => user.username.toLowerCase() === this.state.username.toLowerCase())) {
-                    alert("Username already exists")
-                } else if (parsedUsers.find(user => user.email.toLowerCase() === this.state.email.toLowerCase())) {
+
+                if (parsedUsers.find(user => user.email.toLowerCase() === this.state.email.toLowerCase())) {
                     alert("Email already exists")
                     console.log(this.state.email)
                 } else if (this.state.password !== this.state.confirmPassword) {
                     alert("Passwords dont match")
-                } else if (this.state.username === "" || this.state.email === "" || this.state.password === "") {
+                } else if (this.state.email === "" || this.state.password === "") {
                     alert("Please fill out all fields")
                 } else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email))) {
                     alert("Please enter a valid email address")
@@ -51,7 +47,7 @@ class Registration extends Component {
                     RegistrationManager.createNewUser(user)
                         .then(results => {
                             sessionStorage.setItem("activeUser", results.id)
-                            this.props.history.push("/CategoryList");
+                            this.props.history.push("/items");
 
                         })
 
@@ -66,12 +62,6 @@ class Registration extends Component {
                 <fieldset>
                     <h3>Register</h3>
                     <div className="formgrid">
-                        <input onChange={this.handleFieldChange} type="text"
-                            id="username"
-                            placeholder="Username"
-                            required="" autoFocus="" />
-                        <label htmlFor="inputUsername">Username</label>
-
                         <input onChange={this.handleFieldChange} type="email"
                             id="email"
                             placeholder="Email address"

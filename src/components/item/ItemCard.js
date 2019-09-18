@@ -9,15 +9,21 @@ class ItemCard extends Component {
         return (
             <div className="card">
                 <div className="card-content">
-                    {/* i want one category container for all items in that category */}
-                    <h3>Category: {this.props.item.category.type}</h3>
+                    {/*filter by category */}
+
+                       {/* <picture>
+                    </picture> */}
+                    {/* I want the category to be displayed differently than the way is is in the database ie lawn Lawn & Garden */}
+                    <h3>Category: {this.props.item.category.type}</h3>  
                     <h4><span className="card-petname"></span>{this.props.item.name}</h4>
                     <p>{this.props.item.year} {this.props.item.model}</p>
-                    <Link to={`/items/${this.props.item.id}`}><button>Details</button></Link>
-                    {/* I want to move these buttons to the details page */}
+                     <p>Notes: {this.props.item.notes}</p>
+                    <p>Manual: {this.props.item.manual}</p>
+                    <Link to={`/maintenanceItems/new`}><button>Add Maintenance</button></Link>
+                    <Link to={`/items/${this.props.item.id}`}><button>Maintenance Details</button></Link>
                     <button type="button"
-                        onClick={() => { this.props.history.push(`/items/${this.props.item.id}/edit`) }}>Edit</button>
-                    <button type="button" onClick={() => this.props.deleteItem(this.props.item.id)}>Delete
+                        onClick={() => { this.props.history.push(`/items/${this.props.item.id}/edit`) }}>Edit Item</button>
+                    <button type="button" onClick={() => this.props.deleteItem(this.props.item.id)}>Delete Item
                     Item</button>
 
                 </div>

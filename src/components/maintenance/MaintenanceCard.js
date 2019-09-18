@@ -15,9 +15,7 @@ class MaintenanceCard extends Component {
                     <p>{this.props.maintenanceItems.title}</p>
                     <p>{this.props.maintenanceItems.details}</p>
                     <p>{this.props.maintenanceItems.parts}</p>
-                    {/* not sure how or where to send content below, yet */}
-                    {/* <Link to={`/maintenanceItems/${this.props.maintenanceItem.id}`}><button>Details</button></Link> */}
-                    {/* I want to move these buttons to the details page */}
+                  
                     <button type="button"
                         onClick={() => { this.props.history.push(`/maintenanceItems/${this.props.maintenanceItems.id}/edit`) }}>Edit</button>
                     <button type="button" onClick={() => this.props.deleteItem(this.props.maintenancetems.id)}>Delete
