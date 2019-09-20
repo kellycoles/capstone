@@ -31,17 +31,27 @@
       "notes": "radiator repair ",
       "userId": 3
     },
-
     {
       "id": 2,
-      "name": "mower",
-      "year": "2003",
-      "model": "cub cadet",
-      "categoryId": 5,
-      "image": "upload image",
-      "manual": "upload manual",
-      "notes": "oil filter: briggs 4322, oil: 30",
-      "userId": 4
+      "name": "washer",
+      "year": "2006",
+      "model": "affinity",
+      "categoryId": 1,
+      "image": "none",
+      "manual": "coming soon",
+      "notes": "buggy control panel",
+      "userId": 1
+    },
+    {
+      "name": "washer",
+      "year": "US Department of Education",
+      "model": "affinity",
+      "categoryId": 1,
+      "image": "aaa",
+      "manual": "manual",
+      "notes": "buggy control panel",
+      "userId": 3,
+      "id": 3
     }
   ],
   "maintenanceItems": [
@@ -52,16 +62,9 @@
       "details": "changed the oil at 250,000 miles",
       "parts": "6 quarts 5 w 20 oil and p216 Fram oil filter",
       "date": "2019, 10,10",
+      "model": "ss",
+      "year": "ss",
       "itemId": 1
-    },
-    {
-      "id": 2,
-      "name": "mower",
-      "title": "oil change",
-      "details": "the usual",
-      "parts": "1.5 quarts sae 30 oil, brigs filter:2117",
-      "date": "2019, 10,10",
-      "itemId": 2
     }
   ],
   "categories": [

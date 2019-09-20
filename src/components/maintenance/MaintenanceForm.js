@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MaintenanceManager from '../../modules/MaintenanceManager';
-import CategoryManager from '../../modules/CategoryManager';
+import ItemsManager from '../../modules/ItemsManager';
 
 class MaintenanceForm extends Component {
     state = {
@@ -10,11 +10,13 @@ class MaintenanceForm extends Component {
         parts: "",
         date: "",
         itemId: "",
+        items: [],
         loadingStatus: false,
     };
     componentDidMount() {
-        CategoryManager.getAllItems()
-            .then(categories => this.setState({ categories }))
+        ItemsManager.getItems()
+            .then(items => this.setState({ items }))
+
     }
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -31,19 +33,23 @@ class MaintenanceForm extends Component {
             this.setState({ loadingStatus: true });
 
             const maintenance = {
+
                 name: this.state.name,
                 title: this.state.title,
                 details: this.state.details,
                 parts: this.state.parts,
                 date: this.state.date,
+                model: this.state.model,
+                year: this.state.year,
                 itemId: parseInt(this.state.itemId)
 
-            }; 
+            };
 
             MaintenanceManager.postMaintenanceItem(maintenance)
-                .then(() => this.props.history.push("/maintenanceItems"));
+                .then(() => this.props.history.push(`/maintenanceItems
+                `));
         }
-    };
+    }
 
     render() {
 
@@ -59,6 +65,7 @@ class MaintenanceForm extends Component {
                                 onChange={this.handleFieldChange}
                                 id="date"
 
+
                             />
                             <label htmlFor="date">Date of Maintenance:</label>
                             <input
@@ -69,6 +76,24 @@ class MaintenanceForm extends Component {
 
                             />
                             <label htmlFor="name">Name of Item</label>
+                            <input
+                                type="text"
+                                required
+                                onChange={this.handleFieldChange}
+                                id="model"
+
+                            />
+                            <label htmlFor="model">Model:</label>
+                            <input
+                                type="text"
+                                required
+                                onChange={this.handleFieldChange}
+                                id="year"
+
+                            />
+                            <label htmlFor="year">Year:</label>
+
+
                             <input
                                 type="text"
                                 required

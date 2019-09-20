@@ -19,12 +19,11 @@ class ItemCard extends Component {
                     <p>{this.props.item.year} {this.props.item.model}</p>
                      <p>Notes: {this.props.item.notes}</p>
                     <p>Manual: {this.props.item.manual}</p>
-                    <Link to={`/maintenanceItems/new`}><button>Add Maintenance</button></Link>
+                    <Link to={`/maintenanceItems/${this.props.item.id}/new`}><button>Add Maintenance</button></Link>
                     <Link to={`/items/${this.props.item.id}`}><button>Maintenance Details</button></Link>
                     <button type="button"
                         onClick={() => { this.props.history.push(`/items/${this.props.item.id}/edit`) }}>Edit Item</button>
-                    <button type="button" onClick={() => this.props.deleteItem(this.props.item.id)}>Delete Item
-                    Item</button>
+                    <button type="button" onClick={() => this.props.deleteItem(this.props.item.id)}>Delete Item</button>
 
                 </div>
             </div>

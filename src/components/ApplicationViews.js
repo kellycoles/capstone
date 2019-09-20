@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import { Route, withRouter, Redirect } from "react-router-dom"
 import login from './authentication/login'
@@ -11,7 +10,7 @@ import ItemEditForm from './item/ItemEditForm'
 import MaintenanceForm from './maintenance/MaintenanceForm'
 import MaintenanceList from './maintenance/MaintenanceList'
 // import MaintenanceDetails from './maintenance/MaintenanceDetails'
-// import MaintenancEditForm from './maintenance/MaintenanceEditForm'
+import MaintenanceEditForm from './maintenance/MaintenanceEditForm'
 
 export default class ApplicationViews extends Component {
     isAuthenticated = () => sessionStorage.getItem("activeUser") !== null
@@ -48,13 +47,13 @@ export default class ApplicationViews extends Component {
                         return <Redirect to="/login" />
                     }
                 }} />
-                <Route exact path="/maintenanceItems/new" render={(props) => {
+                <Route exact path="/maintenanceItems/:itemId(\d+)/new" render={(props) => {
                     return <MaintenanceForm {...props} />
                 }} />
-                {/* <Route path="/maintenceItems/:maintenceItemsId(\d+)/edit" render={props => {
+                <Route path="/maintenanceItems/:maintenanceItemsId(\d+)/edit" render={props => {
                     return <MaintenanceEditForm {...props} />
                 }}
-                /> */}
+                />
 
             </React.Fragment>
         )

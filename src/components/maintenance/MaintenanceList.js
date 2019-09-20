@@ -1,3 +1,5 @@
+
+  
 import React, { Component } from 'react'
 import MaintenanceCard from './MaintenanceCard'
 import MaintenanceManager from '../../modules/MaintenanceManager'
@@ -26,7 +28,7 @@ class MaintenanceList extends Component {
     }
 
     deleteMaintenanceItem = id => {
-        MaintenanceManager.deleteItem(id)
+        MaintenanceManager.deleteMaintenanceItem(id)
             .then(() => {
                 MaintenanceManager.getMaintenanceItems()
                     .then((newItem) => {
@@ -43,18 +45,14 @@ console.log(this.state.maintenanceItems)
             <>
             <h1>My Maintenance</h1>
                 <section className="section-content">
-                    <button type="button"
-                        className="card"
-                        onClick={() => { this.props.history.push("/maintenanceItems/new") }}>
-                        Add Maintenance
-                    </button>
+          
                 </section>
                     {this.state.maintenanceItems.filter(unfiltered => unfiltered.item.userId === this.loggedInUser)
                     .map(item =>
                     <MaintenanceCard
                             key={item.id}
                             item={item}
-                            deleteItem={this.deleteItem}
+                            deleteItem={this.deleteMaintenanceItem}
                             {...this.props} />
                     )}
             </>

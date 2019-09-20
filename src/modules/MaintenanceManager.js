@@ -1,3 +1,4 @@
+
 const remoteURL = "http://localhost:5002"
 
 export default {
@@ -29,7 +30,7 @@ export default {
         }).then(data => data.json());
     },
     postMaintenanceItem(newItem) {
-        return fetch(`${remoteURL}/maintenanceItems`, {
+        return fetch(`${remoteURL}/maintenanceItems/${newItem.id}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

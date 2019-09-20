@@ -4,10 +4,10 @@ export default {
     getItem(id) {
         return fetch(`${remoteURL}/items/${id}`).then(result => result.json())
     },
-    // getUserItems(id, userId) {
-    //     return fetch(`${remoteURL}/items/${id}&userId=${userId}`)
-    //         .then(result => result.json())
-    // },
+    getItems() {
+        return fetch(`${remoteURL}/items`)
+            .then(result => result.json())
+    },
 
     getAllItems(userId) {
         return fetch(`${remoteURL}/items?userId=${userId}&_expand=category`)

@@ -32,7 +32,7 @@ class ItemsEditForm extends Component {
       name: this.state.name,
       year: this.state.year,
       model: this.state.model,
-      categoryId:parseInt(this.state.categoryId),     //category
+      categoryId:parseInt(this.state.categoryId),    
       image: this.state.image,
       manual: this.state.manual,
       notes: this.state.notes,
@@ -77,7 +77,6 @@ class ItemsEditForm extends Component {
                 )
 
                 }
-{/* not sure about the select above */}
 
               </select>
               <input
