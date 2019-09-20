@@ -48,7 +48,7 @@ export default class ApplicationViews extends Component {
                     }
                 }} />
                 <Route exact path="/maintenanceItems/:itemId(\d+)/new" render={(props) => {
-                    return <MaintenanceForm {...props} />
+                    return <MaintenanceForm itemId={parseInt(props.match.params.itemId)}{...props}  />
                 }} />
                 <Route path="/maintenanceItems/:maintenanceItemsId(\d+)/edit" render={props => {
                     return <MaintenanceEditForm {...props} />

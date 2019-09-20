@@ -30,7 +30,7 @@ export default {
         }).then(data => data.json());
     },
     postMaintenanceItem(newItem) {
-        return fetch(`${remoteURL}/maintenanceItems/${newItem.id}`, {
+        return fetch(`${remoteURL}/maintenanceItems/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

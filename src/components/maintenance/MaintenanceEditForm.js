@@ -10,10 +10,7 @@ class MaintenanceEditForm extends Component {
         details: "",
         parts: "",
         date: "",
-        model: "",
-        year:"",
-        itemId: "",
-        items: [],
+        item: {},
         loadingStatus: false,
     };
 
@@ -30,13 +27,9 @@ class MaintenanceEditForm extends Component {
         const editedItem = {
             id: this.props.match.params.itemId,
             name: this.state.name,
-            title: this.state.title,
-            details: this.state.details,
-            parts: this.state.parts,
-            date: this.state.date,
             model: this.state.model,
             year: this.state.year,
-            itemId:parseInt(this.state.itemId)
+            itemId: parseInt(this.state.item.id)
         };
 
         MaintenanceManager.updateMaintenanceItem(editedItem)
@@ -45,13 +38,13 @@ class MaintenanceEditForm extends Component {
     //Below are the fields that populate the edit form
     componentDidMount() {
         ItemsManager.getItems()
-        .then(items => this.setState({ items }))
-        
+            .then(items => this.setState({ items }))
 
-        MaintenanceManager.getItem(this.props.match.params.itemId)
+
+        MaintenanceManager.getItem(this.props.match.params.item.id)
             .then(item => {
                 this.setState({
-                    name: item.name,
+                  
                     title: item.title,
                     details: item.details,
                     parts: item.parts,
@@ -68,36 +61,7 @@ class MaintenanceEditForm extends Component {
                 <form>
                     <fieldset>
                         <div className="formgrid">
-           
-                            <input
-                                type="text"
-                                required
-                                className="form-control"
-                                onChange={this.handleFieldChange}
-                                id="name"
-                                value={this.state.name}
-                            />
-                            <label htmlFor="name">Name</label>
-                            
-                            <input
-                                type="text"
-                                required
-                                className="form-control"
-                                onChange={this.handleFieldChange}
-                                id="model"
-                                value={this.state.model}
-                            />
-                            <label htmlFor="name">Model</label>
 
-                            <input
-                                type="text"
-                                required
-                                className="form-control"
-                                onChange={this.handleFieldChange}
-                                id="year"
-                                value={this.state.name}
-                            />
-                            <label htmlFor="year">Year</label>
                             <input
                                 type="text"
                                 required
@@ -134,7 +98,7 @@ class MaintenanceEditForm extends Component {
                                 value={this.state.date}
                             />
                             <label htmlFor="date">Date:</label>
-                        
+
                         </div>
                         <div className="alignRight">
                             <button

@@ -9,13 +9,12 @@ class MaintenanceForm extends Component {
         details: "",
         parts: "",
         date: "",
-        itemId: "",
-        items: [],
+        item: {},
         loadingStatus: false,
     };
     componentDidMount() {
-        ItemsManager.getItems()
-            .then(items => this.setState({ items }))
+        ItemsManager.getItem(this.props.itemId)
+            .then(item => this.setState({ item }))
 
     }
     handleFieldChange = evt => {
@@ -26,22 +25,18 @@ class MaintenanceForm extends Component {
 
     constructNewMaintenance = evt => {
         evt.preventDefault();
-        if (this.state.name === "" || this.state.title === "" || this.state.details === "" || this.state.parts === "" || this.state.category === "" || this.state.date === "") {
+        if (this.state.title === "" || this.state.details === "" || this.state.parts === "" || this.state.category === "" || this.state.date === "") {
             window.alert("Please complete all fields");
         } else {
 
             this.setState({ loadingStatus: true });
 
             const maintenance = {
-
-                name: this.state.name,
                 title: this.state.title,
                 details: this.state.details,
                 parts: this.state.parts,
                 date: this.state.date,
-                model: this.state.model,
-                year: this.state.year,
-                itemId: parseInt(this.state.itemId)
+                itemId: parseInt(this.state.item.id)
 
             };
 
@@ -52,11 +47,12 @@ class MaintenanceForm extends Component {
     }
 
     render() {
-
+        console.log(this.state)
         return (
             <>
-                <h1 className="center card">Maintenance Log Form</h1>
+                <h1 className="center card">Add Maintenance Form</h1>
                 <form>
+                    <h2>You are adding maintenance to: {this.state.item.name}</h2>
                     <fieldset>
                         <div className="formgrid">
                             <input
@@ -68,30 +64,6 @@ class MaintenanceForm extends Component {
 
                             />
                             <label htmlFor="date">Date of Maintenance:</label>
-                            <input
-                                type="text"
-                                required
-                                onChange={this.handleFieldChange}
-                                id="name"
-
-                            />
-                            <label htmlFor="name">Name of Item</label>
-                            <input
-                                type="text"
-                                required
-                                onChange={this.handleFieldChange}
-                                id="model"
-
-                            />
-                            <label htmlFor="model">Model:</label>
-                            <input
-                                type="text"
-                                required
-                                onChange={this.handleFieldChange}
-                                id="year"
-
-                            />
-                            <label htmlFor="year">Year:</label>
 
 
                             <input

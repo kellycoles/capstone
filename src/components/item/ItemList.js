@@ -15,8 +15,8 @@ class ItemList extends Component {
 // put getAllItems in a function call it in line 19 and line 31. sort by category in function
 
     componentDidMount() {
-        console.log(this.loggedInUser)
-        ItemsManager.getAllItems(this.loggedInUser)   //this is going to be a function call
+        ItemsManager.getAllItems(this.loggedInUser) 
+        
             .then((itemFromDB) => {
                 // sort category here
                 this.setState({
@@ -28,7 +28,7 @@ class ItemList extends Component {
     deleteItem = id => {
         ItemsManager.deleteItem(id)
             .then(() => {
-                ItemsManager.getAllItems(this.loggedInUser) //this is going to be a function call
+                ItemsManager.getAllItems(this.loggedInUser) 
                     .then((newItem) => {
                         this.setState({
                             items: newItem
@@ -38,7 +38,7 @@ class ItemList extends Component {
     }
 
     render() {
-console.log(this.state.items)
+// console.log(this.state.items)
         return (
             <>
             <h1 className="center card">My Items</h1>

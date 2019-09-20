@@ -28,7 +28,7 @@
       "categoryId": 2,
       "image": "image",
       "manual": "manual",
-      "notes": "radiator repair ",
+      "notes": "takes 5 20 oil",
       "userId": 3
     },
     {
@@ -43,28 +43,34 @@
       "userId": 1
     },
     {
-      "name": "washer",
-      "year": "US Department of Education",
-      "model": "affinity",
-      "categoryId": 1,
-      "image": "aaa",
-      "manual": "manual",
-      "notes": "buggy control panel",
-      "userId": 3,
-      "id": 3
+      "name": "mower",
+      "year": "2003",
+      "model": "cub",
+      "categoryId": 5,
+      "image": "none",
+      "manual": "none",
+      "notes": "yellow",
+      "userId": 1,
+      "id": 4
     }
   ],
   "maintenanceItems": [
     {
       "id": 1,
-      "name": "truck",
       "title": "oil change",
       "details": "changed the oil at 250,000 miles",
       "parts": "6 quarts 5 w 20 oil and p216 Fram oil filter",
       "date": "2019, 10,10",
-      "model": "ss",
-      "year": "ss",
       "itemId": 1
+    },
+    {
+    
+      "title": "w",
+      "details": "w",
+      "parts": "w",
+      "date": "2019-09-20",
+      "itemId": 1,
+      "id": 2
     }
   ],
   "categories": [
