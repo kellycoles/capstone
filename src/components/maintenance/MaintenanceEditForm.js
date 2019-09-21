@@ -25,10 +25,10 @@ class MaintenanceEditForm extends Component {
         this.setState({ loadingStatus: true });
 
         const editedItem = {
-            id: this.props.match.params.itemId,
-            name: this.state.name,
-            model: this.state.model,
-            year: this.state.year,
+            title: this.state.title,
+            details: this.state.details,
+            parts: this.state.parts,
+            date: this.state.date,
             itemId: parseInt(this.state.item.id)
         };
 
@@ -41,7 +41,7 @@ class MaintenanceEditForm extends Component {
             .then(items => this.setState({ items }))
 
 
-        MaintenanceManager.getItem(this.props.match.params.item.id)
+        MaintenanceManager.getItem(this.props.match.params.itemId)
             .then(item => {
                 this.setState({
                   

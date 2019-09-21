@@ -38,7 +38,6 @@ class ItemList extends Component {
     }
 
     render() {
-// console.log(this.state.items)
         return (
             <>
             <h1 className="center card">My Items</h1>

@@ -10,6 +10,7 @@ import MaintenanceManager from '../../modules/MaintenanceManager'
 
 class MaintenanceList extends Component {
     //define what this component needs to render
+
     state = {
         maintenanceItems: [],
     }
