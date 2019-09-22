@@ -13,9 +13,9 @@ class ItemsEditForm extends Component {
     notes: "",
     userId: "",
     categoryId: "",
-    categories:[],
+    categories: [],
     loadingStatus: false,
-};
+  };
 
   handleFieldChange = evt => {
     const stateToChange = {}
@@ -32,7 +32,7 @@ class ItemsEditForm extends Component {
       name: this.state.name,
       year: this.state.year,
       model: this.state.model,
-      categoryId:parseInt(this.state.categoryId),    
+      categoryId: parseInt(this.state.categoryId),
       image: this.state.image,
       manual: this.state.manual,
       notes: this.state.notes,
@@ -46,7 +46,7 @@ class ItemsEditForm extends Component {
   componentDidMount() {
 
     CategoryManager.getAllItems()
-          .then(categories => this.setState({ categories }))
+      .then(categories => this.setState({ categories }))
 
     ItemsManager.getItem(this.props.match.params.itemId)
       .then(item => {
@@ -125,14 +125,12 @@ class ItemsEditForm extends Component {
                 value={this.state.manual}
               />
               <label htmlFor="manual">Manual:</label>
-              <input
-                type="text"
-                required
+              <textarea value={this.state.value}
                 onChange={this.handleFieldChange}
                 id="notes"
-                value={this.state.notes}
               />
               <label htmlFor="notes">Notes:</label>
+            
             </div>
             <div className="alignRight">
               <button

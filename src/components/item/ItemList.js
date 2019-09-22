@@ -16,9 +16,9 @@ class ItemList extends Component {
 
     componentDidMount() {
         ItemsManager.getAllItems(this.loggedInUser) 
-        
             .then((itemFromDB) => {
                 // sort category here
+                itemFromDB.sort((a, b) => (a.category.type > b.category.type) ? 1 : -1)
                 this.setState({
                     items: itemFromDB
                 })

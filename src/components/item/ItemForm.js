@@ -12,7 +12,7 @@ class ItemForm extends Component {
         notes: "",
         userId: "",
         categoryId: "",
-        categories:[],
+        categories: [],
         loadingStatus: false,
     };
     componentDidMount() {
@@ -27,7 +27,7 @@ class ItemForm extends Component {
 
     constructNewItem = evt => {
         evt.preventDefault();
-        if (this.state.name === "" || this.state.year === "" || this.state.model === "" || this.state.category === "") {
+        if (this.state.categoryId=== "" || this.state.name === "" || this.state.year === "" || this.state.model === "" || this.state.category === "") {
             window.alert("Please complete name, year, and model fields");
         } else {
 
@@ -59,65 +59,61 @@ class ItemForm extends Component {
                     <fieldset>
                         <div className="formgrid">
                             <select id="categoryId" value={this.state.category} onChange={this.handleFieldChange}>
-                            <option value="">Select Category</option>
-                                {this.state.categories.map(category=>
-                                <option key={category.id} value={category.id}>
-                                    {category.type}
-                                </option>
+                                <option value="">Select Category</option>
+                                {this.state.categories.map(category =>
+                                    <option key={category.id} value={category.id}>
+                                        {category.type}
+                                    </option>
                                 )
-
                                 }
-
-
                             </select>
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="name"
-
                             />
                             <label htmlFor="name">Name</label>
+
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="model"
-
                             />
                             <label htmlFor="model">Model:</label>
+
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="year"
-
                             />
                             <label htmlFor="year">Year:</label>
+
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="image"
-
                             />
                             <label htmlFor="image">Image:</label>
+
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="manual"
-
                             />
                             <label htmlFor="manual">Manual:</label>
-                            <input
-                                type="text"
-                                required
+
+
+                            <textarea value={this.state.value}
                                 onChange={this.handleFieldChange}
                                 id="notes"
-
                             />
                             <label htmlFor="notes">Notes:</label>
+
                         </div>
                         <div className="alignRight">
                             <button

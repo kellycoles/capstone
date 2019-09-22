@@ -5,7 +5,7 @@ import ItemsManager from "../../modules/ItemsManager"
 class MaintenanceEditForm extends Component {
     //set the initial state
     state = {
-        name: "",
+       
         title: "",
         details: "",
         parts: "",
@@ -13,7 +13,7 @@ class MaintenanceEditForm extends Component {
         item: {},
         loadingStatus: false,
     };
-
+  
     handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
@@ -25,11 +25,12 @@ class MaintenanceEditForm extends Component {
         this.setState({ loadingStatus: true });
 
         const editedItem = {
+            id: this.props.match.params.itemId,
             title: this.state.title,
             details: this.state.details,
             parts: this.state.parts,
             date: this.state.date,
-            itemId: parseInt(this.state.item.id)
+            itemId: parseInt(this.state.itemId)
         };
 
         MaintenanceManager.updateMaintenanceItem(editedItem)
@@ -38,13 +39,14 @@ class MaintenanceEditForm extends Component {
     //Below are the fields that populate the edit form
     componentDidMount() {
         ItemsManager.getItems()
-            .then(items => this.setState({ items }))
+            .then(item => this.setState({ 
+                item}))
 
 
         MaintenanceManager.getItem(this.props.match.params.itemId)
             .then(item => {
                 this.setState({
-                  
+                   
                     title: item.title,
                     details: item.details,
                     parts: item.parts,
@@ -56,9 +58,13 @@ class MaintenanceEditForm extends Component {
     }
 
     render() {
+        console.log('line 61',this.state)
         return (
             <>
+              <h1 className="center card">Edit Maintenance Form</h1>
                 <form>
+                    <h2>Edit maintenance on the {this.state.item.name}.</h2>
+                
                     <fieldset>
                         <div className="formgrid">
 
@@ -71,15 +77,12 @@ class MaintenanceEditForm extends Component {
                                 value={this.state.title}
                             />
                             <label htmlFor="title">Title</label>
-                            <input
-                                type="text"
-                                required
-                                className="form-control"
+
+                            <textarea value={this.state.value}
                                 onChange={this.handleFieldChange}
                                 id="details"
-                                value={this.state.details}
                             />
-                            <label htmlFor="details">Details</label>
+                            <label htmlFor="details">Details:</label>
 
                             <input
                                 type="text"

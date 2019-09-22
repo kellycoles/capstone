@@ -4,7 +4,6 @@ import ItemsManager from '../../modules/ItemsManager';
 
 class MaintenanceForm extends Component {
     state = {
-        name: "",
         title: "",
         details: "",
         parts: "",
@@ -32,6 +31,7 @@ class MaintenanceForm extends Component {
             this.setState({ loadingStatus: true });
 
             const maintenance = {
+
                 title: this.state.title,
                 details: this.state.details,
                 parts: this.state.parts,
@@ -39,7 +39,6 @@ class MaintenanceForm extends Component {
                 itemId: parseInt(this.state.item.id)
 
             };
-
             MaintenanceManager.postMaintenanceItem(maintenance)
                 .then(() => this.props.history.push(`/maintenanceItems
                 `));
@@ -52,45 +51,39 @@ class MaintenanceForm extends Component {
             <>
                 <h1 className="center card">Add Maintenance Form</h1>
                 <form>
-                    <h2>You are adding maintenance to: {this.state.item.name}</h2>
+                    <h2>Add maintenance to the {this.state.item.name}.</h2>
                     <fieldset>
                         <div className="formgrid">
+
                             <input
                                 type="date"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="date"
-
-
                             />
                             <label htmlFor="date">Date of Maintenance:</label>
-
 
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="title"
-
                             />
                             <label htmlFor="title">Maintenance Performed</label>
-                            <input
-                                type="text"
-                                required
+
+                            <textarea value={this.state.value}
                                 onChange={this.handleFieldChange}
                                 id="details"
-
                             />
-                            <label htmlFor="details">Maintenance Details:</label>
+                            <label htmlFor="details">Details:</label>
+
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="parts"
-
                             />
                             <label htmlFor="parts">Parts Used:</label>
-
 
                         </div>
                         <div className="alignRight">

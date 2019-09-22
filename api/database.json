@@ -21,47 +21,36 @@
   ],
   "items": [
     {
-      "id": 2,
       "name": "washer",
       "year": "2006",
       "model": "affinity",
       "categoryId": 1,
-      "image": "none",
-      "manual": "coming soon",
+      "image": "image",
+      "manual": "manual",
       "notes": "buggy control panel",
-      "userId": 1
-    },
-    {
-      "name": "mower",
-      "year": "2003",
-      "model": "cub",
-      "categoryId": 5,
-      "image": "none",
-      "manual": "none",
-      "notes": "yellow",
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "name": "computer",
-      "year": "2012",
-      "model": "toshiba",
-      "categoryId": 3,
-      "image": "h",
-      "manual": "h",
-      "notes": "h",
       "userId": 3,
-      "id": 5
+      "id": 1
+    },
+    {
+      "name": "Mazda",
+      "year": "2012",
+      "model": "Miata",
+      "categoryId": 2,
+      "image": "image",
+      "manual": "manual",
+      "notes": "fun car!",
+      "userId": 3,
+      "id": 2
     }
   ],
   "maintenanceItems": [
     {
+      "id": 2,
       "title": "Earthquake Markers",
-      "details": "he had a turd matted in fur",
-      "parts": "brush",
-      "date": "2019-09-20",
-      "itemId": 5,
-      "id": 1
+      "details": "hhhhhhhhhh",
+      "parts": "new stuff",
+      "date": "2019-09-25",
+      "itemId": 2
     }
   ],
   "categories": [

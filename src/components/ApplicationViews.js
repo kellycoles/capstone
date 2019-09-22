@@ -51,7 +51,7 @@ export default class ApplicationViews extends Component {
                     return <MaintenanceForm itemId={parseInt(props.match.params.itemId)}{...props}  />
                 }} />
                 <Route path="/maintenanceItems/:itemId(\d+)/edit" render={props => {
-                    return <MaintenanceEditForm itemId={parseInt(props.match.params.itemId)}{...props} />
+                    return <MaintenanceEditForm {...props} />
                 }}
                 />
 
