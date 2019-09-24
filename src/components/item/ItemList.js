@@ -12,7 +12,6 @@ class ItemList extends Component {
     }
     loggedInUser = parseInt(sessionStorage.getItem("activeUser"))
 
-// put getAllItems in a function call it in line 19 and line 31. sort by category in function
 
     componentDidMount() {
         ItemsManager.getAllItems(this.loggedInUser) 
@@ -41,13 +40,13 @@ class ItemList extends Component {
         return (
             <>
             <h1 className="center card">My Items</h1>
-                <section className="section-content">
+                {/* <section className="section-content">
                     <button type="button"
                         className="card"
                         onClick={() => { this.props.history.push("/items/new") }}>
                         Add Item
                     </button>
-                </section>
+                </section> */}
                     {this.state.items.map(item =>
                     <ItemCard
                             key={item.id}

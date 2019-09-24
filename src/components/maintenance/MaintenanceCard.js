@@ -18,7 +18,7 @@ class MaintenanceCard extends Component {
                     <p>Date: {this.props.item.date}</p>
                     <button type="button"
                         onClick={() => { this.props.history.push(`/maintenanceItems/${this.props.item.id}/edit`) }}>Edit Maintenance</button>
-                    <button type="button" onClick={() => this.props.deleteItem(this.props.item.id)}>Delete Maintenance
+                    <button type="button" onClick={() => {if(window.confirm('Delete the item?'))this.props.deleteItem(this.props.item.id)}}>Delete Maintenance
                     Item</button>
 
                 </div>

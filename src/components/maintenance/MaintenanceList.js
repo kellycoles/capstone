@@ -25,7 +25,6 @@ class MaintenanceList extends Component {
                 this.setState({
                     maintenanceItems: itemFromDB
                 })
-                console.log('line 28',itemFromDB)
             })
     }
 

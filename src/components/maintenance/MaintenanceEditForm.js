@@ -69,7 +69,14 @@ class MaintenanceEditForm extends Component {
 
                     <fieldset>
                         <div className="formgrid">
-
+                        <input
+                                type="date"
+                                required
+                                onChange={this.handleFieldChange}
+                                id="date"
+                                value={this.state.date}
+                            />
+                            <label htmlFor="date">Date:</label>
                             <input
                                 type="text"
                                 required
@@ -78,7 +85,7 @@ class MaintenanceEditForm extends Component {
                                 id="title"
                                 value={this.state.title}
                             />
-                            <label htmlFor="title">Title</label>
+                            <label htmlFor="title">Maintenance Performed:</label>
 
                             <textarea value={this.state.details}
                                 onChange={this.handleFieldChange}
@@ -94,15 +101,8 @@ class MaintenanceEditForm extends Component {
                                 id="parts"
                                 value={this.state.parts}
                             />
-                            <label htmlFor="parts">Parts</label>
-                            <input
-                                type="date"
-                                required
-                                onChange={this.handleFieldChange}
-                                id="date"
-                                value={this.state.date}
-                            />
-                            <label htmlFor="date">Date:</label>
+                            <label htmlFor="parts">Parts Used:</label>
+                        
 
                         </div>
                         <div className="alignRight">
