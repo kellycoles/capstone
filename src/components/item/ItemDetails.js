@@ -40,19 +40,21 @@ class ItemDetails extends Component {
         return (
             <>
                 <p>Image: {this.state.image}</p>
-                <h1>Maintenance History on: {this.state.year} {this.state.name} {this.state.model}</h1>
+                <h1>Maintenance History: {this.state.year} {this.state.name} {this.state.model}</h1>
 
                 <div className="card">
 
                     {this.state.maintenanceItem.map(maintItem =>
                         <div key={maintItem.id} className="card-content">
-                        
+
                             <p> {maintItem.date}</p>
                             <p>Maintenance: {maintItem.title}</p>
                             <p>Details: {maintItem.details}</p>
                             <p>Parts: {maintItem.parts}</p>
-
-                            <button type="button" disabled={this.state.loadingStatus} onClick={()=>this.handleDelete(maintItem.id)}>Delete Maintenance</button>
+                            <button type="button"
+                                onClick={() => { this.props.history.push(`/maintenanceItems/${maintItem.id}/edit`) }}>Edit Maintenance</button>
+                            <button type="button"
+                             disabled={this.state.loadingStatus} onClick={() => this.handleDelete(maintItem.id)}>Delete Maintenance</button>
                         </div>
                     )}
 

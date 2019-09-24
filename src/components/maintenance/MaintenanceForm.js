@@ -7,7 +7,7 @@ class MaintenanceForm extends Component {
         title: "",
         details: "",
         parts: "",
-        date: Date.now(),
+        date:"",
         item: {},
         loadingStatus: false,
     };

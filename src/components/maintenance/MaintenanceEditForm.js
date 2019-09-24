@@ -34,7 +34,7 @@ class MaintenanceEditForm extends Component {
         };
       
         MaintenanceManager.updateMaintenanceItem(editedItem)
-            .then(() => this.props.history.push("/maintenanceItems"))
+            .then(() => this.props.history.push(`/items/${this.state.itemId}`))
     }
 
     //Below are the fields that populate the edit form
@@ -80,7 +80,7 @@ class MaintenanceEditForm extends Component {
                             />
                             <label htmlFor="title">Title</label>
 
-                            <textarea value={this.state.value}
+                            <textarea value={this.state.details}
                                 onChange={this.handleFieldChange}
                                 id="details"
                             />
@@ -96,7 +96,7 @@ class MaintenanceEditForm extends Component {
                             />
                             <label htmlFor="parts">Parts</label>
                             <input
-                                type="text"
+                                type="date"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="date"
