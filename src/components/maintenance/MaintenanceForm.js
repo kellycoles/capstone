@@ -7,7 +7,7 @@ class MaintenanceForm extends Component {
         title: "",
         details: "",
         parts: "",
-        date: Date.now(),
+        date: new Date().toISOString().slice(0,10),
         item: {},
         loadingStatus: false,
     };
@@ -31,7 +31,6 @@ class MaintenanceForm extends Component {
             this.setState({ loadingStatus: true });
 
             const maintenance = {
-
                 title: this.state.title,
                 details: this.state.details,
                 parts: this.state.parts,
@@ -55,6 +54,7 @@ class MaintenanceForm extends Component {
                         <div className="formgrid">
 
                             <input
+                                value= {this.state.date}
                                 type="date"
                                 required
                                 onChange={this.handleFieldChange}
@@ -68,7 +68,7 @@ class MaintenanceForm extends Component {
                                 onChange={this.handleFieldChange}
                                 id="title"
                             />
-                            <label htmlFor="title">Maintenance Performed</label>
+                            <label htmlFor="title">Maintenance Performed:</label>
 
                             <textarea value={this.state.value}
                                 onChange={this.handleFieldChange}

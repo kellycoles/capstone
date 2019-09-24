@@ -9,11 +9,7 @@ class ItemCard extends Component {
         return (
             <div className="card">
                 <div className="card-content">
-                    {/*filter by category */}
-
-                       {/* <picture>
-                    </picture> */}
-                    {/* I want the category to be displayed differently than the way is is in the database ie lawn Lawn & Garden */}
+                  
                     <h3>Category: {this.props.item.category.type}</h3>  
                     <h4><span className="card-petname"></span>{this.props.item.name}</h4>
                     <p>{this.props.item.year} {this.props.item.model}</p>
@@ -23,7 +19,7 @@ class ItemCard extends Component {
                     <Link to={`/items/${this.props.item.id}`}><button>Maintenance Details</button></Link>
                     <button type="button"
                         onClick={() => { this.props.history.push(`/items/${this.props.item.id}/edit`) }}>Edit Item</button>
-                    <button type="button" onClick={() => this.props.deleteItem(this.props.item.id)}>Delete Item</button>
+                    <button type="button" onClick={() => {if(window.confirm('Delete the item?'))this.props.deleteItem(this.props.item.id)}}>Delete Item</button>
 
                 </div>
             </div>
@@ -32,4 +28,4 @@ class ItemCard extends Component {
     }
 }
 
-export default ItemCard;
+export default ItemCard

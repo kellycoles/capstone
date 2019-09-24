@@ -18,7 +18,7 @@ class ItemDetails extends Component {
             .then((item) => {
                 // .......// get the maint on the item
                 this.setState({
-                    itemId: item.itemId,
+                   
                     name: item.name,
                     year: item.year,
                     model: item.model,
@@ -26,7 +26,7 @@ class ItemDetails extends Component {
                     maintenanceItem: item.maintenanceItems,
                     loadingStatus: false
                 });
-                console.log('line 36', item)
+                console.log('item id is', item.id)
             });
     }
 
@@ -39,20 +39,26 @@ class ItemDetails extends Component {
     render() {
         return (
             <>
-                <p>Image: {this.state.image}</p>
-                <h1>Maintenance History on: {this.state.year} {this.state.name} {this.state.model}</h1>
-
+                <p>Image coming soon </p>
+                <h1>Maintenance History: {this.state.year}{this.state.model}{this.state.name}</h1>
+                <button type="button"
+                    onClick={() => { this.props.history.push(`/maintenanceItems/${this.props.itemId}/new`) }}>Add Maintenance
+                </button>
                 <div className="card">
 
                     {this.state.maintenanceItem.map(maintItem =>
                         <div key={maintItem.id} className="card-content">
-                        
+
                             <p> {maintItem.date}</p>
                             <p>Maintenance: {maintItem.title}</p>
                             <p>Details: {maintItem.details}</p>
                             <p>Parts: {maintItem.parts}</p>
 
-                            <button type="button" disabled={this.state.loadingStatus} onClick={()=>this.handleDelete(maintItem.id)}>Delete Maintenance</button>
+                            <button type="button"
+                                onClick={() => { this.props.history.push(`/maintenanceItems/${maintItem.id}/edit`) }}>Edit Maintenance</button>
+                            
+                            <button type="button"
+                                disabled={this.state.loadingStatus} onClick={() => {if(window.confirm('Delete the item?'))this.handleDelete(maintItem.id)}}>Delete Maintenance</button>
                         </div>
                     )}
 

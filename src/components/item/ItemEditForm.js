@@ -127,7 +127,7 @@ class ItemsEditForm extends Component {
                 value={this.state.manual}
               />
               <label htmlFor="manual">Manual:</label>
-              <textarea value={this.state.value}
+              <textarea value={this.state.notes}
                 onChange={this.handleFieldChange}
                 id="notes"
               />

@@ -17,6 +17,11 @@
       "email": "kellycoles1@gmail.com",
       "password": "123",
       "id": 3
+    },
+    {
+      "email": "andy@andy.com",
+      "password": "123",
+      "id": 4
     }
   ],
   "items": [
@@ -74,6 +79,28 @@
       "notes": "gas/oil mix fuel\nethanol free",
       "userId": 1,
       "id": 7
+    },
+    {
+      "id": 8,
+      "name": "mower",
+      "year": "2010",
+      "model": "murry",
+      "categoryId": 6,
+      "image": "url",
+      "manual": "url",
+      "notes": "notes about Andy's mower",
+      "userId": 4
+    },
+    {
+      "name": "bbbb",
+      "year": "bb",
+      "model": "bbb",
+      "categoryId": 6,
+      "image": "bb",
+      "manual": "bb",
+      "notes": "bbb",
+      "userId": 4,
+      "id": 10
     }
   ],
   "maintenanceItems": [
@@ -86,12 +113,12 @@
       "id": 11
     },
     {
+      "id": 12,
       "title": "Earthquake Markers",
       "details": "hfhfhfhfhfhfh",
-      "parts": "dfnkn",
+      "parts": "dfnkn/ edited from ",
       "date": "2019-09-20",
-      "itemId": 2,
-      "id": 12
+      "itemId": 2
     },
     {
       "title": "blades",
@@ -116,6 +143,30 @@
       "date": "2019-09-23",
       "itemId": 6,
       "id": 17
+    },
+    {
+      "title": "gggg",
+      "details": "gggg",
+      "parts": "gggg",
+      "date": 1569339154296,
+      "itemId": 2,
+      "id": 18
+    },
+    {
+      "id": 19,
+      "title": "test",
+      "details": "test",
+      "parts": "test",
+      "date": "2019-07-24",
+      "itemId": 8
+    },
+    {
+      "id": 20,
+      "title": "Earthquake Markers",
+      "details": "fff",
+      "parts": "fffff",
+      "date": "2019-09-24",
+      "itemId": 8
     }
   ],
   "categories": [
