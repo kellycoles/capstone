@@ -7,7 +7,7 @@ class MaintenanceForm extends Component {
         title: "",
         details: "",
         parts: "",
-        date: "",
+        date: Date.now(),
         item: {},
         loadingStatus: false,
     };
@@ -40,13 +40,12 @@ class MaintenanceForm extends Component {
 
             };
             MaintenanceManager.postMaintenanceItem(maintenance)
-                .then(() => this.props.history.push(`/maintenanceItems
-                `));
+                .then(() => this.props.history.push(`/items/${this.state.item.id}`))
+                
         }
     }
 
     render() {
-        console.log(this.state)
         return (
             <>
                 <h1 className="center card">Add Maintenance Form</h1>

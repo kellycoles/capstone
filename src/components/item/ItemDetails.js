@@ -1,59 +1,64 @@
 
 import React, { Component } from 'react';
-import ItemsManager from '../../modules/ItemsManager';
+import MaintenanceManager from '../../modules/MaintenanceManager';
 
 class ItemDetails extends Component {
 
     state = {
-        categoryId: "", //need type array?
+        itemId: "",
         name: "",
         year: "",
         model: "",
-        image: "",              
-        notes: "",
+        maintenanceItem: [],
         loadingStatus: true,
     }
 
     componentDidMount() {
-        ItemsManager.getItem(this.props.itemId)
+        MaintenanceManager.getAllMaintenceItem(this.props.itemId)
             .then((item) => {
                 // .......// get the maint on the item
                 this.setState({
-                    categoryId: item.categoryId,    //expand name        
+                    itemId: item.itemId,
                     name: item.name,
                     year: item.year,
                     model: item.model,
-                    image: item.image,
-                    notes: item.notes,
+                    //image maybe
+                    maintenanceItem: item.maintenanceItems,
                     loadingStatus: false
                 });
+                console.log('line 36', item)
             });
     }
 
-    handleDelete = () => {
+    handleDelete = (id) => {
         this.setState({ loadingStatus: true })
-        ItemsManager.deleteItem(this.props.itemId)            //change this to delete maintenance on item, not the item
-            .then(() => this.props.history.push("/items"))
+        MaintenanceManager.deleteMaintenanceItem(id)
+            .then(() => this.componentDidMount())
     }
 
     render() {
         return (
-            <div className="card">
-                <div className="card-content">
-                   
-                    <p>Image: {this.state.image}</p>
-                    {/* <picture>
-                    </picture> */}
-                    <h1><span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h1>
-                    <p> {this.state.year} {this.state.model}</p>
-                    <p>Notes: {this.state.notes}</p>
-                    <p>Manual: {this.state.manual}</p>
-                    {/* re-code this delete to delete a maintenance*/}
-                    <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Delete Maintenance</button>
+            <>
+                <p>Image: {this.state.image}</p>
+                <h1>{this.state.year} {this.state.name} {this.state.model}</h1>
 
+                <div className="card">
+
+                    {this.state.maintenanceItem.map(item =>
+                        <div key={item.id} className="card-content">
+                        
+                            <p> {item.date}</p>
+                            <p>Maintenance: {item.title}</p>
+                            <p>Details: {item.details}</p>
+                            <p>Parts: {item.parts}</p>
+
+                            <button type="button" disabled={this.state.loadingStatus} onClick={()=>this.handleDelete(item.id)}>Delete Maintenance</button>
+                        </div>
+                    )}
 
                 </div>
-            </div>
+
+            </>
         );
     }
 }

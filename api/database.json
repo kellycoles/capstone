@@ -21,18 +21,18 @@
   ],
   "items": [
     {
-      "name": "washer",
+      "name": "otto-washer",
       "year": "2006",
       "model": "affinity",
       "categoryId": 1,
       "image": "image",
       "manual": "manual",
       "notes": "buggy control panel",
-      "userId": 3,
+      "userId": 1,
       "id": 1
     },
     {
-      "name": "Mazda",
+      "name": "kelly-Mazda",
       "year": "2012",
       "model": "Miata",
       "categoryId": 2,
@@ -41,41 +41,87 @@
       "notes": "fun car!",
       "userId": 3,
       "id": 2
+    },
+    {
+      "name": "otto's mower",
+      "year": "2003",
+      "model": "cub",
+      "categoryId": 5,
+      "image": "coming soon",
+      "manual": "coming soon",
+      "notes": "otto loves his mower",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "kelly computer",
+      "year": "fff",
+      "model": "ffff",
+      "categoryId": 3,
+      "image": "fff",
+      "manual": "fff",
+      "notes": "ffff",
+      "userId": 3,
+      "id": 4
     }
   ],
   "maintenanceItems": [
     {
-      "id": 2,
+      "title": "mower",
+      "details": "ljvou",
+      "parts": "v gvou",
+      "date": "2019-09-17",
+      "itemId": 3,
+      "id": 5
+    },
+    {
+      "title": "washer maint",
+      "details": "bbbb",
+      "parts": "bbbb",
+      "date": "2019-09-11",
+      "itemId": 1,
+      "id": 7
+    },
+    {
+      "title": "computer maint 2",
+      "details": "ggg",
+      "parts": "ggg",
+      "date": "2019-09-23",
+      "itemId": 4,
+      "id": 11
+    },
+    {
       "title": "Earthquake Markers",
-      "details": "hhhhhhhhhh",
-      "parts": "new stuff",
-      "date": "2019-09-25",
-      "itemId": 2
+      "details": "hfhfhfhfhfhfh",
+      "parts": "dfnkn",
+      "date": "2019-09-20",
+      "itemId": 2,
+      "id": 12
     }
   ],
   "categories": [
     {
-      "type": "appliance",
+      "type": "Appliance",
       "id": 1
     },
     {
-      "type": "auto",
+      "type": "Auto",
       "id": 2
     },
     {
-      "type": "electronics",
+      "type": "Electronics",
       "id": 3
     },
     {
-      "type": "home",
+      "type": "Home",
       "id": 4
     },
     {
-      "type": "lawn",
+      "type": "Lawn & Garden",
       "id": 5
     },
     {
-      "type": "other",
+      "type": "Other",
       "id": 6
     }
   ],

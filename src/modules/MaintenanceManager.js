@@ -9,11 +9,13 @@ export default {
         return fetch(`${remoteURL}/maintenanceItems?&_expand=item`) 
             .then(result => result.json())
     },
-
-    getMaintenceOneItem(itemId) {
-        return fetch(`${remoteURL}/maintenanceItems?itemId=${itemId}&_expand=item`) 
+//below get all maintenance on one item
+    getAllMaintenceItem(itemId) {
+        return fetch(`${remoteURL}/items/${itemId}?_embed=maintenanceItems`) 
         .then(result => result.json())
     },
+
+    //post/edit/delete
     deleteMaintenanceItem(id) {
         return fetch(`${remoteURL}/maintenanceItems/${id}`, {
             method: "DELETE"

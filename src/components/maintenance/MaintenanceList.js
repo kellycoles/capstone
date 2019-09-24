@@ -19,7 +19,6 @@ class MaintenanceList extends Component {
 
     // make a function to get all items line 20,31
     componentDidMount() {
-        console.log(this.loggedInUser)
         MaintenanceManager.getMaintenanceItems()
             .then((itemFromDB) => {
                 itemFromDB.sort((a, b) => (a.item.name > b.item.name) ? 1 : -1)
@@ -42,7 +41,6 @@ class MaintenanceList extends Component {
     }
 
     render() {
-        console.log(this.state.maintenanceItems)
         return (
             <>
                 <h1>My Maintenance</h1>
