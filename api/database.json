@@ -21,17 +21,6 @@
   ],
   "items": [
     {
-      "name": "otto-washer",
-      "year": "2006",
-      "model": "affinity",
-      "categoryId": 1,
-      "image": "image",
-      "manual": "manual",
-      "notes": "buggy control panel",
-      "userId": 1,
-      "id": 1
-    },
-    {
       "name": "kelly-Mazda",
       "year": "2012",
       "model": "Miata",
@@ -63,25 +52,31 @@
       "notes": "ffff",
       "userId": 3,
       "id": 4
+    },
+    {
+      "name": "water heater",
+      "year": "2019",
+      "model": "ream",
+      "categoryId": 4,
+      "image": "img",
+      "manual": "man",
+      "notes": "its hot!",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "name": "Blower",
+      "year": "2003",
+      "model": "Redmax",
+      "categoryId": 5,
+      "image": "image",
+      "manual": "manual",
+      "notes": "gas/oil mix fuel\nethanol free",
+      "userId": 1,
+      "id": 7
     }
   ],
   "maintenanceItems": [
-    {
-      "title": "mower",
-      "details": "ljvou",
-      "parts": "v gvou",
-      "date": "2019-09-17",
-      "itemId": 3,
-      "id": 5
-    },
-    {
-      "title": "washer maint",
-      "details": "bbbb",
-      "parts": "bbbb",
-      "date": "2019-09-11",
-      "itemId": 1,
-      "id": 7
-    },
     {
       "title": "computer maint 2",
       "details": "ggg",
@@ -97,6 +92,30 @@
       "date": "2019-09-20",
       "itemId": 2,
       "id": 12
+    },
+    {
+      "title": "blades",
+      "details": "sharpened the blades greased bearings",
+      "parts": "none",
+      "date": "2019-09-23",
+      "itemId": 3,
+      "id": 15
+    },
+    {
+      "title": "general cl0eaning",
+      "details": "cleaned screen",
+      "parts": "none",
+      "date": "2019-09-24",
+      "itemId": 7,
+      "id": 16
+    },
+    {
+      "title": "install",
+      "details": "details about install",
+      "parts": "parts go here",
+      "date": "2019-09-23",
+      "itemId": 6,
+      "id": 17
     }
   ],
   "categories": [

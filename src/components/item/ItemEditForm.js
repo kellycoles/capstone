@@ -67,6 +67,8 @@ class ItemsEditForm extends Component {
     return (
       <>
         <form>
+          <h1>Edit Item Form</h1>
+          <h2>Edit: {this.state.name}</h2>
           <fieldset>
             <div className="formgrid">
               <select id="categoryId" value={this.state.categoryId} onChange={this.handleFieldChange}>

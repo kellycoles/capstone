@@ -5,7 +5,7 @@ import ItemsManager from "../../modules/ItemsManager"
 class MaintenanceEditForm extends Component {
     //set the initial state
     state = {
-
+        name:"",
         title: "",
         details: "",
         parts: "",
@@ -48,7 +48,7 @@ class MaintenanceEditForm extends Component {
         MaintenanceManager.getItem(this.props.match.params.itemId)
             .then(item => {
                 this.setState({
-
+                    name: item.item.name,
                     title: item.title,
                     details: item.details,
                     parts: item.parts,
@@ -56,16 +56,16 @@ class MaintenanceEditForm extends Component {
                     itemId: parseInt(item.itemId),
                     loadingStatus: false,
                 });
-              
             });
     }
 
     render() {
         return (
             <>
+           
                 <h1 className="center card">Edit Maintenance Form</h1>
                 <form>
-                    <h2>Edit maintenance on the {this.state.item.name}.</h2>
+                    <h2>Edit maintenance: {this.state.name}</h2>
 
                     <fieldset>
                         <div className="formgrid">

@@ -50,7 +50,7 @@ class MaintenanceForm extends Component {
             <>
                 <h1 className="center card">Add Maintenance Form</h1>
                 <form>
-                    <h2>Add maintenance to the {this.state.item.name}.</h2>
+                    <h2>Add maintenance: {this.state.item.name}</h2>
                     <fieldset>
                         <div className="formgrid">
 
