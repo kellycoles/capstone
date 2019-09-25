@@ -1,172 +1,124 @@
 {
   "users": [
     {
-      "username": "Otto",
       "email": "Otto@otto.com",
       "password": "456",
       "id": 1
     },
     {
-      "username": "joe",
-      "email": "joe@joe.com",
-      "password": "555",
-      "id": 2
-    },
-    {
-      "username": "kellycoles",
       "email": "kellycoles1@gmail.com",
       "password": "123",
-      "id": 3
-    },
-    {
-      "email": "andy@andy.com",
-      "password": "123",
-      "id": 4
+      "id": 2
     }
   ],
   "items": [
     {
-      "name": "kelly-Mazda",
-      "year": "2012",
-      "model": "Miata",
-      "categoryId": 2,
-      "image": "image",
-      "manual": "manual",
-      "notes": "fun car!",
-      "userId": 3,
-      "id": 2
-    },
-    {
-      "name": "otto's mower",
+      "name": "mower",
       "year": "2003",
-      "model": "cub",
+      "model": "cub cadet",
       "categoryId": 5,
-      "image": "coming soon",
-      "manual": "coming soon",
-      "notes": "otto loves his mower",
+      "image": "url",
+      "manual": "url",
+      "notes": "trick to starting",
       "userId": 1,
       "id": 3
     },
     {
-      "name": "kelly computer",
-      "year": "fff",
-      "model": "ffff",
-      "categoryId": 3,
-      "image": "fff",
-      "manual": "fff",
-      "notes": "ffff",
-      "userId": 3,
+      "name": "washer",
+      "year": "2006",
+      "model": "whirpool",
+      "categoryId": 1,
+      "image": "coming soon",
+      "manual": "url",
+      "notes": "front load washers require regular cleaning or the seal will mold.",
+      "userId": 1,
       "id": 4
     },
     {
-      "name": "water heater",
+      "name": "Water Heater",
       "year": "2019",
-      "model": "ream",
+      "model": "Rheem",
       "categoryId": 4,
-      "image": "img",
-      "manual": "man",
-      "notes": "its hot!",
+      "image": "none",
+      "manual": "url",
+      "notes": "installed 2019-setting is on low",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "name": "computer",
+      "year": "2011",
+      "model": "toshiba",
+      "categoryId": 3,
+      "image": "none",
+      "manual": "url",
+      "notes": "windows update is causing random reboot",
       "userId": 1,
       "id": 6
     },
     {
-      "name": "Blower",
-      "year": "2003",
-      "model": "Redmax",
-      "categoryId": 5,
-      "image": "image",
-      "manual": "manual",
-      "notes": "gas/oil mix fuel\nethanol free",
+      "name": "Sea Doo",
+      "year": "1997",
+      "model": "Bombardier",
+      "categoryId": 6,
+      "image": "url",
+      "manual": "url",
+      "notes": "fun, fun, fun!",
       "userId": 1,
       "id": 7
     },
     {
-      "id": 8,
-      "name": "mower",
-      "year": "2010",
-      "model": "murry",
-      "categoryId": 6,
-      "image": "url",
+      "name": "Dryer",
+      "year": "2006",
+      "model": "Whirlpool",
+      "categoryId": 1,
+      "image": "none",
       "manual": "url",
-      "notes": "notes about Andy's mower",
-      "userId": 4
-    },
-    {
-      "name": "bbbb",
-      "year": "bb",
-      "model": "bbb",
-      "categoryId": 6,
-      "image": "bb",
-      "manual": "bb",
-      "notes": "bbb",
-      "userId": 4,
-      "id": 10
+      "notes": "buggy control panel",
+      "userId": 1,
+      "id": 8
     }
   ],
   "maintenanceItems": [
     {
-      "title": "computer maint 2",
-      "details": "ggg",
-      "parts": "ggg",
-      "date": "2019-09-23",
-      "itemId": 4,
-      "id": 11
+      "title": "tune up",
+      "details": "installed new belt and heating element",
+      "parts": "heating element #4566635 belt #6788865",
+      "date": "2019-09-25",
+      "itemId": 8,
+      "id": 1
     },
     {
-      "id": 12,
-      "title": "Earthquake Markers",
-      "details": "hfhfhfhfhfhfh",
-      "parts": "dfnkn/ edited from ",
-      "date": "2019-09-20",
-      "itemId": 2
+      "title": "control panel",
+      "details": "installed new control panel",
+      "parts": "control panel # 7811903",
+      "date": "2019-08-01",
+      "itemId": 8,
+      "id": 2
+    },
+    {
+      "title": "date test",
+      "details": "tttttt",
+      "parts": "tttttt",
+      "date": "2019-07-17",
+      "itemId": 8,
+      "id": 3
     },
     {
       "title": "blades",
-      "details": "sharpened the blades greased bearings",
+      "details": "sharpened blades and greased bearings",
       "parts": "none",
-      "date": "2019-09-23",
+      "date": "2019-09-25",
       "itemId": 3,
-      "id": 15
+      "id": 5
     },
     {
-      "title": "general cl0eaning",
-      "details": "cleaned screen",
-      "parts": "none",
-      "date": "2019-09-24",
-      "itemId": 7,
-      "id": 16
-    },
-    {
-      "title": "install",
-      "details": "details about install",
-      "parts": "parts go here",
-      "date": "2019-09-23",
-      "itemId": 6,
-      "id": 17
-    },
-    {
-      "title": "gggg",
-      "details": "gggg",
-      "parts": "gggg",
-      "date": 1569339154296,
-      "itemId": 2,
-      "id": 18
-    },
-    {
-      "id": 19,
-      "title": "test",
-      "details": "test",
-      "parts": "test",
-      "date": "2019-07-24",
-      "itemId": 8
-    },
-    {
-      "id": 20,
-      "title": "Earthquake Markers",
-      "details": "fff",
-      "parts": "fffff",
-      "date": "2019-09-24",
-      "itemId": 8
+      "title": "ffff",
+      "details": "ffff",
+      "parts": "ffff",
+      "date": "2019-09-25",
+      "itemId": 8,
+      "id": 6
     }
   ],
   "categories": [

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ItemCard from './ItemCard'
 import ItemsManager from '../../modules/ItemsManager'
+import CategoryManager from '../../modules/CategoryManager'
 
 //===============================================================================
 // check classNames they are still animal
@@ -9,12 +10,18 @@ import ItemsManager from '../../modules/ItemsManager'
 class ItemList extends Component {
     state = {
         items: [],
+        categories: []
     }
     loggedInUser = parseInt(sessionStorage.getItem("activeUser"))
 
 
     componentDidMount() {
-        ItemsManager.getAllItems(this.loggedInUser) 
+
+        CategoryManager.getAllItems()
+            .then(categoriesFromDB => this.setState({ categories: categoriesFromDB }))
+
+
+        ItemsManager.getAllItems(this.loggedInUser)
             .then((itemFromDB) => {
                 // sort category here
                 itemFromDB.sort((a, b) => (a.category.type > b.category.type) ? 1 : -1)
@@ -27,7 +34,7 @@ class ItemList extends Component {
     deleteItem = id => {
         ItemsManager.deleteItem(id)
             .then(() => {
-                ItemsManager.getAllItems(this.loggedInUser) 
+                ItemsManager.getAllItems(this.loggedInUser)
                     .then((newItem) => {
                         this.setState({
                             items: newItem
@@ -39,21 +46,25 @@ class ItemList extends Component {
     render() {
         return (
             <>
-            <h1 className="center card">My Items</h1>
-                {/* <section className="section-content">
-                    <button type="button"
-                        className="card"
-                        onClick={() => { this.props.history.push("/items/new") }}>
-                        Add Item
-                    </button>
-                </section> */}
-                    {this.state.items.map(item =>
-                    <ItemCard
-                            key={item.id}
-                            item={item}
-                            deleteItem={this.deleteItem}  
-                            {...this.props} />
-                    )}
+                <h1 className="center card">My Items</h1>
+                {this.state.categories.map(category =>
+                    <React.Fragment>
+                        <h2>{category.type}</h2>
+                        <div>
+                            {this.state.items
+                                .filter(item => item.categoryId === category.id)
+                                .map(item =>
+
+                                    <ItemCard
+                                        key={item.id}
+                                        item={item}
+                                        deleteItem={this.deleteItem}
+                                        {...this.props} />
+                                )}
+                        </div>
+                    </React.Fragment>
+                )}
+
             </>
         )
     }
