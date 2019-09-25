@@ -17,7 +17,6 @@ class MaintenanceList extends Component {
     //store the logged in user's id to use later to show only that person's data
     loggedInUser = parseInt(sessionStorage.getItem("activeUser"))
 
-    // make a function to get all items line 20,31
     componentDidMount() {
         MaintenanceManager.getMaintenanceItems()
             .then((itemFromDB) => {

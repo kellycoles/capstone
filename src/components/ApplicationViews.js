@@ -26,11 +26,16 @@ export default class ApplicationViews extends Component {
                     if (this.isAuthenticated()) {
                         return <ItemList {...props} />
                     } else {
+                        // alert("Please register or log in")
                         return <Redirect to="/login" />
                     }
                 }} />
                 <Route exact path="/items/new" render={(props) => {
+                    if (this.isAuthenticated()) {
                     return <ItemForm {...props} />
+                       } else {
+                        return <Redirect to="/login"/>
+                    }
                 }} />
                 <Route exact path="/items/:itemId(\d+)/edit" render={props => {
                     return <ItemEditForm {...props} />
