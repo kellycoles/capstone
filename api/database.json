@@ -57,15 +57,15 @@
       "id": 6
     },
     {
+      "id": 7,
       "name": "Sea Doo",
       "year": "1997",
       "model": "Bombardier",
-      "categoryId": 6,
+      "categoryId": 2,
       "image": "url",
       "manual": "url",
       "notes": "fun, fun, fun!",
-      "userId": 1,
-      "id": 7
+      "userId": 1
     },
     {
       "name": "Dryer",

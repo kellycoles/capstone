@@ -5,7 +5,7 @@ export default {
         return fetch(`${remoteURL}/items/${id}`).then(result => result.json())
     },
     getItems() {
-        return fetch(`${remoteURL}/items`)
+        return fetch(`${remoteURL}/items?_sort=name`)
             .then(result => result.json())
     },
 
