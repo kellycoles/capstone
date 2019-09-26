@@ -23,7 +23,7 @@ class ItemList extends Component {
 
         ItemsManager.getAllItems(this.loggedInUser)
             .then((itemFromDB) => {
-                // sort category here
+                // sort category a-z
                 itemFromDB.sort((a, b) => (a.category.type > b.category.type) ? 1 : -1)
                 this.setState({
                     items: itemFromDB
@@ -48,7 +48,7 @@ class ItemList extends Component {
             <>
                 <h1 className="center card">My Items</h1>
                 {this.state.categories.map(category =>
-                    <React.Fragment>
+                    <React.Fragment key= {category.id}>
                         <h2>{category.type}</h2>
                         <div>
                             {this.state.items

@@ -24,6 +24,7 @@
       "id": 3
     },
     {
+      "id": 4,
       "name": "washer",
       "year": "2006",
       "model": "whirpool",
@@ -31,8 +32,7 @@
       "image": "coming soon",
       "manual": "url",
       "notes": "front load washers require regular cleaning or the seal will mold.",
-      "userId": 1,
-      "id": 4
+      "userId": 1
     },
     {
       "name": "Water Heater",
@@ -53,7 +53,7 @@
       "image": "none",
       "manual": "url",
       "notes": "windows update is causing random reboot",
-      "userId": 1,
+      "userId": 2,
       "id": 6
     },
     {
@@ -65,7 +65,7 @@
       "image": "url",
       "manual": "url",
       "notes": "fun, fun, fun!",
-      "userId": 1
+      "userId": 2
     },
     {
       "name": "Dryer",
@@ -81,27 +81,19 @@
   ],
   "maintenanceItems": [
     {
-      "title": "tune up",
-      "details": "installed new belt and heating element",
-      "parts": "heating element #4566635 belt #6788865",
-      "date": "2019-09-25",
-      "itemId": 8,
-      "id": 1
-    },
-    {
       "title": "control panel",
       "details": "installed new control panel",
       "parts": "control panel # 7811903",
       "date": "2019-08-01",
-      "itemId": 8,
+      "itemId": 7,
       "id": 2
     },
     {
       "title": "date test",
-      "details": "tttttt",
+      "details": "details on maint",
       "parts": "tttttt",
       "date": "2019-07-17",
-      "itemId": 8,
+      "itemId": 6,
       "id": 3
     },
     {
@@ -113,12 +105,20 @@
       "id": 5
     },
     {
-      "title": "ffff",
-      "details": "ffff",
-      "parts": "ffff",
-      "date": "2019-09-25",
-      "itemId": 8,
-      "id": 6
+      "title": "Maintenance List displayed by category",
+      "details": "testing",
+      "parts": "ggggg",
+      "date": "2019-09-26",
+      "itemId": 3,
+      "id": 7
+    },
+    {
+      "title": "belt",
+      "details": "new belt",
+      "parts": "belt",
+      "date": "2019-09-26",
+      "itemId": 4,
+      "id": 8
     }
   ],
   "categories": [

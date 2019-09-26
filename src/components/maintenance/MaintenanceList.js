@@ -3,26 +3,30 @@
 import React, { Component } from 'react'
 import MaintenanceCard from './MaintenanceCard'
 import MaintenanceManager from '../../modules/MaintenanceManager'
-
+import CategoryManager from '../../modules/CategoryManager'
 //===============================================================================
 // check classNames they are still animal
+
 //============================================================================
 
 class MaintenanceList extends Component {
-    //define what this component needs to render
 
     state = {
-        maintenanceItems: [],
+        items: [],
+        categories: []
     }
-    //store the logged in user's id to use later to show only that person's data
     loggedInUser = parseInt(sessionStorage.getItem("activeUser"))
 
     componentDidMount() {
-        MaintenanceManager.getMaintenanceItems()
+        CategoryManager.getAllItems()
+            .then(categoriesFromDB => this.setState({ categories: categoriesFromDB }))
+
+        MaintenanceManager.getItemsWithMaintenanceItems(this.loggedInUser)
             .then((itemFromDB) => {
-                itemFromDB.sort((a, b) => (a.item.name > b.item.name) ? 1 : -1)
+                itemFromDB.sort((a, b) => (a.name > b.name) ? 1 : -1)
                 this.setState({
-                    maintenanceItems: itemFromDB
+                    items: itemFromDB,
+
                 })
             })
     }
@@ -30,7 +34,7 @@ class MaintenanceList extends Component {
     deleteMaintenanceItem = id => {
         MaintenanceManager.deleteMaintenanceItem(id)
             .then(() => {
-                MaintenanceManager.getMaintenanceItems()
+                MaintenanceManager.getItemsWithMaintenanceItems()
                     .then((newItem) => {
                         this.setState({
                             maintenanceItems: newItem
@@ -40,20 +44,40 @@ class MaintenanceList extends Component {
     }
 
     render() {
+
         return (
             <>
                 <h1>My Maintenance</h1>
-                <section className="section-content">
+                {this.state.categories.map(category =>
+                    <React.Fragment key={category.id}>
+                        <h2>{category.type}</h2>
 
-                </section>
-                {this.state.maintenanceItems.filter(unfiltered => unfiltered.item.userId === this.loggedInUser)
-                    .map(item =>
-                        <MaintenanceCard
-                            key={item.id}
-                            item={item}
-                            deleteItem={this.deleteMaintenanceItem}
-                            {...this.props} />
-                    )}
+                        <div>
+                            {this.state.items
+                                .filter(item => item.categoryId === category.id)
+                                .map(item => 
+                                    <React.Fragment key={item.id}>
+                                        <h3>{item.name}</h3>
+                                        <div>
+                                            {item.maintenanceItems.map(maintenanceItem =>
+                                                // <MaintenanceCard
+                                                //     key={maintenanceItem .id}
+                                                //     item={maintenanceItem }
+                                                //     deleteItem={this.deleteMaintenanceItem}
+                                                //     {...this.props} />
+                                                <div  key={maintenanceItem .id}>{maintenanceItem.details}</div>
+                                            )
+                                            }
+                                        </div>
+                                    </React.Fragment>
+                                
+                                )}
+
+                        </div>
+
+                    </React.Fragment>
+
+                )}
             </>
         )
     }

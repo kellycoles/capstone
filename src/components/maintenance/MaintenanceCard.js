@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from "react-router-dom";
 
 //=======================================================
 // Check classNames they are still animal
@@ -8,8 +7,7 @@ class MaintenanceCard extends Component {
     render() {
         return (
             <div className="card">
-                <div className="card-content">
-                    {/* i want one category container for all items in that category */}
+                <div  className="card-content">
 
                     <h3><span className="card-petname"></span>{this.props.item.item.name}</h3>
                     <p>Maintenance: {this.props.item.title}</p>
