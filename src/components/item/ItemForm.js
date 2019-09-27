@@ -93,6 +93,7 @@ class ItemForm extends Component {
 
                             <input
                                 type="text"
+                                placeholder="URL"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="image"
@@ -101,6 +102,7 @@ class ItemForm extends Component {
 
                             <input
                                 type="text"
+                                placeholder="URL"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="manual"

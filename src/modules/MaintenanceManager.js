@@ -5,11 +5,11 @@ export default {
     getItem(id) {
         return fetch(`${remoteURL}/maintenanceItems/${id}?_expand=item`).then(result => result.json())
     },
-    getMaintenanceItems() {
-        return fetch(`${remoteURL}/maintenanceItems?&_expand=item`) 
+    getItemsWithMaintenanceItems(userId) {
+        return fetch(`${remoteURL}/items?_embed=maintenanceItems&_expand=category&userId=${userId}&_sort=categoryId`) 
             .then(result => result.json())
     },
-//below get all maintenance on one item
+//get all maintenance on one item
     getAllMaintenceItem(itemId) {
         return fetch(`${remoteURL}/items/${itemId}?_embed=maintenanceItems`) 
         .then(result => result.json())
