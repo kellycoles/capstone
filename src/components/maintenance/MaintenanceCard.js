@@ -9,7 +9,7 @@ class MaintenanceCard extends Component {
             <div className="card">
                 <div  className="card-content">
 
-                    <h3><span className="card-petname"></span>{this.props.item.item.name}</h3>
+                    <h3><span className="card-petname"></span>{this.props.item.name}</h3>
                     <p>Maintenance: {this.props.item.title}</p>
                     <p>Details: {this.props.item.details}</p>
                     <p>Parts: {this.props.item.parts}</p>

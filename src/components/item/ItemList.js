@@ -47,7 +47,8 @@ class ItemList extends Component {
         return (
             <>
                 <h1 className="center card">My Items</h1>
-                {this.state.categories.map(category =>
+                
+                {this.state.categories.map(category => 
                     <React.Fragment key= {category.id}>
                         <h2>{category.type}</h2>
                         <div>

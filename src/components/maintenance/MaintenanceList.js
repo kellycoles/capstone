@@ -55,22 +55,21 @@ class MaintenanceList extends Component {
                         <div>
                             {this.state.items
                                 .filter(item => item.categoryId === category.id)
-                                .map(item => 
+                                .map(item =>
                                     <React.Fragment key={item.id}>
                                         <h3>{item.name}</h3>
                                         <div>
                                             {item.maintenanceItems.map(maintenanceItem =>
-                                                // <MaintenanceCard
-                                                //     key={maintenanceItem .id}
-                                                //     item={maintenanceItem }
-                                                //     deleteItem={this.deleteMaintenanceItem}
-                                                //     {...this.props} />
-                                                <div  key={maintenanceItem .id}>{maintenanceItem.details}</div>
+                                                <MaintenanceCard
+                                                    key={maintenanceItem.id}
+                                                    item={maintenanceItem}
+                                                    deleteItem={this.deleteMaintenanceItem}
+                                                    {...this.props} />
                                             )
                                             }
                                         </div>
                                     </React.Fragment>
-                                
+
                                 )}
 
                         </div>
@@ -78,6 +77,7 @@ class MaintenanceList extends Component {
                     </React.Fragment>
 
                 )}
+
             </>
         )
     }

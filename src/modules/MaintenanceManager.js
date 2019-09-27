@@ -9,7 +9,7 @@ export default {
         return fetch(`${remoteURL}/items?_embed=maintenanceItems&_expand=category&userId=${userId}&_sort=categoryId`) 
             .then(result => result.json())
     },
-//below get all maintenance on one item
+//get all maintenance on one item
     getAllMaintenceItem(itemId) {
         return fetch(`${remoteURL}/items/${itemId}?_embed=maintenanceItems`) 
         .then(result => result.json())
