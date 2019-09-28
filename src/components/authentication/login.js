@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import UsersManager from "../../modules/UsersManager";
+import { Link } from "react-router-dom";
+import "./Authentication.css"
 class Login extends Component {
 
     // Set initial state
@@ -32,28 +34,35 @@ class Login extends Component {
     render() {
         return (
             <>
-            <form onSubmit={this.handleLogin}>
-                <fieldset>
-                    <h3>Please sign in</h3>
-                    <div className="formgrid">
-                        <input onChange={this.handleFieldChange} type="email"
-                            id="email"
-                            placeholder="Email address"
-                            required="" autoFocus="" />
-                        <label htmlFor="inputEmail">Email address</label>
-
-                        <input onChange={this.handleFieldChange} type="password"
-                            id="password"
-                            placeholder="Password"
-                            required="" />
-                        <label htmlFor="inputPassword">Password</label>
-                    </div>
-                    <button type="submit">
-                        Sign in
-            </button>
-                </fieldset>
-            </form>
-                <p>Or register a new account</p>
+                <div className="wrapper">
+                    <form onSubmit={this.handleLogin}>
+                        <h2>Login Form</h2>
+                        <div className="input-container">
+                            <picture className="authentication--icon">
+                                <img src={require('../../icons/email.png')} alt="envelope icon" />
+                            </picture>
+                            <input onChange={this.handleFieldChange} type="email"
+                                className="input-field"
+                                id="email"
+                                placeholder="Email address"
+                                required="" autoFocus="" />
+                        </div>
+                        <div className="input-container">
+                            <picture className="authentication--icon">
+                                <img src={require('../../icons/lock.png')} alt="lock icon" />
+                            </picture>
+                            <input onChange={this.handleFieldChange} type="password"
+                                className="input-field"
+                                id="password"
+                                placeholder="Password"
+                                required="" />
+                        </div>
+                        <button type="submit" className="btn">
+                            Login
+                        </button>
+                    </form>
+                <p className ="center">Or<br></br><Link to={"/Registration"} className="link">Register new account</Link></p>
+                </div>
             </>
         )
     }

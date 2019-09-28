@@ -8,7 +8,7 @@ class Welcome extends Component {
         return (
             <>
                 <div>
-                    <h1>Welcome to Maintenance Log</h1>
+                    <h1>Welcome to The Maintenance Log</h1>
                     
                 </div>
                 <div className="welcome--btns">

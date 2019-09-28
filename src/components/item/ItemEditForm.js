@@ -119,16 +119,20 @@ class ItemsEditForm extends Component {
                 value={this.state.image}
               />
               <label htmlFor="image">Image</label>
+
               <input
                 type="text"
                 required
+                className="form-control"
                 onChange={this.handleFieldChange}
                 id="manual"
                 value={this.state.manual}
               />
               <label htmlFor="manual">Manual:</label>
+
               <textarea value={this.state.notes}
                 onChange={this.handleFieldChange}
+                className="form-control"
                 id="notes"
               />
               <label htmlFor="notes">Notes:</label>

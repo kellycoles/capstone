@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&display=swap');
+
+/*Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font: 1.2em/1.5 'PT Sans Narrow', Arial, sans-serif;
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'PT Sans', sans-serif;
+  letter-spacing: 2px;
+}
