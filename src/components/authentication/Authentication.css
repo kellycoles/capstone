@@ -53,12 +53,12 @@ body {
 }
 .link {
 color: #ad4e2b;
+opacity: 0.8;
+
 }
 
-.link:hover {
-    opacity:.5; 
-}
-
+.link:hover,
 .btn:hover {
   opacity: 1;
+  box-shadow: 0 5px 10px -5px rgba(0,0,0,0.5);
 }

@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import UsersManager from "../../modules/UsersManager";
 import { Link } from "react-router-dom";
 import "./Authentication.css"
+
 class Login extends Component {
 
     // Set initial state

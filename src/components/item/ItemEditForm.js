@@ -142,7 +142,7 @@ class ItemsEditForm extends Component {
               <button
                 type="button" disabled={this.state.loadingStatus}
                 onClick={this.updateExistingItem}
-                className="btn btn-primary"
+                className="btn-primary"
               >Submit</button>
             </div>
           </fieldset>

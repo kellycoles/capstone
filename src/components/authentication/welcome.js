@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
+import "./Welcome.css"
 
 
 
@@ -7,9 +8,13 @@ class Welcome extends Component {
     render() {
         return (
             <>
-                <div>
-                    <h1>Welcome to The Maintenance Log</h1>
-                    
+                <div class="header-container">
+                    <div class="header">
+                        <picture className="logo--icon">
+                            <img src={require('../../icons/lg-logo.png')} alt="logo-icon" />
+                        </picture>
+                        <h1 class = "welcome">Welcome to The Maintenance Log</h1>
+                    </div>
                 </div>
                 <div className="welcome--btns">
                     <Link to="/Registration"><button className="register--btn">Register New Account</button></Link>
