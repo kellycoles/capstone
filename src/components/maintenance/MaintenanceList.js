@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import MaintenanceCard from './MaintenanceCard'
 import MaintenanceManager from '../../modules/MaintenanceManager'
 import CategoryManager from '../../modules/CategoryManager'
+import NavBar from "../site-nav/NavBar"
 //===============================================================================
 // check classNames they are still animal
 
@@ -47,6 +48,7 @@ class MaintenanceList extends Component {
 
         return (
             <>
+                <NavBar />
                 <h1>My Maintenance</h1>
                 {this.state.categories.map(category =>
                     <React.Fragment key={category.id}>

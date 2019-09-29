@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 import UsersManager from "../../modules/UsersManager";
 import { Link } from "react-router-dom";
-import "./Authentication.css"
+import "../Form.css"
+import NavBar from "../site-nav/NavBar"
 
 class Login extends Component {
 
@@ -35,9 +36,10 @@ class Login extends Component {
     render() {
         return (
             <>
+                <NavBar />
                 <div className="wrapper">
                     <form onSubmit={this.handleLogin}>
-                        <h2>Login Form</h2>
+                        <h1>Login Form</h1>
                         <div className="input-container">
                             <picture className="authentication--icon">
                                 <img src={require('../../icons/email.png')} alt="envelope icon" />
@@ -62,7 +64,7 @@ class Login extends Component {
                             Login
                         </button>
                     </form>
-                <p className ="center">Or<br></br><Link to={"/Registration"} className="link">Register new account</Link></p>
+                    <p className="center">Or<br></br><Link to={"/Registration"} className="link">Register new account</Link></p>
                 </div>
             </>
         )

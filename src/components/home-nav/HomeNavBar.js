@@ -3,11 +3,11 @@ import { Link } from "react-router-dom"
 
 
 
-class NavBar extends Component {
+class HomeNavBar extends Component {
     render() {
         return (
             <nav className="nav-container">
-                <div className="title">  <picture className="sm--logo--icon">
+                <div className="title">  <picture>
                     <img src={require('../../icons/tools-red.png')} alt="logo-icon" />
                 </picture><h1>The Maintenance Log</h1></div>
                 <ul className="nav">
@@ -30,4 +30,4 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar
+export default HomeNavBar
