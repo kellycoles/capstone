@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ItemsManager from '../../modules/ItemsManager';
 import CategoryManager from '../../modules/CategoryManager';
-
+import NavBar from "../site-nav/NavBar"
+// import "./Form.css"
 class ItemForm extends Component {
     state = {
         name: "",
@@ -27,7 +28,7 @@ class ItemForm extends Component {
 
     constructNewItem = evt => {
         evt.preventDefault();
-        if (this.state.categoryId=== "" || this.state.name === "" || this.state.year === "" || this.state.model === "" || this.state.category === "") {
+        if (this.state.categoryId === "" || this.state.name === "" || this.state.year === "" || this.state.model === "" || this.state.category === "") {
             window.alert("Please complete name, year, and model fields");
         } else {
 
@@ -54,11 +55,12 @@ class ItemForm extends Component {
 
         return (
             <>
-                <h1 className="center card">New Item Form</h1>
-                <form>
-                    <fieldset>
-                        <div className="formgrid">
-                            <select id="categoryId" value={this.state.category} onChange={this.handleFieldChange}>
+                <NavBar />
+                <div className="wrapper">
+                    <form>
+                        <h1>Add Item Form</h1>
+                        <div className="input-container">
+                            <select id="categoryId" className="select" value={this.state.category} onChange={this.handleFieldChange}>
                                 <option value="">Select Category</option>
                                 {this.state.categories.map(category =>
                                     <option key={category.id} value={category.id}>
@@ -67,66 +69,80 @@ class ItemForm extends Component {
                                 )
                                 }
                             </select>
+                        </div>
+
+                        <div className="input-container">
+                            <label htmlFor="name">Name:</label>
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
+                                className="sm-input-field"
                                 id="name"
                             />
-                            <label htmlFor="name">Name</label>
 
+                            <label htmlFor="model" className="left-margin">Model:</label>
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
+                                className="sm-input-field"
                                 id="model"
                             />
-                            <label htmlFor="model">Model:</label>
 
+                            <label htmlFor="year" className="left-margin">Year:</label>
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
+                                className="sm-input-field"
                                 id="year"
                             />
-                            <label htmlFor="year">Year:</label>
+                        </div>
 
+                        <div className="input-container">
+                            <label htmlFor="image">Image:</label>
                             <input
                                 type="text"
-                                placeholder="URL"
+                                placeholder="    URL"
                                 required
                                 onChange={this.handleFieldChange}
+                                className="input-field"
                                 id="image"
                             />
-                            <label htmlFor="image">Image:</label>
-
+                        </div>
+                        <div className="input-container">
+                            <label htmlFor="manual">Manual:</label>
                             <input
                                 type="text"
-                                placeholder="URL"
+                                placeholder="    URL"
                                 required
                                 onChange={this.handleFieldChange}
+                                className="input-field"
                                 id="manual"
                             />
-                            <label htmlFor="manual">Manual:</label>
+                        </div>
 
-
-                            <textarea value={this.state.value}
+                        <div className="input-container">
+                            <label htmlFor="manual">Notes:</label>
+                            <input
+                                type="text"
+                                placeholder=""
+                                required
                                 onChange={this.handleFieldChange}
+                                className="input-field"
                                 id="notes"
                             />
-                            <label htmlFor="notes">Notes:</label>
+                        </div>
 
-                        </div>
-                        <div className="alignRight">
-                            <button
-                                type="button"
-                                disabled={this.state.loadingStatus}
-                                onClick={this.constructNewItem
-                                }
-                            >Submit</button>
-                        </div>
-                    </fieldset>
-                </form>
+
+                        <button type="submit" className="btn"
+                            disabled={this.state.loadingStatus}
+                            onClick={this.constructNewItem
+                            }
+                        >Add Item</button>
+                    </form>
+                </div>
             </>
         )
     }

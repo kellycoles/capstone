@@ -3,11 +3,14 @@ import { Link } from "react-router-dom"
 
 
 
-class NavBar extends Component {
+class HomeNavBar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-light light-blue flex-md-nowrap p-0 shadow">
-                <ul className="nav nav-pills nav-fill">
+            <nav className="nav-container">
+                <div className="title">  <picture>
+                    <img src={require('../../icons/tools-red.png')} alt="logo-icon" />
+                </picture><h1>The Maintenance Log</h1></div>
+                <ul className="nav">
                     <li className="nav-item">
                         <Link className="nav-link" to="/">Home</Link>
                     </li>
@@ -20,11 +23,11 @@ class NavBar extends Component {
                     <li className="nav-item">
                         <Link className="nav-link" to="/maintenanceItems">My Maintenance</Link>
                     </li>
-                 
+
                 </ul>
             </nav>
         )
     }
 }
 
-export default NavBar
+export default HomeNavBar

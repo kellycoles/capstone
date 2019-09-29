@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+.wrapper {
+  width: 75%;
+  margin: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.input-container {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+/* login and register */
+.authentication--icon {
+  padding: 10px;
+  background: #ad4e2b;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+.select {
+  width: 25%;
+  padding: 10px;
+  outline: none;
+}
+.select,
+.md-input-field:hover,
+.sm-input-field:hover,
+.input-field:hover {
+  border: 2px solid #ad4e2b;
+}
+
+ .select,
+.md-input-field:focus,
+.sm-input-field:focus,
+.input-field:focus {
+  border: 2px solid #ad4e2b;
+}
+
+/* Set a style for the submit buttons */
+
+.btn {
+  background-color: #ad4e2b;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.link {
+  color: #ad4e2b;
+  opacity: 1;
+}
+
+.link:hover {
+  color: #404040;
+}
+
+.btn:hover {
+  opacity: 1;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+}
+/*============================================================
+ NEW ITEM FORM 
+ =============================================================*/
+
+/* to space 3 input boxes side by side */
+.sm-input-field {
+  width: 25%;
+  padding: 10px;
+  outline: none;
+}
+
+/* to space 3 input boxes side by side*/
+.left-margin{
+  margin-left: 31px;
+}
+/* to make labels look like icons fron login*/
+label {
+  padding: 10px;
+  background: #ad4e2b;
+  color: white;
+  width: 120px;
+  text-align: center;
+}
+/*============================================================
+ Add Maintenance FORM 
+ =============================================================*/
+
+/* to space 3 input boxes side by side */
+.md-input-field {
+  width: 40%;
+  padding: 10px;
+  outline: none;
+}
+
+/* to space 3 input boxes side by side*/
+.md-left-margin{
+  margin-left: 36px;
+}

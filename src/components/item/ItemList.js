@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ItemCard from './ItemCard'
 import ItemsManager from '../../modules/ItemsManager'
 import CategoryManager from '../../modules/CategoryManager'
+import NavBar from "../site-nav/NavBar"
 
 //===============================================================================
 // check classNames they are still animal
@@ -46,10 +47,11 @@ class ItemList extends Component {
     render() {
         return (
             <>
+                <NavBar />
                 <h1 className="center card">My Items</h1>
-                
-                {this.state.categories.map(category => 
-                    <React.Fragment key= {category.id}>
+
+                {this.state.categories.map(category =>
+                    <React.Fragment key={category.id}>
                         <h2>{category.type}</h2>
                         <div>
                             {this.state.items

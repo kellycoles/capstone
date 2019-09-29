@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import MaintenanceManager from '../../modules/MaintenanceManager';
 import ItemsManager from '../../modules/ItemsManager';
+import NavBar from "../site-nav/NavBar"
 
 class MaintenanceForm extends Component {
     state = {
         title: "",
         details: "",
         parts: "",
-        date: new Date().toISOString().slice(0,10),
+        date: new Date().toISOString().slice(0, 10),
         item: {},
         loadingStatus: false,
     };
@@ -40,61 +41,70 @@ class MaintenanceForm extends Component {
             };
             MaintenanceManager.postMaintenanceItem(maintenance)
                 .then(() => this.props.history.push(`/items/${this.state.item.id}`))
-                
+
         }
     }
 
     render() {
         return (
             <>
-                <h1 className="center card">Add Maintenance Form</h1>
-                <form>
-                    <h2>Add maintenance: {this.state.item.name}</h2>
-                    <fieldset>
-                        <div className="formgrid">
-
+                <NavBar />
+                <div className="wrapper">
+                    <h1>Add Maintenance Form</h1>
+                    <form>
+                        <h2>{this.state.item.name}</h2>
+                        <div className="input-container">
+                            <label htmlFor="date">Date:</label>
                             <input
-                                value= {this.state.date}
+                                value={this.state.date}
                                 type="date"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="date"
+                                className="md-input-field"
                             />
-                            <label htmlFor="date">Date of Maintenance:</label>
 
+                            <label htmlFor="title " className="md-left-margin">Maintenance:</label>
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="title"
+                                className="md-input-field"
                             />
-                            <label htmlFor="title">Maintenance Performed:</label>
+                        </div>
 
-                            <textarea value={this.state.value}
+                        <div className="input-container">
+                            <label htmlFor="details">Details:</label>
+                            <input
+                                type="text"
+                                required
                                 onChange={this.handleFieldChange}
                                 id="details"
+                                className="input-field"
                             />
-                            <label htmlFor="details">Details:</label>
-
+                        </div>
+                        <div className="input-container">
+                            <label htmlFor="parts">Parts:</label>
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="parts"
+                                className="input-field"
                             />
-                            <label htmlFor="parts">Parts Used:</label>
+                        </div>
 
-                        </div>
-                        <div className="alignRight">
-                            <button
-                                type="button"
-                                disabled={this.state.loadingStatus}
-                                onClick={this.constructNewMaintenance
-                                }
-                            >Submit</button>
-                        </div>
-                    </fieldset>
-                </form>
+                        <button
+                            type="submit" className="btn"
+                            disabled={this.state.loadingStatus}
+                            onClick={this.constructNewMaintenance
+                            }
+                        >Add Maintenance</button>
+
+
+                    </form>
+                </div>
             </>
         )
     }

@@ -1,11 +1,12 @@
 import React, { Component } from "react"
 import MaintenanceManager from "../../modules/MaintenanceManager"
 import ItemsManager from "../../modules/ItemsManager"
+import NavBar from "../site-nav/NavBar"
 
 class MaintenanceEditForm extends Component {
     //set the initial state
     state = {
-        name:"",
+        name: "",
         title: "",
         details: "",
         parts: "",
@@ -32,7 +33,7 @@ class MaintenanceEditForm extends Component {
             date: this.state.date,
             itemId: parseInt(this.state.itemId)
         };
-      
+
         MaintenanceManager.updateMaintenanceItem(editedItem)
             .then(() => this.props.history.push(`/items/${this.state.itemId}`))
     }
@@ -62,58 +63,66 @@ class MaintenanceEditForm extends Component {
     render() {
         return (
             <>
-           
-                <h1 className="center card">Edit Maintenance Form</h1>
-                <form>
-                    <h2>Edit maintenance: {this.state.name}</h2>
-
-                    <fieldset>
-                        <div className="formgrid">
-                        <input
+                <NavBar />
+                <div className="wrapper">
+                    <h1>Edit Maintenance Form</h1>
+                    <form>
+                        <h2>{this.state.name}</h2>
+                        <div className="input-container">
+                            <label htmlFor="date">Date:</label>
+                            <input
+                                value={this.state.date}
                                 type="date"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="date"
-                                value={this.state.date}
+                                className="md-input-field"
                             />
-                            <label htmlFor="date">Date:</label>
+
+                            <label htmlFor="title " className="md-left-margin">Maintenance:</label>
                             <input
+                                value={this.state.title}
                                 type="text"
                                 required
-                                className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="title"
-                                value={this.state.title}
+                                className="md-input-field"
                             />
-                            <label htmlFor="title">Maintenance Performed:</label>
+                        </div>
 
-                            <textarea value={this.state.details}
-                                onChange={this.handleFieldChange}
-                                id="details"
-                            />
+                        <div className="input-container">
                             <label htmlFor="details">Details:</label>
-
                             <input
+                                value={this.state.details}
                                 type="text"
                                 required
-                                className="form-control"
+                                onChange={this.handleFieldChange}
+                                id="details"
+                                className="input-field"
+                            />
+                        </div>
+                        <div className="input-container">
+                            <label htmlFor="parts">Parts:</label>
+                            <input
+                                value={this.state.parts}
+                                type="text"
+                                required
                                 onChange={this.handleFieldChange}
                                 id="parts"
-                                value={this.state.parts}
+                                className="input-field"
                             />
-                            <label htmlFor="parts">Parts Used:</label>
-                        
+                        </div>
 
-                        </div>
-                        <div className="alignRight">
-                            <button
-                                type="button" disabled={this.state.loadingStatus}
-                                onClick={this.updateExistingItem}
-                                className="btn btn-primary"
-                            >Submit</button>
-                        </div>
-                    </fieldset>
-                </form>
+                        <button
+                            type="submit" className="btn"
+                            disabled={this.state.loadingStatus}
+                            onClick={this.updateExistingItem
+                            }
+                        >Edit Maintenance</button>
+
+
+                    </form>
+                </div>
             </>
         );
     }

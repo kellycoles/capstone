@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import ItemsManager from "../../modules/ItemsManager"
 import CategoryManager from "../../modules/CategoryManager"
+import NavBar from "../site-nav/NavBar"
 
 class ItemsEditForm extends Component {
   //set the initial state
@@ -66,12 +67,13 @@ class ItemsEditForm extends Component {
   render() {
     return (
       <>
-        <form>
-          <h1>Edit Item Form</h1>
-          <h2>Edit: {this.state.name}</h2>
-          <fieldset>
-            <div className="formgrid">
-              <select id="categoryId" value={this.state.categoryId} onChange={this.handleFieldChange}>
+        <NavBar />
+        <div className="wrapper">
+          <form>
+            <h1>Edit Item Form</h1>
+            <h2>{this.state.name}</h2>
+            <div className="input-container">
+            <select id="categoryId" className="select" value={this.state.categoryId} onChange={this.handleFieldChange}>
                 {this.state.categories.map(category =>
                   <option key={category.id} value={category.id}>
                     {category.type}
@@ -81,68 +83,86 @@ class ItemsEditForm extends Component {
                 }
 
               </select>
+            </div>
+
+            <div className="input-container">
+              <label htmlFor="name">Name:</label>
               <input
                 type="text"
                 required
-                className="form-control"
                 onChange={this.handleFieldChange}
+                className="sm-input-field"
                 id="name"
-                value={this.state.name}
+                value= {this.state.name}
               />
-              <label htmlFor="name">Name</label>
 
+              <label htmlFor="model" className="left-margin">Model:</label>
               <input
                 type="text"
                 required
-                className="form-control"
                 onChange={this.handleFieldChange}
+                className="sm-input-field"
                 id="model"
-                value={this.state.model}
+                value= {this.state.model}
               />
-              <label htmlFor="model">Model</label>
-              <input
-                type="text"
-                required
-                className="form-control"
-                onChange={this.handleFieldChange}
-                id="year"
-                value={this.state.year}
-              />
-              <label htmlFor="year">Year</label>
 
+              <label htmlFor="year" className="left-margin">Year:</label>
               <input
                 type="text"
                 required
-                className="form-control"
                 onChange={this.handleFieldChange}
+                className="sm-input-field"
+                id="year"
+                value= {this.state.year}
+              />
+            </div>
+
+            <div className="input-container">
+              <label htmlFor="image">Image:</label>
+              <input
+                type="text"
+                placeholder="    URL"
+                required
+                onChange={this.handleFieldChange}
+                className="input-field"
                 id="image"
-                value={this.state.image}
+                value= {this.state.image}
               />
-              <label htmlFor="image">Image</label>
+            </div>
+            <div className="input-container">
+              <label htmlFor="manual">Manual:</label>
               <input
                 type="text"
+                placeholder="    URL"
                 required
                 onChange={this.handleFieldChange}
+                className="input-field"
                 id="manual"
-                value={this.state.manual}
+                value= {this.state.manual}
               />
-              <label htmlFor="manual">Manual:</label>
-              <textarea value={this.state.notes}
+            </div>
+
+            <div className="input-container">
+              <label htmlFor="manual">Notes:</label>
+              <input
+                type="text"
+                placeholder=""
+                required
                 onChange={this.handleFieldChange}
+                className="input-field"
                 id="notes"
+                value= {this.state.notes}
               />
-              <label htmlFor="notes">Notes:</label>
-            
             </div>
-            <div className="alignRight">
-              <button
-                type="button" disabled={this.state.loadingStatus}
-                onClick={this.updateExistingItem}
-                className="btn btn-primary"
-              >Submit</button>
-            </div>
-          </fieldset>
-        </form>
+
+
+            <button type="submit" className="btn"
+              disabled={this.state.loadingStatus}
+              onClick={this.updateExistingItem
+              }
+            > Edit Item</button>
+          </form>
+        </div>
       </>
     );
   }

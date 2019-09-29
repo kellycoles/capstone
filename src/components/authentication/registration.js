@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 import RegistrationManager from "../../modules/RegistrationManager";
 import UsersManager from "../../modules/UsersManager";
-
+import "../Form.css"
+import NavBar from "../site-nav/NavBar"
 class Registration extends Component {
 
     // Set initial state
@@ -58,33 +59,47 @@ class Registration extends Component {
 
     render() {
         return (
-            <form>
-                <fieldset>
-                    <h3>Register</h3>
-                    <div className="formgrid">
-                        <input onChange={this.handleFieldChange} type="email"
-                            id="email"
-                            placeholder="Email address"
-                            required="" />
-                        <label htmlFor="inputEmail">Email address</label>
-
-                        <input onChange={this.handleFieldChange} type="password"
-                            id="password"
-                            placeholder="Password"
-                            required="" />
-                        <label htmlFor="inputPassword">Password</label>
-
-                        <input onChange={this.handleFieldChange} type="password"
-                            id="confirmPassword"
-                            placeholder="Confirm Password"
-                            required="" />
-                        <label htmlFor="inputPassword">Confirm Password</label>
-                    </div>
-                    <button onClick={this.createNewUser} type="submit">
-                        Register New Account
+            <>
+                <NavBar />
+                <div className="wrapper">
+                    <form onSubmit={this.handleLogin}>
+                        <h1>Register Form</h1>
+                        <div className="input-container">
+                            <picture className="authentication--icon">
+                                <img src={require('../../icons/email.png')} alt="envelope icon" />
+                            </picture>
+                            <input onChange={this.handleFieldChange} type="email"
+                                className="input-field"
+                                id="email"
+                                placeholder="Email address"
+                                required="" autoFocus="" />
+                        </div>
+                        <div className="input-container">
+                            <picture className="authentication--icon">
+                                <img src={require('../../icons/lock.png')} alt="lock icon" />
+                            </picture>
+                            <input onChange={this.handleFieldChange} type="password"
+                                className="input-field"
+                                id="password"
+                                placeholder="Password"
+                                required="" />
+                        </div>
+                        <div className="input-container">
+                            <picture className="authentication--icon">
+                                <img src={require('../../icons/lock.png')} alt="lock icon" />
+                            </picture>
+                            <input onChange={this.handleFieldChange} type="password"
+                                className="input-field"
+                                id="password"
+                                placeholder="Confirm Password"
+                                required="" />
+                        </div>
+                        <button onClick={this.createNewUser} type="submit" className="btn">
+                            Register
                     </button>
-                </fieldset>
-            </form>
+                    </form>
+                </div>
+            </>
         )
     }
 

@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import MaintenanceManager from '../../modules/MaintenanceManager';
+import NavBar from "../site-nav/NavBar"
 
 class ItemDetails extends Component {
 
@@ -38,6 +39,7 @@ console.log(item)
     render() {
         return (
             <>
+             <NavBar />
                 <p>Image coming soon </p>
                 <h1>Maintenance History: {this.state.year} {this.state.model} {this.state.name}</h1>
                 <button type="button"
