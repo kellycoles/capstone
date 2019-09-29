@@ -12,106 +12,10 @@
     }
   ],
   "items": [
-    {
-      "name": "mower",
-      "year": "2003",
-      "model": "cub cadet",
-      "categoryId": 5,
-      "image": "url",
-      "manual": "url",
-      "notes": "trick to starting",
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "id": 4,
-      "name": "washer",
-      "year": "2006",
-      "model": "whirpool",
-      "categoryId": 1,
-      "image": "coming soon",
-      "manual": "url",
-      "notes": "front load washers require regular cleaning or the seal will mold.",
-      "userId": 1
-    },
-    {
-      "name": "Water Heater",
-      "year": "2019",
-      "model": "Rheem",
-      "categoryId": 4,
-      "image": "none",
-      "manual": "url",
-      "notes": "installed 2019-setting is on low",
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "name": "computer",
-      "year": "2011",
-      "model": "toshiba",
-      "categoryId": 3,
-      "image": "none",
-      "manual": "url",
-      "notes": "windows update is causing random reboot",
-      "userId": 2,
-      "id": 6
-    },
-    {
-      "id": 7,
-      "name": "Sea Doo",
-      "year": "1997",
-      "model": "Bombardier",
-      "categoryId": 6,
-      "image": "url",
-      "manual": "url",
-      "notes": "fun, fun, fun!",
-      "userId": 2
-    },
-    {
-      "name": "Dryer",
-      "year": "2006",
-      "model": "Whirlpool",
-      "categoryId": 1,
-      "image": "none",
-      "manual": "url",
-      "notes": "buggy control panel",
-      "userId": 1,
-      "id": 8
-    }
+ 
   ],
   "maintenanceItems": [
-    {
-      "title": "control panel",
-      "details": "installed new control panel",
-      "parts": "control panel # 7811903",
-      "date": "2019-08-01",
-      "itemId": 7,
-      "id": 2
-    },
-    {
-      "title": "date test",
-      "details": "details on maint",
-      "parts": "tttttt",
-      "date": "2019-07-17",
-      "itemId": 6,
-      "id": 3
-    },
-    {
-      "title": "blades",
-      "details": "sharpened blades and greased bearings",
-      "parts": "none",
-      "date": "2019-09-25",
-      "itemId": 3,
-      "id": 5
-    },
-    {
-      "title": "belt",
-      "details": "new belt",
-      "parts": "belt",
-      "date": "2019-09-26",
-      "itemId": 4,
-      "id": 8
-    }
+  
   ],
   "categories": [
     {

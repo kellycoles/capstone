@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import MaintenanceManager from '../../modules/MaintenanceManager';
 import NavBar from "../site-nav/NavBar"
+import "../item/ItemList.css"
 
 class ItemDetails extends Component {
 
@@ -22,7 +23,6 @@ class ItemDetails extends Component {
                     name: item.name,
                     year: item.year,
                     model: item.model,
-                    //image maybe
                     maintenanceItem: item.maintenanceItems,
                     loadingStatus: false
                 });
@@ -40,19 +40,18 @@ console.log(item)
         return (
             <>
              <NavBar />
-                <p>Image coming soon </p>
-                <h1>Maintenance History: {this.state.year} {this.state.model} {this.state.name}</h1>
-                <button type="button"
+                <h1 className="center">Maintenance History: {this.state.year} {this.state.model} {this.state.name}</h1>
+                <button type="button" className="button"
                     onClick={() => { this.props.history.push(`/maintenanceItems/${this.props.itemId}/new`) }}>Add Maintenance
                 </button>
-                <div className="card">
+                <div className="card-container"> 
                     {this.state.maintenanceItem.map(maintItem =>
-                        <div key={maintItem.id} className="card-content">
+                        <div key={maintItem.id} className="card">
                            
-                            <p> {maintItem.date}</p>
-                            <p>Maintenance: {maintItem.title}</p>
-                            <p>Details: {maintItem.details}</p>
-                            <p>Parts: {maintItem.parts}</p>
+                            <p><span className="strong">Date:</span> {maintItem.date}</p>
+                            <p><span className="strong">Maintenance:</span> {maintItem.title}</p>
+                            <p><span className="strong">Details:</span> {maintItem.details}</p>
+                            <p><span className="strong">Parts:</span> {maintItem.parts}</p>
 
                             <button type="button"
                                 onClick={() => { this.props.history.push(`/maintenanceItems/${maintItem.id}/edit`) }}>Edit Maintenance</button>

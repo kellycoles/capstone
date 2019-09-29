@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import ItemsManager from "../../modules/ItemsManager"
 import CategoryManager from "../../modules/CategoryManager"
 import NavBar from "../site-nav/NavBar"
+import "../Form.css"
 
 class ItemsEditForm extends Component {
   //set the initial state
@@ -9,7 +10,6 @@ class ItemsEditForm extends Component {
     name: "",
     year: "",
     model: "",
-    image: "",
     manual: "",
     notes: "",
     userId: "",
@@ -34,7 +34,6 @@ class ItemsEditForm extends Component {
       year: this.state.year,
       model: this.state.model,
       categoryId: parseInt(this.state.categoryId),
-      image: this.state.image,
       manual: this.state.manual,
       notes: this.state.notes,
       userId: parseInt(sessionStorage.getItem('activeUser'))
@@ -56,7 +55,6 @@ class ItemsEditForm extends Component {
           year: item.year,
           model: item.model,
           categoryId: parseInt(item.categoryId),
-          image: item.image,
           manual: item.manual,
           notes: item.notes,
           loadingStatus: false,
@@ -71,7 +69,7 @@ class ItemsEditForm extends Component {
         <div className="wrapper">
           <form>
             <h1>Edit Item Form</h1>
-            <h2>{this.state.name}</h2>
+            
             <div className="input-container">
             <select id="categoryId" className="select" value={this.state.categoryId} onChange={this.handleFieldChange}>
                 {this.state.categories.map(category =>
@@ -118,18 +116,6 @@ class ItemsEditForm extends Component {
             </div>
 
             <div className="input-container">
-              <label htmlFor="image">Image:</label>
-              <input
-                type="text"
-                placeholder="    URL"
-                required
-                onChange={this.handleFieldChange}
-                className="input-field"
-                id="image"
-                value= {this.state.image}
-              />
-            </div>
-            <div className="input-container">
               <label htmlFor="manual">Manual:</label>
               <input
                 type="text"
@@ -160,7 +146,7 @@ class ItemsEditForm extends Component {
               disabled={this.state.loadingStatus}
               onClick={this.updateExistingItem
               }
-            > Edit Item</button>
+            > Save Changes</button>
           </form>
         </div>
       </>
