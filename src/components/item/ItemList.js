@@ -4,9 +4,7 @@ import ItemsManager from '../../modules/ItemsManager'
 import CategoryManager from '../../modules/CategoryManager'
 import NavBar from "../site-nav/NavBar"
 
-//===============================================================================
-// check classNames they are still animal
-//============================================================================
+
 
 class ItemList extends Component {
     state = {
@@ -48,26 +46,28 @@ class ItemList extends Component {
         return (
             <>
                 <NavBar />
-                <h1 className="center card">My Items</h1>
+                <h1 className="center">My Items</h1>
+                <div className="card-container">
+                    {this.state.categories.map(category =>
+                        <React.Fragment key={category.id}>
+                         
+                                <h2>{category.type}</h2>
 
-                {this.state.categories.map(category =>
-                    <React.Fragment key={category.id}>
-                        <h2>{category.type}</h2>
-                        <div>
-                            {this.state.items
-                                .filter(item => item.categoryId === category.id)
-                                .map(item =>
+                                {this.state.items
+                                    .filter(item => item.categoryId === category.id)
+                                    .map(item =>
 
-                                    <ItemCard
-                                        key={item.id}
-                                        item={item}
-                                        deleteItem={this.deleteItem}
-                                        {...this.props} />
-                                )}
-                        </div>
-                    </React.Fragment>
-                )}
+                                        <ItemCard
+                                            key={item.id}
+                                            item={item}
+                                            deleteItem={this.deleteItem}
+                                            {...this.props} />
+                                    )}
+                        
 
+                        </React.Fragment>
+                    )}
+                </div>
             </>
         )
     }

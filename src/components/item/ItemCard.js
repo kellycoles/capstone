@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-//=======================================================
-// Check classNames they are still animal
-//===================================================
+import "./ItemList.css"
+
 class ItemCard extends Component {
     render() {
         return (
-            <>
-                <div className="card">
-                    <div className="card-content">
-                        <h4><span className="card-petname"></span>{this.props.item.name}</h4>
+    
+                    <div className="card">
+                        <h3>{this.props.item.name}</h3>
                         <p>{this.props.item.year} {this.props.item.model}</p>
-                        <p>Notes: {this.props.item.notes}</p>
-                        <p>Manual: <a href={this.props.item.manual}>{this.props.item.manual}</a></p>
-                        <Link to={`/maintenanceItems/${this.props.item.id}/new`}><button>Add Maintenance</button></Link>
-                        <Link to={`/items/${this.props.item.id}`}><button>Maintenance Details</button></Link>
-                        <button type="button"
-                            onClick={() => { this.props.history.push(`/items/${this.props.item.id}/edit`) }}>Edit Item</button>
-                        <button type="button" onClick={() => { if (window.confirm('Delete the item?')) this.props.deleteItem(this.props.item.id) }}>Delete Item</button>
-
+                        <p><span className="strong">Notes:</span>  {this.props.item.notes}</p>
+                        <p><span className="strong">Manual:</span> <a href={this.props.item.manual}>{this.props.item.manual}</a></p>
+                        <div className="btn-wrapper">
+                            <Link to={`/maintenanceItems/${this.props.item.id}/new`}><button className="card-btn">Add Maintenance</button></Link>
+                            <Link to={`/items/${this.props.item.id}`}><button className="card-btn">Maintenance Details</button></Link>
+                            <button type="button" className="card-btn"
+                                onClick={() => { this.props.history.push(`/items/${this.props.item.id}/edit`) }}>Edit Item</button>
+                            <button type="button" className="card-btn" onClick={() => { if (window.confirm('Delete the item?')) this.props.deleteItem(this.props.item.id) }}>Delete Item</button>
+                        </div>
                     </div>
-                </div>
-            </>
+            
+
         );
     }
 }

@@ -53,6 +53,7 @@
 .welcome {
     font-size: 2.5em;
     color: #f2f2f2;
+    text-shadow:  0 1px 1px rgba(0,0,0, .80);
 }
 
 .title {
@@ -93,6 +94,19 @@
     margin-bottom: 30px;
 }
 
+.link {
+    font-size: 1.2em;
+}
+
+.background {
+    margin-top:50px;
+    height: 650px;
+    background: linear-gradient(#f2f2f2, transparent 90%),
+    linear-gradient(0deg,#f2f2f2, transparent),
+    #f2f2f2 url('../../icons/background1.jpg') no-repeat center;
+
+background-size: cover;
+}
 /* @media (max-width:1390px) {
     .title {
         visibility: hidden;

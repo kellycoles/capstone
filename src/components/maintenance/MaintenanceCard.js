@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
-//=======================================================
-// Check classNames they are still animal
-//===================================================
+import "../item/ItemList.css"
+
 class MaintenanceCard extends Component {
     render() {
         return (
             <>
                 <div className="card">
-                    <div className="card-content">
-                        <h3><span className="card-petname"></span>{this.props.item.name}</h3>
-                        <p>Maintenance: {this.props.item.title}</p>
-                        <p>Details: {this.props.item.details}</p>
-                        <p>Parts: {this.props.item.parts}</p>
-                        <p>Date: {this.props.item.date}</p>
-                        <button type="button"
+                    <h3>{this.props.name}</h3>
+                    <p><span className="strong">Maintenance:</span> {this.props.item.title}</p>
+                    <p><span className="strong">Details:</span> {this.props.item.details}</p>
+                    <p><span className="strong">Parts:</span> {this.props.item.parts}</p>
+                    <p><span className="strong">Date:</span> {this.props.item.date}</p>
+                    <div className="btn-wrapper">
+                        <button type="button" className="card-btn"
                             onClick={() => { this.props.history.push(`/maintenanceItems/${this.props.item.id}/edit`) }}>Edit Maintenance</button>
-                        <button type="button" onClick={() => { if (window.confirm('Delete the item?')) this.props.deleteItem(this.props.item.id) }}>Delete Maintenance
+                        <button type="button" className="card-btn" onClick={() => { if (window.confirm('Delete the item?')) this.props.deleteItem(this.props.item.id) }}>Delete Maintenance
                     Item</button>
-
                     </div>
                 </div>
             </>

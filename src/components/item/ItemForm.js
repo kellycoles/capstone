@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import ItemsManager from '../../modules/ItemsManager';
 import CategoryManager from '../../modules/CategoryManager';
 import NavBar from "../site-nav/NavBar"
-// import "./Form.css"
+import "../Form.css"
 class ItemForm extends Component {
     state = {
         name: "",
         year: "",
         model: "",
-        image: "",
         manual: "",
         notes: "",
         userId: "",
@@ -39,7 +38,6 @@ class ItemForm extends Component {
                 year: this.state.year,
                 model: this.state.model,
                 categoryId: parseInt(this.state.categoryId),
-                image: this.state.image,
                 manual: this.state.manual,
                 notes: this.state.notes,
                 userId: parseInt(sessionStorage.getItem('activeUser'))
@@ -100,17 +98,7 @@ class ItemForm extends Component {
                             />
                         </div>
 
-                        <div className="input-container">
-                            <label htmlFor="image">Image:</label>
-                            <input
-                                type="text"
-                                placeholder="    URL"
-                                required
-                                onChange={this.handleFieldChange}
-                                className="input-field"
-                                id="image"
-                            />
-                        </div>
+              
                         <div className="input-container">
                             <label htmlFor="manual">Manual:</label>
                             <input

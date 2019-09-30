@@ -118,7 +118,7 @@ class MaintenanceEditForm extends Component {
                             disabled={this.state.loadingStatus}
                             onClick={this.updateExistingItem
                             }
-                        >Edit Maintenance</button>
+                        >Save Changes</button>
 
 
                     </form>

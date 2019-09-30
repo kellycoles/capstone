@@ -7,6 +7,7 @@ header {
 
 .site-title {
   color: #f2f2f2;
+  text-shadow:  0 1px 1px rgba(0,0,0, .80);
 }
 
 .logo-icon {
@@ -35,7 +36,9 @@ nav .container li {
 }
 
 nav .container a {
+
   color: #f2f2f2;
+ 
 }
 
 nav .container a:hover {

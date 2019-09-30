@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import MaintenanceManager from '../../modules/MaintenanceManager';
 import NavBar from "../site-nav/NavBar"
+import "../item/ItemList.css"
 
 class ItemDetails extends Component {
 
@@ -17,16 +18,15 @@ class ItemDetails extends Component {
     componentDidMount() {
         MaintenanceManager.getAllMaintenceItem(this.props.itemId)
             .then((item) => {
-                item.maintenanceItems.sort((a, b) => (a.date < b.date) ? 1 : -1)       
+                item.maintenanceItems.sort((a, b) => (a.date < b.date) ? 1 : -1)
                 this.setState({
                     name: item.name,
                     year: item.year,
                     model: item.model,
-                    //image maybe
                     maintenanceItem: item.maintenanceItems,
                     loadingStatus: false
                 });
-console.log(item)
+                console.log(item)
             });
     }
 
@@ -39,26 +39,26 @@ console.log(item)
     render() {
         return (
             <>
-             <NavBar />
-                <p>Image coming soon </p>
-                <h1>Maintenance History: {this.state.year} {this.state.model} {this.state.name}</h1>
-                <button type="button"
+                <NavBar />
+                <h1 className="center">Maintenance History: {this.state.year} {this.state.model} {this.state.name}</h1>
+                <button type="button" className="maint-button"
                     onClick={() => { this.props.history.push(`/maintenanceItems/${this.props.itemId}/new`) }}>Add Maintenance
                 </button>
-                <div className="card">
+                <div className="card-container">
                     {this.state.maintenanceItem.map(maintItem =>
-                        <div key={maintItem.id} className="card-content">
-                           
-                            <p> {maintItem.date}</p>
-                            <p>Maintenance: {maintItem.title}</p>
-                            <p>Details: {maintItem.details}</p>
-                            <p>Parts: {maintItem.parts}</p>
+                        <div key={maintItem.id} className="card">
 
-                            <button type="button"
-                                onClick={() => { this.props.history.push(`/maintenanceItems/${maintItem.id}/edit`) }}>Edit Maintenance</button>
+                            <p><span className="strong">Date:</span> {maintItem.date}</p>
+                            <p><span className="strong">Maintenance:</span> {maintItem.title}</p>
+                            <p><span className="strong">Details:</span> {maintItem.details}</p>
+                            <p><span className="strong">Parts:</span> {maintItem.parts}</p>
+                            <div className="btn-wrapper">
+                                <button type="button" className="card-btn"
+                                    onClick={() => { this.props.history.push(`/maintenanceItems/${maintItem.id}/edit`) }}>Edit</button>
 
-                            <button type="button"
-                                disabled={this.state.loadingStatus} onClick={() => { if (window.confirm('Delete the item?')) this.handleDelete(maintItem.id) }}>Delete Maintenance</button>
+                                <button type="button" className="card-btn"
+                                    disabled={this.state.loadingStatus} onClick={() => { if (window.confirm('Delete the item?')) this.handleDelete(maintItem.id) }}>Delete</button>
+                            </div>
                         </div>
                     )}
 

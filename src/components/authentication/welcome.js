@@ -10,16 +10,15 @@ class Welcome extends Component {
         return (
             <>
                 <HomeNavBar />
-                <div class="header-container">
-                    <div class="header">
+                <div className="header-container">
+                    <div className="header">
                         <picture className="logo--icon">
                             <img src={require('../../icons/lg-logo.png')} alt="logo-icon" />
                         </picture>
-                        <h1 class="welcome">Welcome to The Maintenance Log</h1>
+                        <h1 className="welcome">Welcome to The Maintenance Log</h1>
                     </div>
-
-
                 </div>
+
                 <div className="welcome--btns">
                     <Link to="/Registration"><button className="register--btn">Register New Account</button></Link>
                     <Link to="/Login"><button className="login--btn">Login</button></Link>

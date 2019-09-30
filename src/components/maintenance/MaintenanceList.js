@@ -5,10 +5,8 @@ import MaintenanceCard from './MaintenanceCard'
 import MaintenanceManager from '../../modules/MaintenanceManager'
 import CategoryManager from '../../modules/CategoryManager'
 import NavBar from "../site-nav/NavBar"
-//===============================================================================
-// check classNames they are still animal
+import "../item/ItemList.css"
 
-//============================================================================
 
 class MaintenanceList extends Component {
 
@@ -49,37 +47,39 @@ class MaintenanceList extends Component {
         return (
             <>
                 <NavBar />
-                <h1>My Maintenance</h1>
-                {this.state.categories.map(category =>
-                    <React.Fragment key={category.id}>
-                        <h2>{category.type}</h2>
+                <h1 className="center">My Maintenance</h1>
+                <div className="card-container">
+                    {this.state.categories.map(category =>
+                        <React.Fragment key={category.id}>
+                            <h2>{category.type}</h2>
 
-                        <div>
-                            {this.state.items
-                                .filter(item => item.categoryId === category.id)
-                                .map(item =>
-                                    <React.Fragment key={item.id}>
-                                        <h3>{item.name}</h3>
-                                        <div>
-                                            {item.maintenanceItems.map(maintenanceItem =>
-                                                <MaintenanceCard
-                                                    key={maintenanceItem.id}
-                                                    item={maintenanceItem}
-                                                    deleteItem={this.deleteMaintenanceItem}
-                                                    {...this.props} />
-                                            )
-                                            }
-                                        </div>
-                                    </React.Fragment>
+                            <div>
+                                {this.state.items
+                                    .filter(item => item.categoryId === category.id)
+                                    .map(item =>
+                                        <React.Fragment key={item.id}>
+                                            {/* <h3>{item.name}</h3> */}
+                                            <div>
+                                                {item.maintenanceItems.map(maintenanceItem =>
+                                                    <MaintenanceCard
+                                                        key={maintenanceItem.id}
+                                                        item={maintenanceItem}
+                                                        name={item.name}
+                                                        deleteItem={this.deleteMaintenanceItem}
+                                                        {...this.props} />
+                                                )
+                                                }
+                                            </div>
+                                        </React.Fragment>
 
-                                )}
+                                    )}
 
-                        </div>
+                            </div>
 
-                    </React.Fragment>
+                        </React.Fragment>
 
-                )}
-
+                    )}
+                </div>
             </>
         )
     }
