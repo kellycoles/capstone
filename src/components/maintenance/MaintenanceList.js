@@ -46,8 +46,8 @@ class MaintenanceList extends Component {
 
         return (
             <>
-                <NavBar />
-                <h1 className="center">My Maintenance</h1>
+                <NavBar  id = "top"/>
+                <h1  className="center">My Maintenance</h1>
                 <div className="card-container">
                     {this.state.categories.map(category =>
                         <React.Fragment key={category.id}>
@@ -80,6 +80,7 @@ class MaintenanceList extends Component {
 
                     )}
                 </div>
+                <a href="#top" class="top-link">Back to top &raquo;</a>
             </>
         )
     }

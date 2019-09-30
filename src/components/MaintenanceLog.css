@@ -22,8 +22,12 @@ h1, h2, h3, h4, h5, h6 {
 .strong{
 	font-weight: 600;
 }
-/* .container-cards {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-  } */
+.background {
+    margin-top:50px;
+    height: 650px;
+    background: linear-gradient(#f2f2f2, transparent 90%),
+    linear-gradient(0deg,#f2f2f2, transparent),
+    #f2f2f2 url('../icons/background1.jpg') no-repeat center;
+
+background-size: cover;
+}

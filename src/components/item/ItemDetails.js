@@ -63,7 +63,6 @@ class ItemDetails extends Component {
                     )}
 
                 </div>
-
             </>
         );
     }

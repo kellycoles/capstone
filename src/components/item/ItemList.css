@@ -7,17 +7,17 @@
     margin: 15px 5px;
     background-color: #f2f2f2;
     border: 1px solid #dedede;
-    width:100%;
-   
- 
+    width:100%; 
+}
+
+h2 {
+    margin-top: 40px;
 }
 
 .card-container {
     margin:auto;
     width: 80%;
-    /* display: flex;
-    flex-wrap:wrap; */
-    /* justify-content: space-evenly; */
+
 }
 .maint-button {
     background-color: #ad4e2b;
@@ -29,12 +29,14 @@
     opacity: 0.9;
     font-size: .9em;
     margin-bottom: 20px;
+    margin-top: 20px;
     margin-left:5%;
   }
 /* buttons on cards */
 .card-btn {
-    padding: 3px 10px;
+    padding: 3px 20px;
     margin-top: 20px;
+    border-radius: 10% 10%;
 }
 
 .card-btn:hover,
@@ -47,14 +49,24 @@
     display: flex;
     justify-content: space-evenly
 }
-/* 
-.item-category {
-background-color: #ad4e2b;
-border-radius:10%;
-color:white;
 
-}
+.manual a {
+    color: #ad4e2b;
+    opacity: 1;
+  }
+  
+  .manual a:hover {
+    color: #404040;
+  }
 
-.align-left {
-    text-align: left;
-} */
+
+  
+  .top-link {
+   float:right;
+    padding:50px;
+    color: #ad4e2b;
+  }
+  
+  .top-link:hover {
+    color: #404040;
+  }

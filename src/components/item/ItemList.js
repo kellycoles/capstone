@@ -5,7 +5,6 @@ import CategoryManager from '../../modules/CategoryManager'
 import NavBar from "../site-nav/NavBar"
 
 
-
 class ItemList extends Component {
     state = {
         items: [],
@@ -45,18 +44,15 @@ class ItemList extends Component {
     render() {
         return (
             <>
-                <NavBar />
+                <NavBar  id = "top"/>
                 <h1 className="center">My Items</h1>
                 <div className="card-container">
                     {this.state.categories.map(category =>
                         <React.Fragment key={category.id}>
-                         
                                 <h2>{category.type}</h2>
-
                                 {this.state.items
                                     .filter(item => item.categoryId === category.id)
                                     .map(item =>
-
                                         <ItemCard
                                             key={item.id}
                                             item={item}
@@ -68,6 +64,7 @@ class ItemList extends Component {
                         </React.Fragment>
                     )}
                 </div>
+               <a href="#top" class="top-link">Back to top &raquo;</a>
             </>
         )
     }
