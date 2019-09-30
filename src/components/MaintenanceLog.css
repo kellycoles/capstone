@@ -22,3 +22,8 @@ h1, h2, h3, h4, h5, h6 {
 .strong{
 	font-weight: 600;
 }
+/* .container-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  } */

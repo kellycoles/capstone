@@ -47,7 +47,7 @@ class ItemList extends Component {
             <>
                 <NavBar />
                 <h1 className="center">My Items</h1>
-                <div className="wrapper">
+                <div className="card-container">
                     {this.state.categories.map(category =>
                         <React.Fragment key={category.id}>
                             <div>

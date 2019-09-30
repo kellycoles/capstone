@@ -41,14 +41,14 @@ body {
   padding: 10px;
   outline: none;
 }
-.select,
+.select:hover,
 .md-input-field:hover,
 .sm-input-field:hover,
 .input-field:hover {
   border: 2px solid #ad4e2b;
 }
 
- .select,
+ .select:focus,
 .md-input-field:focus,
 .sm-input-field:focus,
 .input-field:focus {

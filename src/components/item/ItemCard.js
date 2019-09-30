@@ -12,15 +12,16 @@ class ItemCard extends Component {
                         <p>{this.props.item.year} {this.props.item.model}</p>
                         <p><span className="strong">Notes:</span>  {this.props.item.notes}</p>
                         <p><span className="strong">Manual:</span> <a href={this.props.item.manual}>{this.props.item.manual}</a></p>
-                        <Link to={`/maintenanceItems/${this.props.item.id}/new`}><button>Add Maintenance</button></Link>
-                        <Link to={`/items/${this.props.item.id}`}><button>Maintenance Details</button></Link>
-                        <button type="button"
-                            onClick={() => { this.props.history.push(`/items/${this.props.item.id}/edit`) }}>Edit Item</button>
-                        <button type="button" onClick={() => { if (window.confirm('Delete the item?')) this.props.deleteItem(this.props.item.id) }}>Delete Item</button>
-
+                        <div className="btn-wrapper">
+                            <Link to={`/maintenanceItems/${this.props.item.id}/new`}><button className="card-btn">Add Maintenance</button></Link>
+                            <Link to={`/items/${this.props.item.id}`}><button className="card-btn">Maintenance Details</button></Link>
+                            <button type="button" className="card-btn"
+                                onClick={() => { this.props.history.push(`/items/${this.props.item.id}/edit`) }}>Edit Item</button>
+                            <button type="button" className="card-btn" onClick={() => { if (window.confirm('Delete the item?')) this.props.deleteItem(this.props.item.id) }}>Delete Item</button>
+                        </div>
                     </div>
                 </div>
-            
+
             </>
         );
     }

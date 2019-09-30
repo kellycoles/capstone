@@ -94,6 +94,10 @@
     margin-bottom: 30px;
 }
 
+.link {
+    font-size: 1.2em;
+}
+
 .background {
     margin-top:50px;
     height: 650px;

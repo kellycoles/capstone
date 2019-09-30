@@ -12,10 +12,124 @@
     }
   ],
   "items": [
- 
+    {
+      "name": "Dodge",
+      "year": "2000",
+      "model": "Dakota",
+      "categoryId": 2,
+      "manual": "https://dodgeforum.com/forum/2nd-gen-dakota-tech/71862-dodge-dakota-manual-download.html",
+      "notes": "takes 5-20 oil filter #216 oil pan bolt 17mm",
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "name": "Mazda",
+      "year": "2012",
+      "model": "Miata",
+      "categoryId": 2,
+      "manual": "https://carmanuals2.com/mazda/mx-5-2012-owner-s-manual-30264",
+      "notes": "takes 0-20 oil filter #4107 oil pan bolt 14mm",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Washer",
+      "year": "2006",
+      "model": "Frigidaire Affinity",
+      "categoryId": 1,
+      "manual": "https://www.manualslib.com/products/Frigidaire-Fafw3577kw-Affinity-Front-Load-Washer-53453.html",
+      "notes": "#PLN756664738 ",
+      "userId": 2
+    },
+    {
+      "name": "Dryer",
+      "year": "2006",
+      "model": "Frigidaire Affinity",
+      "categoryId": 1,
+      "manual": "https://www.manualslib.com/manual/241478/Frigidaire-Affinity-Faqe7001l.html",
+      "notes": "# FAQE7701",
+      "userId": 2,
+      "id": 4
+    },
+    {
+      "name": "Computer",
+      "year": "2011",
+      "model": "Toshiba",
+      "categoryId": 3,
+      "manual": "https://www.manualslib.com/products/Toshiba-Satellite-P745-2788879.html",
+      "notes": "satellite p745 ",
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "name": "Computer",
+      "year": "2019",
+      "model": "Dell Inspiron",
+      "categoryId": 3,
+      "manual": "https://www.dell.com/support/home/us/en/19/product-support/product/inspiron-7000/docs",
+      "notes": "7000 series ",
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "name": "HVAC",
+      "year": "2011",
+      "model": "Carrier",
+      "categoryId": 4,
+      "manual": "https://www.manualslib.com/brand/carrier/air-conditioner.html",
+      "notes": "Gas heat ",
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "name": "Water Heater",
+      "year": "2019",
+      "model": "Rheem",
+      "categoryId": 4,
+      "manual": "https://www.waterheaterhub.com/rheem-water-heater-manuals/",
+      "notes": "Gas 40 gal",
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "name": "Mower",
+      "year": "2003",
+      "model": "cub cadet Z-force",
+      "categoryId": 5,
+      "manual": "https://www.manualslib.com/manual/683972/Cub-Cadet-Z-Force.html",
+      "notes": "SAE 30 oil briggs filter 21134",
+      "userId": 2,
+      "id": 9
+    },
+    {
+      "name": "Sea Doo",
+      "year": "1997",
+      "model": "Bombardier",
+      "categoryId": 6,
+      "manual": "https://www.manualslib.com/manual/683972/Cub-Cadet-Z-Force.html",
+      "notes": "",
+      "userId": 2,
+      "id": 10
+    }
   ],
   "maintenanceItems": [
-  
+    {
+      "title": "brakes",
+      "details": "Rear brakes, and system beed.",
+      "parts": "brake pads",
+      "date": "2019-08-01",
+      "itemId": 2,
+      "id": 1
+    },
+    {
+      "title": "Tune up",
+      "details": "replaced the belt, heating element, and drum bearing",
+      "parts": "heating element, belt, bearing. Appliance Parts Pros.",
+      "date": "2019-08-13",
+      "itemId": 4,
+      "id": 2
+    }
   ],
   "categories": [
     {
