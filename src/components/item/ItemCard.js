@@ -5,8 +5,7 @@ import "./ItemList.css"
 class ItemCard extends Component {
     render() {
         return (
-            <>
-                <div className="card-container">
+    
                     <div className="card">
                         <h3>{this.props.item.name}</h3>
                         <p>{this.props.item.year} {this.props.item.model}</p>
@@ -20,9 +19,8 @@ class ItemCard extends Component {
                             <button type="button" className="card-btn" onClick={() => { if (window.confirm('Delete the item?')) this.props.deleteItem(this.props.item.id) }}>Delete Item</button>
                         </div>
                     </div>
-                </div>
+            
 
-            </>
         );
     }
 }

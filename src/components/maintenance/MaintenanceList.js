@@ -64,6 +64,7 @@ class MaintenanceList extends Component {
                                                     <MaintenanceCard
                                                         key={maintenanceItem.id}
                                                         item={maintenanceItem}
+                                                        name={item.name}
                                                         deleteItem={this.deleteMaintenanceItem}
                                                         {...this.props} />
                                                 )

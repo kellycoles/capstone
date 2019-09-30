@@ -6,7 +6,7 @@ class MaintenanceCard extends Component {
         return (
             <>
                 <div className="card">
-                    <h3>{this.props.item.name}</h3>
+                    <h3>{this.props.name}</h3>
                     <p><span className="strong">Maintenance:</span> {this.props.item.title}</p>
                     <p><span className="strong">Details:</span> {this.props.item.details}</p>
                     <p><span className="strong">Parts:</span> {this.props.item.parts}</p>

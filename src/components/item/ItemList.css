@@ -7,15 +7,17 @@
     margin: 15px 5px;
     background-color: #f2f2f2;
     border: 1px solid #dedede;
+    width:100%;
+   
  
 }
 
 .card-container {
     margin:auto;
     width: 80%;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-evenly;
+    /* display: flex;
+    flex-wrap:wrap; */
+    /* justify-content: space-evenly; */
 }
 .maint-button {
     background-color: #ad4e2b;
@@ -45,10 +47,14 @@
     display: flex;
     justify-content: space-evenly
 }
-
-/* .item-category {
+/* 
+.item-category {
 background-color: #ad4e2b;
-border-radius:10%/50%;
-width:100px;
+border-radius:10%;
 color:white;
+
+}
+
+.align-left {
+    text-align: left;
 } */

@@ -50,8 +50,8 @@ class ItemList extends Component {
                 <div className="card-container">
                     {this.state.categories.map(category =>
                         <React.Fragment key={category.id}>
-                            <div>
-                                <h2 className ="item-category">{category.type}</h2>
+                         
+                                <h2>{category.type}</h2>
 
                                 {this.state.items
                                     .filter(item => item.categoryId === category.id)
@@ -63,7 +63,7 @@ class ItemList extends Component {
                                             deleteItem={this.deleteItem}
                                             {...this.props} />
                                     )}
-                            </div>
+                        
 
                         </React.Fragment>
                     )}
