@@ -13,14 +13,14 @@
   ],
   "items": [
     {
+      "id": 1,
       "name": "Dodge",
       "year": "2000",
       "model": "Dakota",
       "categoryId": 2,
       "manual": "https://dodgeforum.com/forum/2nd-gen-dakota-tech/71862-dodge-dakota-manual-download.html",
-      "notes": "takes 5-20 oil filter #216 oil pan bolt 17mm",
-      "userId": 2,
-      "id": 1
+      "notes": "takes 5-20 oil filter #p216 oil pan bolt 17mm",
+      "userId": 2
     },
     {
       "name": "Mazda",
@@ -43,14 +43,14 @@
       "userId": 2
     },
     {
+      "id": 4,
       "name": "Dryer",
       "year": "2006",
       "model": "Frigidaire Affinity",
       "categoryId": 1,
       "manual": "https://www.manualslib.com/manual/241478/Frigidaire-Affinity-Faqe7001l.html",
-      "notes": "# FAQE7701",
-      "userId": 2,
-      "id": 4
+      "notes": "# FAQE7703",
+      "userId": 2
     },
     {
       "name": "Computer",
@@ -115,20 +115,68 @@
   ],
   "maintenanceItems": [
     {
+      "id": 1,
       "title": "brakes",
-      "details": "Rear brakes, and system beed.",
+      "details": "Rear brakes, and system bleed.",
       "parts": "brake pads",
       "date": "2019-08-01",
-      "itemId": 2,
-      "id": 1
+      "itemId": 2
+    },
+    {
+      "title": "winterize",
+      "details": "treated fuel; ran anti-freeze through system; changed jet pump oil",
+      "parts": "anti corrosive lube, oil, gas treatment",
+      "date": "2019-09-01",
+      "itemId": 10,
+      "id": 3
+    },
+    {
+      "title": "Upgrade",
+      "details": "Installed 4 more Gigs of RAM, 1 TB hard drive",
+      "parts": "RAM and hard drive purchased from computer pros",
+      "date": "2019-05-31",
+      "itemId": 5,
+      "id": 4
     },
     {
       "title": "Tune up",
-      "details": "replaced the belt, heating element, and drum bearing",
-      "parts": "heating element, belt, bearing. Appliance Parts Pros.",
-      "date": "2019-08-13",
+      "details": "changed oil, sharpened blades, greased bearings and spindles",
+      "parts": "none",
+      "date": "2019-09-18",
+      "itemId": 9,
+      "id": 5
+    },
+    {
+      "title": "Coils",
+      "details": "Cleaned coils, checked Freon ",
+      "parts": "coil cleaner",
+      "date": "2019-09-30",
+      "itemId": 7,
+      "id": 6
+    },
+    {
+      "id": 7,
+      "title": "belt",
+      "details": "replaced belt",
+      "parts": "belt from Appliance Parts Pros #777847",
+      "date": "2019-09-30",
+      "itemId": 4
+    },
+    {
+      "title": "heating element",
+      "details": "replaced heating element and wiring.",
+      "parts": "heating element # 6658365 from Appliance Parts Pros",
+      "date": "2019-07-17",
       "itemId": 4,
-      "id": 2
+      "id": 8
+    },
+    {
+      "title": "control panel",
+      "details": "replaced control panel. not sure if its the right one. It's buggy, but it works",
+      "parts": "control panel #LN2246573 purchased from Frigidaire",
+      "date": "2019-02-13",
+      "itemId": 3,
+      "id": 9
     }
   ],
   "categories": [

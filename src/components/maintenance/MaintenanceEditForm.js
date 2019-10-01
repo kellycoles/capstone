@@ -67,6 +67,9 @@ class MaintenanceEditForm extends Component {
                 <div className="wrapper">
                     <h1>Edit Maintenance Form</h1>
                     <form>
+                    <picture className="prints">
+                            <img src={require('../../icons/prints.png')} alt="fingerprints" />
+                        </picture>
                         <h2>{this.state.name}</h2>
                         <div className="input-container">
                             <label htmlFor="date">Date:</label>

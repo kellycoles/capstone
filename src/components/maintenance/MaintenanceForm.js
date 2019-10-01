@@ -50,10 +50,15 @@ class MaintenanceForm extends Component {
             <>
                 <NavBar />
                 <div className="wrapper">
-                    <h1>Add Maintenance Form</h1>
+                    <h1>Add Maintenance Form </h1><picture className="prints">
+                            <img src={require('../../icons/prints.png')} alt="fingerprints" />
+                        </picture>
+                    
+                   
                     <form>
                         <h2>{this.state.item.name}</h2>
                         <div className="input-container">
+
                             <label htmlFor="date">Date:</label>
                             <input
                                 value={this.state.date}
@@ -101,7 +106,6 @@ class MaintenanceForm extends Component {
                             onClick={this.constructNewMaintenance
                             }
                         >Add Maintenance</button>
-
 
                     </form>
                 </div>
