@@ -58,7 +58,6 @@ class MaintenanceList extends Component {
                                     .filter(item => item.categoryId === category.id)
                                     .map(item =>
                                         <React.Fragment key={item.id}>
-                                            {/* <h3>{item.name}</h3> */}
                                             <div>
                                                 {item.maintenanceItems.map(maintenanceItem =>
                                                     <MaintenanceCard
@@ -80,7 +79,7 @@ class MaintenanceList extends Component {
 
                     )}
                 </div>
-                <a href="#top" class="top-link">Back to top &raquo;</a>
+                {/* <a href="#top" class="top-link">Back to top &raquo;</a> */}
             </>
         )
     }

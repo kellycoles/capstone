@@ -64,7 +64,7 @@ class ItemList extends Component {
                         </React.Fragment>
                     )}
                 </div>
-               <a href="#top" class="top-link">Back to top &raquo;</a>
+               {/* <a href="#top" class="top-link">Back to top &raquo;</a> */}
             </>
         )
     }
