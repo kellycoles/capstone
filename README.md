@@ -24,44 +24,7 @@ The Maintenance Log is an app for anyone who owns anything that requires mainten
 npm install -g json-server
 ```
 
-1. Move to the api directory
-```
-cd api
-```
-In the terminal, start your json-server on port 5002
-```
-json-server -p 5002 -w database.json
-```
-In another terminal tab/window type the command
-```
-npm start
-```
-The Maintenance Log is now ready to use!# The Maintenance Log
-
-
-## Creator
-1. Kelly Coles
-
-
-## Technologies used to implement The Maintenance
-1. React library
-1. JSON-Server
-1. JavaScript
-1. JSX
-1. CSS
-
-## How to Launch The Maintenance Log
-
-1. Clone the repository from Github
-1. Open your terminal and type the command "npm install" to install all the dependencies associated with the project
-1. Install JSON Server
-```
-npm install -g json-server
-```
-1. In the main project directory, create a new directory called "api"
-1. In the api directory, create a file called "database.json"
-1. Copy the sample data below into database.json
-1. Move to the api directory
+Move to the api directory
 ```
 cd api
 ```
@@ -74,3 +37,5 @@ In another terminal tab/window type the command
 npm start
 ```
 The Maintenance Log is now ready to use!
+
+
