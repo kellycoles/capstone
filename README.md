@@ -1,70 +1,79 @@
-capstone app maintenance log
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# The Maintenance Log
 
-In the project directory, you can run:
+The Maintenance Log is an app for anyone who owns anything that requires maintenance or repairs. Users can create a list of items organized by category. They can store details, notes, model numbers, and repair manuals for the items, and log all of the maintenance and repairs performed on the items. Users can access maintenance details on one item or all items. User authentication and persistent storage allow multiple users to store, create, read, edit, and delete their lists of items, and their maintenance lists.
 
-### `npm start`
+## Creator
+1. Kelly Coles
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Technologies used to implement The Maintenance Log
+1. React library
+1. JSON-Server
+1. JavaScript
+1. JSX
+1. CSS
 
-### `npm test`
+## How to Launch The Maintenance Log
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository from Github
+1. Open your terminal and type the command "npm install" to install all the dependencies associated with the project
+1. Install JSON Server
+```
+npm install -g json-server
+```
+1. In the main project directory, create a new directory called "api"
+1. In the api directory, create a file called "database.json"
+1. Copy the sample data below into database.json
+1. Move to the api directory
+```
+cd api
+```
+In the terminal, start your json-server on port 5002
+```
+json-server -p 5002 -w database.json
+```
+In another terminal tab/window type the command
+```
+npm start
+```
+The Maintenance Log is now ready to use!# The Maintenance Log
 
-### `npm run build`
+The Maintenance Log is a dashboard for people to use to organize their daily tasks, events, news article, friends, and chat messages.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Creator
+1. Kelly Coles
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies used to implement The Maintenance
+1. React library
+1. JSON-Server
+1. JavaScript
+1. JSX
+1. CSS
 
-### `npm run eject`
+## How to Launch The Maintenance Log
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Clone the repository from Github
+1. Open your terminal and type the command "npm install" to install all the dependencies associated with the project
+1. Install JSON Server
+```
+npm install -g json-server
+```
+1. In the main project directory, create a new directory called "api"
+1. In the api directory, create a file called "database.json"
+1. Copy the sample data below into database.json
+1. Move to the api directory
+```
+cd api
+```
+In the terminal, start your json-server on port 5002
+```
+json-server -p 5002 -w database.json
+```
+In another terminal tab/window type the command
+```
+npm start
+```
+The Maintenance Log is now ready to use!

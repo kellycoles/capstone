@@ -49,7 +49,7 @@
       "model": "Frigidaire Affinity",
       "categoryId": 1,
       "manual": "https://www.manualslib.com/manual/241478/Frigidaire-Affinity-Faqe7001l.html",
-      "notes": "# FAQE7703",
+      "notes": "# FAQE7704",
       "userId": 2
     },
     {
@@ -155,14 +155,6 @@
       "id": 6
     },
     {
-      "id": 7,
-      "title": "belt",
-      "details": "replaced belt",
-      "parts": "belt from Appliance Parts Pros #777847",
-      "date": "2019-09-30",
-      "itemId": 4
-    },
-    {
       "title": "heating element",
       "details": "replaced heating element and wiring.",
       "parts": "heating element # 6658365 from Appliance Parts Pros",
@@ -177,6 +169,14 @@
       "date": "2019-02-13",
       "itemId": 3,
       "id": 9
+    },
+    {
+      "title": "calipers",
+      "details": "pads wore unevenly so I changed calipers",
+      "parts": "calipers",
+      "date": "2019-10-03",
+      "itemId": 2,
+      "id": 10
     }
   ],
   "categories": [
