@@ -23,9 +23,7 @@ The Maintenance Log is an app for anyone who owns anything that requires mainten
 ```
 npm install -g json-server
 ```
-1. In the main project directory, create a new directory called "api"
-1. In the api directory, create a file called "database.json"
-1. Copy the sample data below into database.json
+
 1. Move to the api directory
 ```
 cd api
@@ -40,7 +38,6 @@ npm start
 ```
 The Maintenance Log is now ready to use!# The Maintenance Log
 
-The Maintenance Log is a dashboard for people to use to organize their daily tasks, events, news article, friends, and chat messages.
 
 ## Creator
 1. Kelly Coles
