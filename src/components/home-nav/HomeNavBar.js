@@ -7,10 +7,10 @@ class HomeNavBar extends Component {
     render() {
         return (
             <nav className="nav-container">
-                <div className="title">  <picture>
+               <div className="title">  <picture>
                     <img src={require('../../icons/tools-red.png')} alt="logo-icon" />
                 </picture><h1>The Maintenance Log</h1></div>
-                <ul className="nav">
+                 <ul className="nav">
                     <li className="nav-item">
                         <Link className="nav-link" to="/">Home</Link>
                     </li>

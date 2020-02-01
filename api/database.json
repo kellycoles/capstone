@@ -101,16 +101,6 @@
       "notes": "SAE 30 oil briggs filter 21134",
       "userId": 2,
       "id": 9
-    },
-    {
-      "name": "Sea Doo",
-      "year": "1997",
-      "model": "Bombardier",
-      "categoryId": 6,
-      "manual": "https://www.manualslib.com/manual/683972/Cub-Cadet-Z-Force.html",
-      "notes": "",
-      "userId": 2,
-      "id": 10
     }
   ],
   "maintenanceItems": [
@@ -121,14 +111,6 @@
       "parts": "brake pads",
       "date": "2019-08-01",
       "itemId": 2
-    },
-    {
-      "title": "winterize",
-      "details": "treated fuel; ran anti-freeze through system; changed jet pump oil",
-      "parts": "anti corrosive lube, oil, gas treatment",
-      "date": "2019-09-01",
-      "itemId": 10,
-      "id": 3
     },
     {
       "title": "Upgrade",
@@ -171,12 +153,20 @@
       "id": 9
     },
     {
-      "title": "calipers",
-      "details": "pads wore unevenly so I changed calipers",
-      "parts": "calipers",
-      "date": "2019-10-03",
-      "itemId": 2,
-      "id": 10
+      "id": 11,
+      "title": "water pump",
+      "details": "hard",
+      "parts": "water pump 65843",
+      "date": "2020-01-14",
+      "itemId": 3
+    },
+    {
+      "title": "radiator",
+      "details": "auto zone smyrna",
+      "parts": "45673",
+      "date": "2020-01-15",
+      "itemId": 1,
+      "id": 12
     }
   ],
   "categories": [
