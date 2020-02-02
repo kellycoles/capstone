@@ -11,8 +11,11 @@ class Welcome extends Component {
             <>
                 <div className="header-container">
                     <div className="header">
-                        <h1 className="welcome">Welcome to The Maintenance Log<br />
-                        <small>Your maintenance record keeper</small></h1>
+                        <picture className="logo--icon">
+                            <img src={require('../../icons/lg-logo.png')} alt="logo-icon" />
+                        </picture>
+                        <h1 className="welcome">Welcome to The Maintenance Log</h1>
+                        {/* <small>A maintenance record keeper</small></h1> */}
                     </div>
                 </div>
 

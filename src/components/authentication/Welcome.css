@@ -12,14 +12,30 @@
 }
 
 .header {
+    width: 75%;
     height: 350px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.logo--icon {
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    padding: 15px;
+ }
 
 .welcome {
     font-size: 2.5em;
     color: #f2f2f2;
     text-shadow: 0 1px 1px rgba(0, 0, 0, .80);
+}
+
+.title {
+    font-size: .8em;
+    color: #ad4e2b;
+    display: flex;
+    margin-right: 250px;
 }
 
 .welcome {
@@ -51,8 +67,4 @@
 .register--btn {
     margin-top: 60px;
     margin-bottom: 30px;
-}
-
-.link {
-    font-size: 1.2em;
 }
