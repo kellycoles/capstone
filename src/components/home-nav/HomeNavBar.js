@@ -3,8 +3,10 @@ import { Link } from "react-router-dom"
 
 
 
+
 class HomeNavBar extends Component {
     render() {
+     
         return (
             <nav className="nav-container">
                <div className="title">  <picture>
