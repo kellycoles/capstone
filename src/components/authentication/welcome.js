@@ -15,7 +15,6 @@ class Welcome extends Component {
                             <img src={require('../../icons/lg-logo.png')} alt="logo-icon" />
                         </picture>
                         <h1 className="welcome">Welcome to The Maintenance Log</h1>
-                        {/* <small>A maintenance record keeper</small></h1> */}
                     </div>
                 </div>
 

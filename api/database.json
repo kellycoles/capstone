@@ -101,6 +101,16 @@
       "notes": "SAE 30 oil briggs filter 21134",
       "userId": 2,
       "id": 9
+    },
+    {
+      "name": "Gun",
+      "year": "2020",
+      "model": "AK-47",
+      "categoryId": 6,
+      "manual": "none",
+      "notes": "powerful",
+      "userId": 2,
+      "id": 10
     }
   ],
   "maintenanceItems": [
