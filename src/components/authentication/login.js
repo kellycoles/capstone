@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import UsersManager from "../../modules/UsersManager";
 import { Link } from "react-router-dom";
 import "../Form.css"
-import NavBar from "../site-nav/NavBar"
+
 
 class Login extends Component {
 
@@ -36,10 +36,15 @@ class Login extends Component {
     render() {
         return (
             <>
-                <NavBar />
+               <header>
+                    <h1 className="site-title">   <picture className="logo-icon">
+                        <img src={require('../../icons/tools-red.png')} alt="logo-icon" />
+                    </picture>The Maintenance Log</h1>
+                </header>
+               
                 <div className="wrapper">
                     <form onSubmit={this.handleLogin}>
-                        <h1>Login Form</h1>
+                        <h1 class ="h1">Login</h1>
                         <div className="input-container">
                             <picture className="authentication--icon">
                                 <img src={require('../../icons/email.png')} alt="envelope icon" />

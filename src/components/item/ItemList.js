@@ -44,27 +44,27 @@ class ItemList extends Component {
     render() {
         return (
             <>
-                <NavBar  id = "top"/>
+                <NavBar id="top" />
                 <h1 className="center">My Items</h1>
                 <div className="card-container">
                     {this.state.categories.map(category =>
                         <React.Fragment key={category.id}>
-                                <h2>{category.type}</h2>
-                                {this.state.items
-                                    .filter(item => item.categoryId === category.id)
-                                    .map(item =>
-                                        <ItemCard
-                                            key={item.id}
-                                            item={item}
-                                            deleteItem={this.deleteItem}
-                                            {...this.props} />
-                                    )}
-                        
+                            <h2>{category.type}</h2>
+                            {this.state.items
+                                .filter(item => item.categoryId === category.id)
+                                .map(item =>
+                                    <ItemCard
+                                        key={item.id}
+                                        item={item}
+                                        deleteItem={this.deleteItem}
+                                        {...this.props} />
+                                )}
+
 
                         </React.Fragment>
                     )}
                 </div>
-               {/* <a href="#top" class="top-link">Back to top &raquo;</a> */}
+                <a href="#top" class="top-link">Back to top &raquo;</a>
             </>
         )
     }

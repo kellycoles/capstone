@@ -79,7 +79,7 @@ class MaintenanceList extends Component {
 
                     )}
                 </div>
-                {/* <a href="#top" class="top-link">Back to top &raquo;</a> */}
+                <a href="#top" class="top-link">Back to top &raquo;</a>
             </>
         )
     }

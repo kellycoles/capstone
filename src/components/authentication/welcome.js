@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
-import HomeNavBar from "../home-nav/HomeNavBar"
 import "./Welcome.css"
+
 
 
 
@@ -9,7 +9,6 @@ class Welcome extends Component {
     render() {
         return (
             <>
-                <HomeNavBar />
                 <div className="header-container">
                     <div className="header">
                         <picture className="logo--icon">

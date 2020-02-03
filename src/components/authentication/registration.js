@@ -1,8 +1,9 @@
 import React, { Component } from "react"
+import { Link } from "react-router-dom";
 import RegistrationManager from "../../modules/RegistrationManager";
 import UsersManager from "../../modules/UsersManager";
 import "../Form.css"
-import NavBar from "../site-nav/NavBar"
+
 class Registration extends Component {
 
     // Set initial state
@@ -60,10 +61,14 @@ class Registration extends Component {
     render() {
         return (
             <>
-                <NavBar />
+                <header>
+                    <h1 className="site-title">   <picture className="logo-icon">
+                        <img src={require('../../icons/tools-red.png')} alt="logo-icon" />
+                    </picture>The Maintenance Log</h1>
+                </header>
                 <div className="wrapper">
                     <form onSubmit={this.handleLogin}>
-                        <h1>Register Form</h1>
+                        <h1 class ="h1">Register</h1>
                         <div className="input-container">
                             <picture className="authentication--icon">
                                 <img src={require('../../icons/email.png')} alt="envelope icon" />
@@ -98,6 +103,7 @@ class Registration extends Component {
                             Register
                     </button>
                     </form>
+                    <p className="center">Or<br></br><Link to={"/Login"} className="link">Login</Link></p>
                 </div>
             </>
         )
