@@ -50,7 +50,7 @@ class MaintenanceForm extends Component {
             <>
                 <NavBar />
                 <div className="wrapper">
-                    <h1>Add Maintenance Form </h1><picture className="prints">
+                    <h1>Add Maintenance</h1><picture className="prints">
                             <img src={require('../../icons/prints.png')} alt="fingerprints" />
                         </picture>
                     

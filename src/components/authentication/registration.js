@@ -68,7 +68,7 @@ class Registration extends Component {
                 </header>
                 <div className="wrapper">
                     <form onSubmit={this.handleLogin}>
-                        <h1 class ="h1 center">Registration Form</h1>
+                        <h1 class ="h1">Register</h1>
                         <div className="input-container">
                             <picture className="authentication--icon">
                                 <img src={require('../../icons/email.png')} alt="envelope icon" />

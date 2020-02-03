@@ -56,7 +56,8 @@ class ItemForm extends Component {
                 <NavBar />
                 <div className="wrapper">
                     <form>
-                        <h1>Add Item Form</h1>
+                        <h1>Add New Item</h1>
+                        <h2></h2>
                         <div className="input-container">
                             <select id="categoryId" className="select" value={this.state.category} onChange={this.handleFieldChange}>
                                 <option value="">Select Category</option>
