@@ -43,7 +43,7 @@ class ItemDetails extends Component {
                 <h1 className="center">Maintenance History: {this.state.year} {this.state.model} {this.state.name}</h1>
                 <button type="button" className="maint-button"
                     onClick={() => { this.props.history.push(`/maintenanceItems/${this.props.itemId}/new`) }}>Add Maintenance
-                </button>
+                                </button>
                 <div className="card-container">
                     {this.state.maintenanceItem.map(maintItem =>
                         <div key={maintItem.id} className="card">
@@ -53,6 +53,7 @@ class ItemDetails extends Component {
                             <p><span className="strong">Details:</span> {maintItem.details}</p>
                             <p><span className="strong">Parts:</span> {maintItem.parts}</p>
                             <div className="btn-wrapper">
+
                                 <button type="button" className="card-btn"
                                     onClick={() => { this.props.history.push(`/maintenanceItems/${maintItem.id}/edit`) }}>Edit</button>
 

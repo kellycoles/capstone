@@ -147,12 +147,12 @@
       "id": 6
     },
     {
+      "id": 8,
       "title": "heating element",
       "details": "replaced heating element and wiring.",
       "parts": "heating element # 6658365 from Appliance Parts Pros",
       "date": "2019-07-17",
-      "itemId": 4,
-      "id": 8
+      "itemId": 4
     },
     {
       "title": "control panel",
